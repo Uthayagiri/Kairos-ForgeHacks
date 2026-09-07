@@ -1,0 +1,40 @@
+# Virtual Environments
+venv/
+backend/venv/
+.venv/
+env/
+
+# Python Bytecode & Cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+.pytest_cache/
+
+# Environment Variables
+.env
+backend/.env
+.env.local
+.env.*.local
+
+# Datasets and Trained Model Artifacts (preserve directory tracking via .gitkeep)
+backend/data/raw/*
+!backend/data/raw/.gitkeep
+backend/data/processed/*
+!backend/data/processed/.gitkeep
+backend/ml/models/*
+!backend/ml/models/__init__.py
+!backend/ml/models/.gitkeep
+
+# Node / Frontend / Extension
+node_modules/
+dist/
+build/
+
+# Operating System & IDE Files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
