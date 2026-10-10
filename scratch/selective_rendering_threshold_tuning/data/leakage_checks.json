@@ -1,0 +1,10 @@
+{
+  "fixed_split": {
+    "train_samples": 7111,
+    "test_samples": 1799,
+    "train_domains": 2520,
+    "test_domains": 631,
+    "leakage_overlap": 0,
+    "status": "ZERO_LEAKAGE_VERIFIED"
+  }
+}

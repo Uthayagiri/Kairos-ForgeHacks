@@ -1,0 +1,13 @@
+{
+  "total_pages_rendered": 250,
+  "render_success_count": 112,
+  "render_timeout_count": 138,
+  "same_dom_count": 5,
+  "dom_expanded_count": 69,
+  "mean_length_ratio": 13.763,
+  "mean_delta_links": -0.34,
+  "median_delta_links": 0.0,
+  "max_delta_links": 10,
+  "mean_delta_internal_links": -0.28,
+  "mean_delta_scripts": 0.3
+}

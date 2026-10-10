@@ -4,3 +4,10 @@ pydantic
 pydantic-settings
 python-dotenv
 pytest
+requests
+beautifulsoup4
+lxml
+pandas
+scikit-learn
+xgboost
+httpx

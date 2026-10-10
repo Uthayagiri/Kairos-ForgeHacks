@@ -1,0 +1,270 @@
+{
+  "tree_gain": {
+    "num_links": 0.3007003962993622,
+    "num_internal_links": 0.08539605885744095,
+    "domain_length": 0.06420207768678665,
+    "num_external_links": 0.03890106454491615,
+    "high_external_link_concentration": 0.03722238913178444,
+    "uses_https": 0.034676700830459595,
+    "external_link_ratio": 0.028890913352370262,
+    "num_slashes": 0.026549914851784706,
+    "path_length": 0.025477880612015724,
+    "num_digits": 0.021498683840036392,
+    "path_depth": 0.020841334015130997,
+    "num_special_chars": 0.02026771381497383,
+    "num_images": 0.019176356494426727,
+    "num_scripts": 0.018192771822214127,
+    "url_length": 0.017912259325385094,
+    "num_dots": 0.016561470925807953,
+    "num_links_with_mismatched_text": 0.014808236621320248,
+    "is_shortened_url": 0.01345268078148365,
+    "num_hyphens": 0.013351302593946457,
+    "num_subdomains": 0.013290589675307274,
+    "title_length": 0.01323667261749506,
+    "has_hidden_iframe": 0.01256808452308178,
+    "num_query_params": 0.012565813027322292,
+    "has_form_action_empty_or_javascript": 0.012520570307970047,
+    "num_iframes": 0.01182237546890974,
+    "has_favicon": 0.01143191009759903,
+    "num_meta_refresh_redirects": 0.011341370642185211,
+    "num_password_fields": 0.0113223223015666,
+    "has_login_form": 0.010320975445210934,
+    "num_underscores": 0.010106838308274746,
+    "text_to_html_ratio": 0.007930652238428593,
+    "has_suspicious_js_patterns": 0.006482473108917475,
+    "num_input_fields": 0.005646092817187309,
+    "html_parse_error": 0.005635604728013277,
+    "has_double_slash_redirect": 0.005610066931694746,
+    "has_url_encoding": 0.005258962977677584,
+    "num_forms": 0.004805565811693668,
+    "has_suspicious_tld": 0.0033779183868318796,
+    "has_suspicious_keywords": 0.003330390900373459,
+    "num_forms_with_external_action": 0.0033144461922347546,
+    "has_at_symbol": 0.0,
+    "has_ip_address": 0.0,
+    "has_port": 0.0,
+    "url_parse_error": 0.0
+  },
+  "permutation": [
+    {
+      "feature": "num_internal_links",
+      "importance_mean": 0.130456,
+      "importance_std": 0.014984
+    },
+    {
+      "feature": "num_links",
+      "importance_mean": 0.107914,
+      "importance_std": 0.007114
+    },
+    {
+      "feature": "num_digits",
+      "importance_mean": 0.085372,
+      "importance_std": 0.005795
+    },
+    {
+      "feature": "domain_length",
+      "importance_mean": 0.036451,
+      "importance_std": 0.007939
+    },
+    {
+      "feature": "path_length",
+      "importance_mean": 0.028777,
+      "importance_std": 0.012038
+    },
+    {
+      "feature": "external_link_ratio",
+      "importance_mean": 0.028777,
+      "importance_std": 0.007881
+    },
+    {
+      "feature": "has_hidden_iframe",
+      "importance_mean": 0.01247,
+      "importance_std": 0.003837
+    },
+    {
+      "feature": "uses_https",
+      "importance_mean": 0.009113,
+      "importance_std": 0.000959
+    },
+    {
+      "feature": "num_external_links",
+      "importance_mean": 0.005755,
+      "importance_std": 0.002446
+    },
+    {
+      "feature": "num_query_params",
+      "importance_mean": 0.003357,
+      "importance_std": 0.002878
+    },
+    {
+      "feature": "num_subdomains",
+      "importance_mean": 0.002878,
+      "importance_std": 0.003524
+    },
+    {
+      "feature": "text_to_html_ratio",
+      "importance_mean": 0.002398,
+      "importance_std": 0.003391
+    },
+    {
+      "feature": "num_hyphens",
+      "importance_mean": 0.001918,
+      "importance_std": 0.000959
+    },
+    {
+      "feature": "num_special_chars",
+      "importance_mean": 0.001918,
+      "importance_std": 0.000959
+    },
+    {
+      "feature": "is_shortened_url",
+      "importance_mean": 0.001439,
+      "importance_std": 0.001175
+    },
+    {
+      "feature": "html_parse_error",
+      "importance_mean": 0.00048,
+      "importance_std": 0.000959
+    },
+    {
+      "feature": "has_at_symbol",
+      "importance_mean": 0.0,
+      "importance_std": 0.0
+    },
+    {
+      "feature": "has_ip_address",
+      "importance_mean": 0.0,
+      "importance_std": 0.0
+    },
+    {
+      "feature": "has_port",
+      "importance_mean": 0.0,
+      "importance_std": 0.0
+    },
+    {
+      "feature": "has_url_encoding",
+      "importance_mean": 0.0,
+      "importance_std": 0.0
+    },
+    {
+      "feature": "has_suspicious_tld",
+      "importance_mean": 0.0,
+      "importance_std": 0.0
+    },
+    {
+      "feature": "has_suspicious_keywords",
+      "importance_mean": 0.0,
+      "importance_std": 0.0
+    },
+    {
+      "feature": "has_double_slash_redirect",
+      "importance_mean": 0.0,
+      "importance_std": 0.0
+    },
+    {
+      "feature": "url_parse_error",
+      "importance_mean": 0.0,
+      "importance_std": 0.0
+    },
+    {
+      "feature": "num_forms",
+      "importance_mean": 0.0,
+      "importance_std": 0.0
+    },
+    {
+      "feature": "has_login_form",
+      "importance_mean": 0.0,
+      "importance_std": 0.0
+    },
+    {
+      "feature": "num_forms_with_external_action",
+      "importance_mean": 0.0,
+      "importance_std": 0.0
+    },
+    {
+      "feature": "num_links_with_mismatched_text",
+      "importance_mean": 0.0,
+      "importance_std": 0.0
+    },
+    {
+      "feature": "has_suspicious_js_patterns",
+      "importance_mean": 0.0,
+      "importance_std": 0.0
+    },
+    {
+      "feature": "num_meta_refresh_redirects",
+      "importance_mean": 0.0,
+      "importance_std": 0.0
+    },
+    {
+      "feature": "high_external_link_concentration",
+      "importance_mean": 0.0,
+      "importance_std": 0.0
+    },
+    {
+      "feature": "num_iframes",
+      "importance_mean": -0.00048,
+      "importance_std": 0.000959
+    },
+    {
+      "feature": "has_favicon",
+      "importance_mean": -0.00048,
+      "importance_std": 0.000959
+    },
+    {
+      "feature": "has_form_action_empty_or_javascript",
+      "importance_mean": -0.000959,
+      "importance_std": 0.001918
+    },
+    {
+      "feature": "num_dots",
+      "importance_mean": -0.005755,
+      "importance_std": 0.005593
+    },
+    {
+      "feature": "num_password_fields",
+      "importance_mean": -0.005755,
+      "importance_std": 0.002446
+    },
+    {
+      "feature": "num_images",
+      "importance_mean": -0.007674,
+      "importance_std": 0.003181
+    },
+    {
+      "feature": "num_slashes",
+      "importance_mean": -0.017266,
+      "importance_std": 0.008224
+    },
+    {
+      "feature": "num_input_fields",
+      "importance_mean": -0.022062,
+      "importance_std": 0.002797
+    },
+    {
+      "feature": "num_underscores",
+      "importance_mean": -0.025899,
+      "importance_std": 0.005121
+    },
+    {
+      "feature": "num_scripts",
+      "importance_mean": -0.028297,
+      "importance_std": 0.003524
+    },
+    {
+      "feature": "title_length",
+      "importance_mean": -0.051319,
+      "importance_std": 0.008252
+    },
+    {
+      "feature": "path_depth",
+      "importance_mean": -0.065707,
+      "importance_std": 0.003896
+    },
+    {
+      "feature": "url_length",
+      "importance_mean": -0.068106,
+      "importance_std": 0.00866
+    }
+  ]
+}

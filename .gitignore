@@ -17,16 +17,10 @@ backend/.env
 .env.local
 .env.*.local
 
-# Datasets and Trained Model Artifacts (preserve directory tracking via .gitkeep)
-backend/data/raw/*
-!backend/data/raw/.gitkeep
-backend/data/processed/*
-!backend/data/processed/.gitkeep
-backend/ml/models/*
-!backend/ml/models/__init__.py
-!backend/ml/models/.gitkeep
+# Large Raw Web Scrape Cache (2.4 GB - excluded from git)
+backend/data/raw/html_cache/
 
-# Node / Frontend / Extension
+# Node / Frontend / Extension Dependencies & Builds
 node_modules/
 dist/
 build/

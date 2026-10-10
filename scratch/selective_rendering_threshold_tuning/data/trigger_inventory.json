@@ -1,0 +1,27 @@
+{
+  "T1": {
+    "name": "Sparse Score-Band Trigger",
+    "condition": "0.35 <= S1 <= 0.70 and num_links <= 20",
+    "rationale": "Captures sparse pages in the borderline ambiguity zone."
+  },
+  "T2": {
+    "name": "JavaScript/SPA Score-Band Trigger",
+    "condition": "0.35 <= S1 <= 0.70 and (num_scripts >= 1 or is_spa_shell_pattern == 1)",
+    "rationale": "Targets single-page applications that require JS execution to populate links."
+  },
+  "T3": {
+    "name": "Sparse JS/SPA Score-Band Trigger",
+    "condition": "0.35 <= S1 <= 0.70 and num_links <= 20 and (num_scripts >= 1 or is_spa_shell_pattern == 1)",
+    "rationale": "Intersection of sparsity and JS dependency in borderline zone."
+  },
+  "T4": {
+    "name": "Narrow Ambiguity Zone Trigger",
+    "condition": "0.40 <= S1 <= 0.65 and num_links <= 20 and (num_scripts >= 1 or is_spa_shell_pattern == 1)",
+    "rationale": "Tightly bounded trigger minimizing rendering overhead."
+  },
+  "T5": {
+    "name": "Learned Training-OOF Trigger",
+    "condition": "0.38 <= S1 <= 0.72 and num_internal_links == 0 and num_links <= 20",
+    "rationale": "Derived strictly from training partition OOF false-positive cluster."
+  }
+}

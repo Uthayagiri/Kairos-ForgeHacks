@@ -1,0 +1,43 @@
+{
+  "dataset": "backend/data/processed/training_dataset_expanded.csv",
+  "train_samples": 7111,
+  "oof_folds": 5,
+  "fold_details": [
+    {
+      "fold_id": 0,
+      "train_samples": 5688,
+      "val_samples": 1423,
+      "train_domains": 2019,
+      "val_domains": 501
+    },
+    {
+      "fold_id": 1,
+      "train_samples": 5689,
+      "val_samples": 1422,
+      "train_domains": 2020,
+      "val_domains": 500
+    },
+    {
+      "fold_id": 2,
+      "train_samples": 5689,
+      "val_samples": 1422,
+      "train_domains": 2014,
+      "val_domains": 506
+    },
+    {
+      "fold_id": 3,
+      "train_samples": 5689,
+      "val_samples": 1422,
+      "train_domains": 2014,
+      "val_domains": 506
+    },
+    {
+      "fold_id": 4,
+      "train_samples": 5689,
+      "val_samples": 1422,
+      "train_domains": 2013,
+      "val_domains": 507
+    }
+  ],
+  "stage1_auc_oof": 0.233
+}

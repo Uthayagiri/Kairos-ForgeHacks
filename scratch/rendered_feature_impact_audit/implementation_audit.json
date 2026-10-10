@@ -1,0 +1,68 @@
+{
+  "files_inspected": [
+    "backend/app/services/detection_engine.py",
+    "backend/ml/feature_extraction/url_features.py",
+    "backend/ml/feature_extraction/html_features.py",
+    "backend/ml/models/feature_columns.json",
+    "scratch/dynamic_content_feature_fusion/scripts/run_experiment.py",
+    "scratch/selective_rendering_threshold_tuning/scripts/run_experiment.py"
+  ],
+  "feature_count": 43,
+  "feature_order": [
+    "url_length",
+    "domain_length",
+    "path_length",
+    "num_dots",
+    "num_hyphens",
+    "num_underscores",
+    "num_slashes",
+    "num_digits",
+    "num_special_chars",
+    "num_subdomains",
+    "num_query_params",
+    "path_depth",
+    "has_at_symbol",
+    "has_ip_address",
+    "uses_https",
+    "has_port",
+    "has_url_encoding",
+    "has_suspicious_tld",
+    "has_suspicious_keywords",
+    "has_double_slash_redirect",
+    "is_shortened_url",
+    "url_parse_error",
+    "num_forms",
+    "num_input_fields",
+    "num_password_fields",
+    "has_login_form",
+    "num_forms_with_external_action",
+    "has_form_action_empty_or_javascript",
+    "num_links",
+    "num_internal_links",
+    "num_external_links",
+    "external_link_ratio",
+    "num_links_with_mismatched_text",
+    "num_scripts",
+    "num_iframes",
+    "has_hidden_iframe",
+    "has_suspicious_js_patterns",
+    "num_meta_refresh_redirects",
+    "title_length",
+    "has_favicon",
+    "num_images",
+    "text_to_html_ratio",
+    "html_parse_error"
+  ],
+  "bug_1_exp14_dataset_truncation": {
+    "finding": "In EXP-14 run_experiment.py line 290, rendering was capped with 'and idx < 1000', resulting in only the first ~300 sparse samples being rendered. All subsequent 7,910 rows received delta_num_links=0 and fallback static features.",
+    "impact": "Over 88% of dataset samples had zero rendered deltas in the cached dataset."
+  },
+  "bug_2_exp15_candidate_score_bypass": {
+    "finding": "In EXP-15 run_experiment.py lines 324-328 (Candidates B, C, D, E, G), the code evaluated s1 (static score) and applied a heuristic rule: 'if delta_links >= 10 and strong_veto == 0: prob = 0.30 else: s1 >= 0.50'.",
+    "impact": "The production model XGBoost predict_proba() was NEVER called with the 43-feature rendered vector! The candidates only checked delta_links on a truncated dataset and manually forced score=0.30."
+  },
+  "bug_3_cascade_meta_feature_isolation": {
+    "finding": "In EXP-15 Candidate F, a separate Stage 2 LogisticRegression model was trained on 5 meta-features (stage1_score, delta_num_links, delta_num_internal_links, strong_phishing_evidence_score, is_spa_shell_pattern) rather than passing the full 43 rendered features through the production classifier.",
+    "impact": "The full 43-feature rendered representation was completely isolated and never evaluated against the production XGBoost model."
+  }
+}

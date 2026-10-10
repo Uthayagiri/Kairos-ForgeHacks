@@ -1,0 +1,983 @@
+{
+  "timestamp_utc": "2026-09-16T04:07:27.328077+00:00",
+  "model_identity": {
+    "model_version": "2.1.0",
+    "model_name": "Balanced Regularized XGBoost Phishing Detector (Candidate A4)",
+    "algorithm": "XGBClassifier",
+    "sha256_hash": "7a80ec64d1d39530f0283bd62758de990f71fe8fe0e92933fa0ada1ea904b0c2",
+    "feature_columns_count": 43,
+    "hyperparameters": {
+      "colsample_bytree": 0.7,
+      "learning_rate": 0.05,
+      "max_depth": 4,
+      "n_estimators": 200,
+      "reg_lambda": 1.0,
+      "scale_pos_weight": 5.0,
+      "subsample": 0.95
+    },
+    "scale_pos_weight": 5.0
+  },
+  "dataset_composition": {
+    "total_samples": 8910,
+    "legitimate_samples": 7005,
+    "phishing_samples": 1905,
+    "imbalance_ratio": "3.6772:1",
+    "unique_urls": 8910,
+    "duplicate_urls": 0,
+    "unique_registered_domains": 3049,
+    "duplicate_feature_vectors": 0,
+    "missing_values_total": 0,
+    "parse_errors": {
+      "url": 0,
+      "html": 68
+    },
+    "source_distribution": {
+      "OpenPhish": {
+        "legitimate": 0,
+        "phishing": 196,
+        "total": 196
+      },
+      "PhishTank": {
+        "legitimate": 0,
+        "phishing": 1709,
+        "total": 1709
+      },
+      "Tranco Top-1M": {
+        "legitimate": 2512,
+        "phishing": 0,
+        "total": 2512
+      },
+      "tranco_internal_link_crawl": {
+        "legitimate": 3841,
+        "phishing": 0,
+        "total": 3841
+      },
+      "unknown": {
+        "legitimate": 652,
+        "phishing": 0,
+        "total": 652
+      }
+    },
+    "top_domains_overall": {
+      "google.com": 179,
+      "vercel.app": 171,
+      "pages.dev": 80,
+      "gov.in": 77,
+      "webflow.io": 59,
+      "netlify.app": 57,
+      "ac.in": 53,
+      "com.br": 46,
+      "gitbook.io": 46,
+      "iceiy.com": 43,
+      "co.uk": 42,
+      "ac.uk": 40,
+      "github.io": 38,
+      "blogspot.com": 37,
+      "edu.au": 32
+    },
+    "top_domains_legitimate": {
+      "gov.in": 77,
+      "ac.in": 53,
+      "ac.uk": 40,
+      "co.uk": 38,
+      "com.br": 35,
+      "edu.au": 32,
+      "co.jp": 26,
+      "gov.uk": 16,
+      "com.cn": 15,
+      "ne.jp": 10
+    },
+    "top_domains_phishing": {
+      "google.com": 176,
+      "vercel.app": 168,
+      "pages.dev": 77,
+      "webflow.io": 56,
+      "netlify.app": 54,
+      "gitbook.io": 43,
+      "iceiy.com": 43,
+      "github.io": 37,
+      "blogspot.com": 34,
+      "framer.app": 32
+    },
+    "tld_distribution_legitimate": {
+      ".com": 3598,
+      ".org": 565,
+      ".edu": 260,
+      ".net": 259,
+      ".ru": 259,
+      ".gov": 215,
+      ".io": 174,
+      ".in": 162,
+      ".de": 146,
+      ".uk": 100
+    },
+    "tld_distribution_phishing": {
+      ".com": 682,
+      ".app": 338,
+      ".io": 155,
+      ".dev": 101,
+      ".net": 46,
+      ".me": 46,
+      ".de": 30,
+      ".run": 24,
+      ".host": 24,
+      ".co": 22
+    },
+    "login_page_counts": {
+      "legitimate_has_login_form": 1154,
+      "phishing_has_login_form": 352,
+      "legitimate_has_password_field": 236,
+      "phishing_has_password_field": 203
+    },
+    "spa_javascript_heavy_counts": {
+      "legitimate_spa_candidates": 859,
+      "phishing_spa_candidates": 1084
+    },
+    "link_count_distribution": {
+      "legitimate": {
+        "count": 7005.0,
+        "mean": 149.48,
+        "std": 238.15,
+        "min": 0.0,
+        "25%": 43.0,
+        "50%": 104.0,
+        "75%": 191.0,
+        "max": 8854.0
+      },
+      "phishing": {
+        "count": 1905.0,
+        "mean": 19.27,
+        "std": 94.13,
+        "min": 0.0,
+        "25%": 0.0,
+        "50%": 2.0,
+        "75%": 9.0,
+        "max": 1576.0
+      }
+    }
+  },
+  "data_leakage": {
+    "stratified_split_domain_overlap_count": 1014,
+    "stratified_split_domain_overlap_pct": 81.71,
+    "group_split_domain_overlap_count": 0,
+    "group_split_domain_overlap_pct": 0.0,
+    "identical_feature_vector_count": 0
+  },
+  "production_model_evaluation": {
+    "domain_disjoint_held_out_test_set": {
+      "accuracy": 0.9686,
+      "precision": 0.8915,
+      "recall": 0.9856,
+      "f1_score": 0.9362,
+      "specificity": 0.9634,
+      "false_positive_rate": 0.0366,
+      "false_negative_rate": 0.0144,
+      "roc_auc": 0.9976,
+      "pr_auc": 0.9927,
+      "brier_score": 0.0222,
+      "confusion_matrix": {
+        "tn": 1315,
+        "fp": 50,
+        "fn": 6,
+        "tp": 411
+      }
+    },
+    "stratified_held_out_test_set": {
+      "accuracy": 0.9574,
+      "precision": 0.8555,
+      "recall": 0.9633,
+      "f1_score": 0.9062,
+      "specificity": 0.9557,
+      "false_positive_rate": 0.0443,
+      "false_negative_rate": 0.0367,
+      "roc_auc": 0.9906,
+      "pr_auc": 0.9792,
+      "brier_score": 0.0298,
+      "confusion_matrix": {
+        "tn": 1339,
+        "fp": 62,
+        "fn": 14,
+        "tp": 367
+      }
+    },
+    "full_dataset_evaluation": {
+      "accuracy": 0.962,
+      "precision": 0.8622,
+      "recall": 0.9785,
+      "f1_score": 0.9166,
+      "specificity": 0.9575,
+      "false_positive_rate": 0.0425,
+      "false_negative_rate": 0.0215,
+      "roc_auc": 0.9945,
+      "pr_auc": 0.9862,
+      "brier_score": 0.0274,
+      "confusion_matrix": {
+        "tn": 6707,
+        "fp": 298,
+        "fn": 41,
+        "tp": 1864
+      }
+    },
+    "risk_score_distribution": {
+      "low_risk_count_prob_lt_0_30": 1281,
+      "medium_risk_count_prob_0_30_to_0_70": 76,
+      "high_risk_count_prob_gte_0_70": 425,
+      "quantiles": {
+        "p10": 0.0022,
+        "p25": 0.0037,
+        "p50": 0.0171,
+        "p75": 0.5503,
+        "p90": 0.9891,
+        "p99": 0.9983
+      }
+    }
+  },
+  "error_analysis": {
+    "false_positive_count": 50,
+    "false_negative_count": 6,
+    "top_15_false_positives": [
+      {
+        "url": "https://smily.check24.de/benefits",
+        "domain": "check24.de",
+        "pred_prob": 0.9236,
+        "num_links": 51,
+        "num_internal_links": 6,
+        "domain_length": 16,
+        "has_login_form": 0,
+        "num_scripts": 16,
+        "uses_https": 1,
+        "has_suspicious_keywords": 0
+      },
+      {
+        "url": "https://register.state.gov/contactus/contactusform",
+        "domain": "state.gov",
+        "pred_prob": 0.9155,
+        "num_links": 0,
+        "num_internal_links": 0,
+        "domain_length": 18,
+        "has_login_form": 0,
+        "num_scripts": 1,
+        "uses_https": 1,
+        "has_suspicious_keywords": 0
+      },
+      {
+        "url": "https://facilities.aicte-india.org/report/",
+        "domain": "aicte-india.org",
+        "pred_prob": 0.8981,
+        "num_links": 0,
+        "num_internal_links": 0,
+        "domain_length": 26,
+        "has_login_form": 0,
+        "num_scripts": 0,
+        "uses_https": 1,
+        "has_suspicious_keywords": 0
+      },
+      {
+        "url": "https://facilities.aicte-india.org/pgdm/",
+        "domain": "aicte-india.org",
+        "pred_prob": 0.894,
+        "num_links": 2,
+        "num_internal_links": 2,
+        "domain_length": 26,
+        "has_login_form": 0,
+        "num_scripts": 2,
+        "uses_https": 1,
+        "has_suspicious_keywords": 0
+      },
+      {
+        "url": "https://lp.chartbeat.com/navigating-new-traffic-landscape-chartbeat?cid=C02924",
+        "domain": "chartbeat.com",
+        "pred_prob": 0.8756,
+        "num_links": 4,
+        "num_internal_links": 0,
+        "domain_length": 16,
+        "has_login_form": 0,
+        "num_scripts": 24,
+        "uses_https": 1,
+        "has_suspicious_keywords": 0
+      },
+      {
+        "url": "https://mediakit.infobae.com/contactocomercial/colombia",
+        "domain": "infobae.com",
+        "pred_prob": 0.8727,
+        "num_links": 0,
+        "num_internal_links": 0,
+        "domain_length": 20,
+        "has_login_form": 0,
+        "num_scripts": 2,
+        "uses_https": 1,
+        "has_suspicious_keywords": 0
+      },
+      {
+        "url": "https://sportfilm800.com",
+        "domain": "sportfilm800.com",
+        "pred_prob": 0.8663,
+        "num_links": 2,
+        "num_internal_links": 0,
+        "domain_length": 16,
+        "has_login_form": 0,
+        "num_scripts": 18,
+        "uses_https": 1,
+        "has_suspicious_keywords": 0
+      },
+      {
+        "url": "https://community.joomla.org/user-groups.html",
+        "domain": "joomla.org",
+        "pred_prob": 0.862,
+        "num_links": 0,
+        "num_internal_links": 0,
+        "domain_length": 20,
+        "has_login_form": 0,
+        "num_scripts": 3,
+        "uses_https": 1,
+        "has_suspicious_keywords": 0
+      },
+      {
+        "url": "https://customerservice.aliexpress.com/category?categoryId=21037513&hcAppId=1248&hcFromCode=Xn2Tk1tb7&hcSessionId=26-1248-c80e752a-3387-40f3-ba39-243131970887",
+        "domain": "aliexpress.com",
+        "pred_prob": 0.8564,
+        "num_links": 0,
+        "num_internal_links": 0,
+        "domain_length": 30,
+        "has_login_form": 0,
+        "num_scripts": 26,
+        "uses_https": 1,
+        "has_suspicious_keywords": 1
+      },
+      {
+        "url": "https://console.fyber.com/login",
+        "domain": "fyber.com",
+        "pred_prob": 0.8254,
+        "num_links": 0,
+        "num_internal_links": 0,
+        "domain_length": 17,
+        "has_login_form": 0,
+        "num_scripts": 2,
+        "uses_https": 1,
+        "has_suspicious_keywords": 1
+      },
+      {
+        "url": "https://glasvezelactiveren.nl",
+        "domain": "glasvezelactiveren.nl",
+        "pred_prob": 0.8199,
+        "num_links": 0,
+        "num_internal_links": 0,
+        "domain_length": 21,
+        "has_login_form": 0,
+        "num_scripts": 0,
+        "uses_https": 1,
+        "has_suspicious_keywords": 0
+      },
+      {
+        "url": "https://promo.acronis.com/Cloud-Referral-Program.html",
+        "domain": "acronis.com",
+        "pred_prob": 0.8119,
+        "num_links": 5,
+        "num_internal_links": 1,
+        "domain_length": 17,
+        "has_login_form": 0,
+        "num_scripts": 8,
+        "uses_https": 1,
+        "has_suspicious_keywords": 0
+      },
+      {
+        "url": "https://sso.pushwoosh.com/login",
+        "domain": "pushwoosh.com",
+        "pred_prob": 0.8088,
+        "num_links": 0,
+        "num_internal_links": 0,
+        "domain_length": 17,
+        "has_login_form": 0,
+        "num_scripts": 3,
+        "uses_https": 1,
+        "has_suspicious_keywords": 1
+      },
+      {
+        "url": "https://academy.amnesty.org/learn",
+        "domain": "amnesty.org",
+        "pred_prob": 0.8074,
+        "num_links": 0,
+        "num_internal_links": 0,
+        "domain_length": 19,
+        "has_login_form": 0,
+        "num_scripts": 5,
+        "uses_https": 1,
+        "has_suspicious_keywords": 0
+      },
+      {
+        "url": "https://www.palmplaystore.com/Introduction/",
+        "domain": "palmplaystore.com",
+        "pred_prob": 0.8041,
+        "num_links": 0,
+        "num_internal_links": 0,
+        "domain_length": 21,
+        "has_login_form": 0,
+        "num_scripts": 1,
+        "uses_https": 1,
+        "has_suspicious_keywords": 0
+      }
+    ],
+    "top_15_false_negatives": [
+      {
+        "url": "https://acessopj.com",
+        "domain": "acessopj.com",
+        "pred_prob": 0.0963,
+        "num_links": 0,
+        "num_internal_links": 0,
+        "domain_length": 12,
+        "has_login_form": 0,
+        "num_scripts": 2,
+        "uses_https": 1,
+        "is_shortened_url": 0,
+        "has_suspicious_keywords": 0
+      },
+      {
+        "url": "https://www.abapj.com",
+        "domain": "abapj.com",
+        "pred_prob": 0.319,
+        "num_links": 0,
+        "num_internal_links": 0,
+        "domain_length": 13,
+        "has_login_form": 0,
+        "num_scripts": 1,
+        "uses_https": 1,
+        "is_shortened_url": 0,
+        "has_suspicious_keywords": 0
+      },
+      {
+        "url": "https://loveaeen.com",
+        "domain": "loveaeen.com",
+        "pred_prob": 0.3194,
+        "num_links": 17,
+        "num_internal_links": 17,
+        "domain_length": 12,
+        "has_login_form": 1,
+        "num_scripts": 2,
+        "uses_https": 1,
+        "is_shortened_url": 0,
+        "has_suspicious_keywords": 0
+      },
+      {
+        "url": "https://ashutoshhospital.com/Korea.html",
+        "domain": "ashutoshhospital.com",
+        "pred_prob": 0.3965,
+        "num_links": 61,
+        "num_internal_links": 56,
+        "domain_length": 20,
+        "has_login_form": 1,
+        "num_scripts": 37,
+        "uses_https": 1,
+        "is_shortened_url": 0,
+        "has_suspicious_keywords": 0
+      },
+      {
+        "url": "https://linktr.ee/Newmaiiiling",
+        "domain": "linktr.ee",
+        "pred_prob": 0.4232,
+        "num_links": 56,
+        "num_internal_links": 55,
+        "domain_length": 9,
+        "has_login_form": 0,
+        "num_scripts": 51,
+        "uses_https": 1,
+        "is_shortened_url": 1,
+        "has_suspicious_keywords": 0
+      },
+      {
+        "url": "https://sites.google.com/view/tapecaria-dias/",
+        "domain": "google.com",
+        "pred_prob": 0.4411,
+        "num_links": 19,
+        "num_internal_links": 19,
+        "domain_length": 16,
+        "has_login_form": 0,
+        "num_scripts": 12,
+        "uses_https": 1,
+        "is_shortened_url": 0,
+        "has_suspicious_keywords": 0
+      }
+    ],
+    "false_positive_profile": {
+      "fp_mean_links": 8.08,
+      "tn_mean_links": 147.37,
+      "fp_median_links": 0.0,
+      "tn_median_links": 108.0,
+      "fp_mean_domain_len": 15.66,
+      "tn_mean_domain_len": 11.93,
+      "fp_login_form_rate": 0.06,
+      "tn_login_form_rate": 0.146,
+      "fp_http_rate": 0.0,
+      "tn_http_rate": 0.0076,
+      "fp_sparse_rate": 0.88
+    },
+    "false_negative_profile": {
+      "fn_mean_links": 25.5,
+      "tp_mean_links": 9.54,
+      "fn_https_rate": 1.0,
+      "tp_https_rate": 0.9416,
+      "fn_shortener_rate": 0.1667,
+      "tp_shortener_rate": 0.0122
+    }
+  },
+  "feature_analysis": {
+    "all_features": [
+      {
+        "name": "url_length",
+        "dtype": "int64",
+        "tree_importance": 0.016278,
+        "missing_count": 0
+      },
+      {
+        "name": "domain_length",
+        "dtype": "int64",
+        "tree_importance": 0.048038,
+        "missing_count": 0
+      },
+      {
+        "name": "path_length",
+        "dtype": "int64",
+        "tree_importance": 0.025519,
+        "missing_count": 0
+      },
+      {
+        "name": "num_dots",
+        "dtype": "int64",
+        "tree_importance": 0.017732,
+        "missing_count": 0
+      },
+      {
+        "name": "num_hyphens",
+        "dtype": "int64",
+        "tree_importance": 0.014088,
+        "missing_count": 0
+      },
+      {
+        "name": "num_underscores",
+        "dtype": "int64",
+        "tree_importance": 0.008041,
+        "missing_count": 0
+      },
+      {
+        "name": "num_slashes",
+        "dtype": "int64",
+        "tree_importance": 0.022867,
+        "missing_count": 0
+      },
+      {
+        "name": "num_digits",
+        "dtype": "int64",
+        "tree_importance": 0.023485,
+        "missing_count": 0
+      },
+      {
+        "name": "num_special_chars",
+        "dtype": "int64",
+        "tree_importance": 0.012296,
+        "missing_count": 0
+      },
+      {
+        "name": "num_subdomains",
+        "dtype": "int64",
+        "tree_importance": 0.018775,
+        "missing_count": 0
+      },
+      {
+        "name": "num_query_params",
+        "dtype": "int64",
+        "tree_importance": 0.014002,
+        "missing_count": 0
+      },
+      {
+        "name": "path_depth",
+        "dtype": "int64",
+        "tree_importance": 0.019582,
+        "missing_count": 0
+      },
+      {
+        "name": "has_at_symbol",
+        "dtype": "int64",
+        "tree_importance": 0.0,
+        "missing_count": 0
+      },
+      {
+        "name": "has_ip_address",
+        "dtype": "int64",
+        "tree_importance": 0.0,
+        "missing_count": 0
+      },
+      {
+        "name": "uses_https",
+        "dtype": "int64",
+        "tree_importance": 0.03579,
+        "missing_count": 0
+      },
+      {
+        "name": "has_port",
+        "dtype": "int64",
+        "tree_importance": 0.0,
+        "missing_count": 0
+      },
+      {
+        "name": "has_url_encoding",
+        "dtype": "int64",
+        "tree_importance": 0.0096,
+        "missing_count": 0
+      },
+      {
+        "name": "has_suspicious_tld",
+        "dtype": "int64",
+        "tree_importance": 0.003737,
+        "missing_count": 0
+      },
+      {
+        "name": "has_suspicious_keywords",
+        "dtype": "int64",
+        "tree_importance": 0.003323,
+        "missing_count": 0
+      },
+      {
+        "name": "has_double_slash_redirect",
+        "dtype": "int64",
+        "tree_importance": 0.0,
+        "missing_count": 0
+      },
+      {
+        "name": "is_shortened_url",
+        "dtype": "int64",
+        "tree_importance": 0.00979,
+        "missing_count": 0
+      },
+      {
+        "name": "url_parse_error",
+        "dtype": "int64",
+        "tree_importance": 0.0,
+        "missing_count": 0
+      },
+      {
+        "name": "num_forms",
+        "dtype": "int64",
+        "tree_importance": 0.007194,
+        "missing_count": 0
+      },
+      {
+        "name": "num_input_fields",
+        "dtype": "int64",
+        "tree_importance": 0.00912,
+        "missing_count": 0
+      },
+      {
+        "name": "num_password_fields",
+        "dtype": "int64",
+        "tree_importance": 0.011012,
+        "missing_count": 0
+      },
+      {
+        "name": "has_login_form",
+        "dtype": "int64",
+        "tree_importance": 0.015134,
+        "missing_count": 0
+      },
+      {
+        "name": "num_forms_with_external_action",
+        "dtype": "int64",
+        "tree_importance": 0.004276,
+        "missing_count": 0
+      },
+      {
+        "name": "has_form_action_empty_or_javascript",
+        "dtype": "int64",
+        "tree_importance": 0.007727,
+        "missing_count": 0
+      },
+      {
+        "name": "num_links",
+        "dtype": "int64",
+        "tree_importance": 0.264683,
+        "missing_count": 0
+      },
+      {
+        "name": "num_internal_links",
+        "dtype": "int64",
+        "tree_importance": 0.165939,
+        "missing_count": 0
+      },
+      {
+        "name": "num_external_links",
+        "dtype": "int64",
+        "tree_importance": 0.065388,
+        "missing_count": 0
+      },
+      {
+        "name": "external_link_ratio",
+        "dtype": "float64",
+        "tree_importance": 0.030348,
+        "missing_count": 0
+      },
+      {
+        "name": "num_links_with_mismatched_text",
+        "dtype": "int64",
+        "tree_importance": 0.014838,
+        "missing_count": 0
+      },
+      {
+        "name": "num_scripts",
+        "dtype": "int64",
+        "tree_importance": 0.011427,
+        "missing_count": 0
+      },
+      {
+        "name": "num_iframes",
+        "dtype": "int64",
+        "tree_importance": 0.016745,
+        "missing_count": 0
+      },
+      {
+        "name": "has_hidden_iframe",
+        "dtype": "int64",
+        "tree_importance": 0.010028,
+        "missing_count": 0
+      },
+      {
+        "name": "has_suspicious_js_patterns",
+        "dtype": "int64",
+        "tree_importance": 0.009253,
+        "missing_count": 0
+      },
+      {
+        "name": "num_meta_refresh_redirects",
+        "dtype": "int64",
+        "tree_importance": 0.00416,
+        "missing_count": 0
+      },
+      {
+        "name": "title_length",
+        "dtype": "int64",
+        "tree_importance": 0.011144,
+        "missing_count": 0
+      },
+      {
+        "name": "has_favicon",
+        "dtype": "int64",
+        "tree_importance": 0.01025,
+        "missing_count": 0
+      },
+      {
+        "name": "num_images",
+        "dtype": "int64",
+        "tree_importance": 0.013606,
+        "missing_count": 0
+      },
+      {
+        "name": "text_to_html_ratio",
+        "dtype": "float64",
+        "tree_importance": 0.007741,
+        "missing_count": 0
+      },
+      {
+        "name": "html_parse_error",
+        "dtype": "int64",
+        "tree_importance": 0.007041,
+        "missing_count": 0
+      }
+    ],
+    "top_15_tree_importances": [
+      {
+        "feature": "num_links",
+        "importance": 0.264683
+      },
+      {
+        "feature": "num_internal_links",
+        "importance": 0.165939
+      },
+      {
+        "feature": "num_external_links",
+        "importance": 0.065388
+      },
+      {
+        "feature": "domain_length",
+        "importance": 0.048038
+      },
+      {
+        "feature": "uses_https",
+        "importance": 0.03579
+      },
+      {
+        "feature": "external_link_ratio",
+        "importance": 0.030348
+      },
+      {
+        "feature": "path_length",
+        "importance": 0.025519
+      },
+      {
+        "feature": "num_digits",
+        "importance": 0.023485
+      },
+      {
+        "feature": "num_slashes",
+        "importance": 0.022867
+      },
+      {
+        "feature": "path_depth",
+        "importance": 0.019582
+      },
+      {
+        "feature": "num_subdomains",
+        "importance": 0.018775
+      },
+      {
+        "feature": "num_dots",
+        "importance": 0.017732
+      },
+      {
+        "feature": "num_iframes",
+        "importance": 0.016745
+      },
+      {
+        "feature": "url_length",
+        "importance": 0.016278
+      },
+      {
+        "feature": "has_login_form",
+        "importance": 0.015134
+      }
+    ],
+    "top_15_permutation_importances": [
+      {
+        "feature": "num_internal_links",
+        "importance_mean": 0.208633,
+        "importance_std": 0.017491
+      },
+      {
+        "feature": "num_links",
+        "importance_mean": 0.047482,
+        "importance_std": 0.006506
+      },
+      {
+        "feature": "domain_length",
+        "importance_mean": 0.03789,
+        "importance_std": 0.003181
+      },
+      {
+        "feature": "path_length",
+        "importance_mean": 0.030695,
+        "importance_std": 0.005952
+      },
+      {
+        "feature": "uses_https",
+        "importance_mean": 0.01199,
+        "importance_std": 0.0
+      },
+      {
+        "feature": "url_length",
+        "importance_mean": 0.011031,
+        "importance_std": 0.002446
+      },
+      {
+        "feature": "num_external_links",
+        "importance_mean": 0.006715,
+        "importance_std": 0.001795
+      },
+      {
+        "feature": "num_images",
+        "importance_mean": 0.005276,
+        "importance_std": 0.002797
+      },
+      {
+        "feature": "num_digits",
+        "importance_mean": 0.004317,
+        "importance_std": 0.004396
+      },
+      {
+        "feature": "num_scripts",
+        "importance_mean": 0.003837,
+        "importance_std": 0.002446
+      },
+      {
+        "feature": "text_to_html_ratio",
+        "importance_mean": 0.002878,
+        "importance_std": 0.000959
+      },
+      {
+        "feature": "title_length",
+        "importance_mean": 0.002398,
+        "importance_std": 0.001517
+      },
+      {
+        "feature": "num_dots",
+        "importance_mean": 0.001918,
+        "importance_std": 0.000959
+      },
+      {
+        "feature": "is_shortened_url",
+        "importance_mean": 0.001918,
+        "importance_std": 0.000959
+      },
+      {
+        "feature": "has_login_form",
+        "importance_mean": 0.001918,
+        "importance_std": 0.000959
+      }
+    ],
+    "top2_feature_concentration_pct": 43.06,
+    "top5_feature_concentration_pct": 57.98,
+    "multicollinear_pairs": [
+      {
+        "feature_1": "num_links",
+        "feature_2": "num_internal_links",
+        "correlation": 0.9717
+      },
+      {
+        "feature_1": "num_slashes",
+        "feature_2": "path_depth",
+        "correlation": 0.9341
+      },
+      {
+        "feature_1": "num_forms",
+        "feature_2": "num_input_fields",
+        "correlation": 0.8453
+      },
+      {
+        "feature_1": "url_length",
+        "feature_2": "num_digits",
+        "correlation": 0.8282
+      },
+      {
+        "feature_1": "num_dots",
+        "feature_2": "num_subdomains",
+        "correlation": 0.7562
+      },
+      {
+        "feature_1": "path_length",
+        "feature_2": "num_hyphens",
+        "correlation": 0.7223
+      },
+      {
+        "feature_1": "path_length",
+        "feature_2": "path_depth",
+        "correlation": 0.7125
+      }
+    ]
+  },
+  "generalization_slices": {
+    "legitimate_login_sso_test": {
+      "total_samples": 195,
+      "false_positives": 3,
+      "false_positive_rate": 0.0154,
+      "mean_predicted_prob": 0.0372
+    },
+    "sparse_legitimate_pages_test": {
+      "total_samples": 185,
+      "false_positives": 44,
+      "false_positive_rate": 0.2378,
+      "mean_predicted_prob": 0.2606
+    },
+    "shortened_url_phishing_recall": 0.8333,
+    "https_phishing_recall": 0.9847,
+    "sparse_phishing_recall": 0.989,
+    "young_domain_cohort": {
+      "total_cohort_samples": 25,
+      "available": true
+    }
+  }
+}

@@ -1,0 +1,237 @@
+[
+  {
+    "feature": "num_links",
+    "importance_mean": 0.092417,
+    "importance_std": 0.005404
+  },
+  {
+    "feature": "num_digits",
+    "importance_mean": 0.061611,
+    "importance_std": 0.006179
+  },
+  {
+    "feature": "internal_link_ratio",
+    "importance_mean": 0.041232,
+    "importance_std": 0.002417
+  },
+  {
+    "feature": "uses_https",
+    "importance_mean": 0.017062,
+    "importance_std": 0.004077
+  },
+  {
+    "feature": "external_link_ratio",
+    "importance_mean": 0.014692,
+    "importance_std": 0.001773
+  },
+  {
+    "feature": "num_external_links",
+    "importance_mean": 0.009479,
+    "importance_std": 0.003351
+  },
+  {
+    "feature": "num_images",
+    "importance_mean": 0.009479,
+    "importance_std": 0.002997
+  },
+  {
+    "feature": "link_density_per_kb_html",
+    "importance_mean": 0.006635,
+    "importance_std": 0.002322
+  },
+  {
+    "feature": "num_dots",
+    "importance_mean": 0.005213,
+    "importance_std": 0.001773
+  },
+  {
+    "feature": "num_underscores",
+    "importance_mean": 0.004265,
+    "importance_std": 0.002763
+  },
+  {
+    "feature": "num_query_params",
+    "importance_mean": 0.004265,
+    "importance_std": 0.001773
+  },
+  {
+    "feature": "links_per_form",
+    "importance_mean": 0.004265,
+    "importance_std": 0.002763
+  },
+  {
+    "feature": "has_hidden_iframe",
+    "importance_mean": 0.003318,
+    "importance_std": 0.001896
+  },
+  {
+    "feature": "is_shortened_url",
+    "importance_mean": 0.002844,
+    "importance_std": 0.001773
+  },
+  {
+    "feature": "num_hyphens",
+    "importance_mean": 0.001896,
+    "importance_std": 0.001773
+  },
+  {
+    "feature": "has_suspicious_js_patterns",
+    "importance_mean": 0.001422,
+    "importance_std": 0.001161
+  },
+  {
+    "feature": "domain_length",
+    "importance_mean": 0.000948,
+    "importance_std": 0.004132
+  },
+  {
+    "feature": "has_favicon",
+    "importance_mean": 0.000948,
+    "importance_std": 0.001161
+  },
+  {
+    "feature": "num_special_chars",
+    "importance_mean": 0.0,
+    "importance_std": 0.0
+  },
+  {
+    "feature": "has_at_symbol",
+    "importance_mean": 0.0,
+    "importance_std": 0.0
+  },
+  {
+    "feature": "has_ip_address",
+    "importance_mean": 0.0,
+    "importance_std": 0.0
+  },
+  {
+    "feature": "has_port",
+    "importance_mean": 0.0,
+    "importance_std": 0.0
+  },
+  {
+    "feature": "has_url_encoding",
+    "importance_mean": 0.0,
+    "importance_std": 0.0
+  },
+  {
+    "feature": "has_suspicious_tld",
+    "importance_mean": 0.0,
+    "importance_std": 0.0
+  },
+  {
+    "feature": "has_suspicious_keywords",
+    "importance_mean": 0.0,
+    "importance_std": 0.0
+  },
+  {
+    "feature": "has_double_slash_redirect",
+    "importance_mean": 0.0,
+    "importance_std": 0.0
+  },
+  {
+    "feature": "url_parse_error",
+    "importance_mean": 0.0,
+    "importance_std": 0.0
+  },
+  {
+    "feature": "num_forms",
+    "importance_mean": 0.0,
+    "importance_std": 0.0
+  },
+  {
+    "feature": "num_forms_with_external_action",
+    "importance_mean": 0.0,
+    "importance_std": 0.0
+  },
+  {
+    "feature": "num_links_with_mismatched_text",
+    "importance_mean": 0.0,
+    "importance_std": 0.0
+  },
+  {
+    "feature": "num_meta_refresh_redirects",
+    "importance_mean": 0.0,
+    "importance_std": 0.0
+  },
+  {
+    "feature": "html_parse_error",
+    "importance_mean": 0.0,
+    "importance_std": 0.0
+  },
+  {
+    "feature": "has_login_form",
+    "importance_mean": -0.000948,
+    "importance_std": 0.001896
+  },
+  {
+    "feature": "num_input_fields",
+    "importance_mean": -0.001422,
+    "importance_std": 0.001161
+  },
+  {
+    "feature": "num_password_fields",
+    "importance_mean": -0.001422,
+    "importance_std": 0.001161
+  },
+  {
+    "feature": "num_iframes",
+    "importance_mean": -0.001896,
+    "importance_std": 0.001773
+  },
+  {
+    "feature": "num_subdomains",
+    "importance_mean": -0.00237,
+    "importance_std": 0.001499
+  },
+  {
+    "feature": "text_to_html_ratio",
+    "importance_mean": -0.004265,
+    "importance_std": 0.002322
+  },
+  {
+    "feature": "has_form_action_empty_or_javascript",
+    "importance_mean": -0.006161,
+    "importance_std": 0.002417
+  },
+  {
+    "feature": "links_per_input_field",
+    "importance_mean": -0.008057,
+    "importance_std": 0.007125
+  },
+  {
+    "feature": "subdomain_to_apex_length_ratio",
+    "importance_mean": -0.009479,
+    "importance_std": 0.006179
+  },
+  {
+    "feature": "num_slashes",
+    "importance_mean": -0.012796,
+    "importance_std": 0.010661
+  },
+  {
+    "feature": "num_scripts",
+    "importance_mean": -0.017536,
+    "importance_std": 0.00385
+  },
+  {
+    "feature": "url_length",
+    "importance_mean": -0.027014,
+    "importance_std": 0.002417
+  },
+  {
+    "feature": "path_length",
+    "importance_mean": -0.027488,
+    "importance_std": 0.012046
+  },
+  {
+    "feature": "title_length",
+    "importance_mean": -0.050711,
+    "importance_std": 0.01034
+  },
+  {
+    "feature": "path_depth",
+    "importance_mean": -0.077251,
+    "importance_std": 0.003214
+  }
+]

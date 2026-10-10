@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SPA Test Page</title>
+</head>
+<body>
+    <div id="root">Loading application...</div>
+    <script>
+        setTimeout(() => {
+            const root = document.getElementById('root');
+            root.innerHTML = '<h2>Dashboard</h2><a href="/home">Home</a><a href="/settings">Settings</a><a href="https://partner.com">Partner</a>';
+        }, 100);
+    </script>
+</body>
+</html>

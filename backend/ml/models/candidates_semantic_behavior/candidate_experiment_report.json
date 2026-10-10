@@ -1,0 +1,305 @@
+{
+  "production_baseline": {
+    "model_version": "2.1.0",
+    "feature_count": 43,
+    "metrics": {
+      "accuracy": 0.9686,
+      "precision": 0.8915,
+      "recall": 0.9856,
+      "f1_score": 0.9362,
+      "specificity": 0.9634,
+      "false_positive_rate": 0.0366,
+      "false_negative_rate": 0.0144,
+      "roc_auc": 0.9976,
+      "pr_auc": 0.9927,
+      "brier_score": 0.0222,
+      "confusion_matrix": {
+        "tn": 1315,
+        "fp": 50,
+        "fn": 6,
+        "tp": 411
+      },
+      "slices": {
+        "sparse_legitimate_fpr": 0.2378,
+        "sparse_legitimate_fps": 44,
+        "sparse_legitimate_total": 185,
+        "legitimate_login_fpr": 0.0154,
+        "legitimate_login_fps": 3,
+        "legitimate_login_total": 195,
+        "shortened_phishing_recall": 0.8333,
+        "shortened_phishing_total": 6,
+        "https_phishing_recall": 0.9847,
+        "https_phishing_total": 393,
+        "sparse_phishing_recall": 0.989,
+        "sparse_phishing_total": 363
+      }
+    }
+  },
+  "ablations": {
+    "Ablation_A_Production_Baseline": {
+      "feature_count": 43,
+      "metrics": {
+        "accuracy": 0.9057,
+        "precision": 0.8716,
+        "recall": 0.7002,
+        "f1_score": 0.7766,
+        "specificity": 0.9685,
+        "false_positive_rate": 0.0315,
+        "false_negative_rate": 0.2998,
+        "roc_auc": 0.9769,
+        "pr_auc": 0.9205,
+        "brier_score": 0.0577,
+        "confusion_matrix": {
+          "tn": 1322,
+          "fp": 43,
+          "fn": 125,
+          "tp": 292
+        },
+        "slices": {
+          "sparse_legitimate_fpr": 0.2,
+          "sparse_legitimate_fps": 37,
+          "sparse_legitimate_total": 185,
+          "legitimate_login_fpr": 0.0256,
+          "legitimate_login_fps": 5,
+          "legitimate_login_total": 195,
+          "shortened_phishing_recall": 0.8333,
+          "shortened_phishing_total": 6,
+          "https_phishing_recall": 0.6819,
+          "https_phishing_total": 393,
+          "sparse_phishing_recall": 0.6887,
+          "sparse_phishing_total": 363
+        },
+        "top2_feature_concentration_pct": 44.27,
+        "top_15_features": {
+          "num_links": 0.3485669791698456,
+          "num_internal_links": 0.0941394716501236,
+          "domain_length": 0.06468047946691513,
+          "uses_https": 0.03497958183288574,
+          "num_slashes": 0.028375642374157906,
+          "path_length": 0.02621377818286419,
+          "external_link_ratio": 0.02469974383711815,
+          "num_external_links": 0.02459094673395157,
+          "num_digits": 0.022294223308563232,
+          "num_special_chars": 0.02055496536195278,
+          "num_dots": 0.019596699625253677,
+          "num_images": 0.01957809552550316,
+          "path_depth": 0.01952938176691532,
+          "url_length": 0.018140675500035286,
+          "num_scripts": 0.01666807197034359
+        }
+      }
+    },
+    "Ablation_B_Form_Behavior": {
+      "feature_count": 46,
+      "metrics": {
+        "accuracy": 0.9035,
+        "precision": 0.8679,
+        "recall": 0.693,
+        "f1_score": 0.7707,
+        "specificity": 0.9678,
+        "false_positive_rate": 0.0322,
+        "false_negative_rate": 0.307,
+        "roc_auc": 0.9764,
+        "pr_auc": 0.9173,
+        "brier_score": 0.0591,
+        "confusion_matrix": {
+          "tn": 1321,
+          "fp": 44,
+          "fn": 128,
+          "tp": 289
+        },
+        "slices": {
+          "sparse_legitimate_fpr": 0.2,
+          "sparse_legitimate_fps": 37,
+          "sparse_legitimate_total": 185,
+          "legitimate_login_fpr": 0.0256,
+          "legitimate_login_fps": 5,
+          "legitimate_login_total": 195,
+          "shortened_phishing_recall": 0.8333,
+          "shortened_phishing_total": 6,
+          "https_phishing_recall": 0.6743,
+          "https_phishing_total": 393,
+          "sparse_phishing_recall": 0.6804,
+          "sparse_phishing_total": 363
+        },
+        "top2_feature_concentration_pct": 41.98,
+        "top_15_features": {
+          "num_links": 0.3011517822742462,
+          "num_internal_links": 0.11868225783109665,
+          "domain_length": 0.05881013721227646,
+          "uses_https": 0.03523194044828415,
+          "num_external_links": 0.03496246784925461,
+          "num_slashes": 0.03008049540221691,
+          "external_link_ratio": 0.0257693063467741,
+          "path_length": 0.025472279638051987,
+          "num_digits": 0.02240685746073723,
+          "num_images": 0.02057737484574318,
+          "path_depth": 0.019984470680356026,
+          "credential_collection_pattern": 0.019330890849232674,
+          "num_special_chars": 0.018818119540810585,
+          "url_length": 0.017206503078341484,
+          "num_scripts": 0.016650855541229248
+        }
+      }
+    },
+    "Ablation_C_Page_Structure": {
+      "feature_count": 47,
+      "metrics": {
+        "accuracy": 0.8979,
+        "precision": 0.866,
+        "recall": 0.6667,
+        "f1_score": 0.7534,
+        "specificity": 0.9685,
+        "false_positive_rate": 0.0315,
+        "false_negative_rate": 0.3333,
+        "roc_auc": 0.9771,
+        "pr_auc": 0.9191,
+        "brier_score": 0.0584,
+        "confusion_matrix": {
+          "tn": 1322,
+          "fp": 43,
+          "fn": 139,
+          "tp": 278
+        },
+        "slices": {
+          "sparse_legitimate_fpr": 0.2,
+          "sparse_legitimate_fps": 37,
+          "sparse_legitimate_total": 185,
+          "legitimate_login_fpr": 0.0205,
+          "legitimate_login_fps": 4,
+          "legitimate_login_total": 195,
+          "shortened_phishing_recall": 0.8333,
+          "shortened_phishing_total": 6,
+          "https_phishing_recall": 0.6463,
+          "https_phishing_total": 393,
+          "sparse_phishing_recall": 0.6474,
+          "sparse_phishing_total": 363
+        },
+        "top2_feature_concentration_pct": 40.87,
+        "top_15_features": {
+          "num_links": 0.3046036660671234,
+          "num_internal_links": 0.10407552123069763,
+          "domain_length": 0.059407297521829605,
+          "num_external_links": 0.03516070917248726,
+          "uses_https": 0.034636784344911575,
+          "num_slashes": 0.030668742954730988,
+          "path_length": 0.02638208121061325,
+          "external_link_ratio": 0.02630777098238468,
+          "num_digits": 0.021444465965032578,
+          "num_images": 0.019298134371638298,
+          "num_special_chars": 0.019189687445759773,
+          "path_depth": 0.018223382532596588,
+          "url_length": 0.017716722562909126,
+          "num_scripts": 0.01725541241466999,
+          "num_dots": 0.015885349363088608
+        }
+      }
+    },
+    "Ablation_D_URL_Content_Consistency": {
+      "feature_count": 47,
+      "metrics": {
+        "accuracy": 0.9057,
+        "precision": 0.8716,
+        "recall": 0.7002,
+        "f1_score": 0.7766,
+        "specificity": 0.9685,
+        "false_positive_rate": 0.0315,
+        "false_negative_rate": 0.2998,
+        "roc_auc": 0.9774,
+        "pr_auc": 0.9209,
+        "brier_score": 0.0575,
+        "confusion_matrix": {
+          "tn": 1322,
+          "fp": 43,
+          "fn": 125,
+          "tp": 292
+        },
+        "slices": {
+          "sparse_legitimate_fpr": 0.1946,
+          "sparse_legitimate_fps": 36,
+          "sparse_legitimate_total": 185,
+          "legitimate_login_fpr": 0.0205,
+          "legitimate_login_fps": 4,
+          "legitimate_login_total": 195,
+          "shortened_phishing_recall": 0.8333,
+          "shortened_phishing_total": 6,
+          "https_phishing_recall": 0.6819,
+          "https_phishing_total": 393,
+          "sparse_phishing_recall": 0.6804,
+          "sparse_phishing_total": 363
+        },
+        "top2_feature_concentration_pct": 36.19,
+        "top_15_features": {
+          "num_links": 0.2582704424858093,
+          "num_internal_links": 0.10361511260271072,
+          "high_external_link_concentration": 0.09313570708036423,
+          "domain_length": 0.05626419559121132,
+          "num_external_links": 0.03492040932178497,
+          "uses_https": 0.03158542141318321,
+          "num_slashes": 0.02674584463238716,
+          "path_length": 0.026245880872011185,
+          "external_link_ratio": 0.023261994123458862,
+          "path_depth": 0.02063726633787155,
+          "num_digits": 0.01929471828043461,
+          "num_images": 0.019020184874534607,
+          "subdomain_to_apex_length_ratio": 0.01870846375823021,
+          "url_length": 0.016181956976652145,
+          "num_special_chars": 0.015927353873848915
+        }
+      }
+    },
+    "Ablation_E_Combined_Semantic_Behavior": {
+      "feature_count": 54,
+      "metrics": {
+        "accuracy": 0.8979,
+        "precision": 0.8638,
+        "recall": 0.6691,
+        "f1_score": 0.7541,
+        "specificity": 0.9678,
+        "false_positive_rate": 0.0322,
+        "false_negative_rate": 0.3309,
+        "roc_auc": 0.976,
+        "pr_auc": 0.9167,
+        "brier_score": 0.0592,
+        "confusion_matrix": {
+          "tn": 1321,
+          "fp": 44,
+          "fn": 138,
+          "tp": 279
+        },
+        "slices": {
+          "sparse_legitimate_fpr": 0.2054,
+          "sparse_legitimate_fps": 38,
+          "sparse_legitimate_total": 185,
+          "legitimate_login_fpr": 0.0154,
+          "legitimate_login_fps": 3,
+          "legitimate_login_total": 195,
+          "shortened_phishing_recall": 0.8333,
+          "shortened_phishing_total": 6,
+          "https_phishing_recall": 0.6489,
+          "https_phishing_total": 393,
+          "sparse_phishing_recall": 0.6391,
+          "sparse_phishing_total": 363
+        },
+        "top2_feature_concentration_pct": 39.05,
+        "top_15_features": {
+          "num_links": 0.2833017110824585,
+          "num_internal_links": 0.10718131065368652,
+          "high_external_link_concentration": 0.07723330706357956,
+          "domain_length": 0.0479632243514061,
+          "num_external_links": 0.03251369670033455,
+          "uses_https": 0.02731255069375038,
+          "num_slashes": 0.026741191744804382,
+          "path_length": 0.023763960227370262,
+          "external_link_ratio": 0.01961355470120907,
+          "path_depth": 0.0195782370865345,
+          "num_digits": 0.01820432022213936,
+          "num_meta_refresh_redirects": 0.01676122657954693,
+          "num_special_chars": 0.015004445798695087,
+          "num_scripts": 0.014036799781024456,
+          "num_links_with_mismatched_text": 0.013236799277365208
+        }
+      }
+    }
+  }
+}

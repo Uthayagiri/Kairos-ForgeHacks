@@ -1,0 +1,13 @@
+{
+  "total_dataset_rows": 8910,
+  "train_samples": 7111,
+  "test_samples": 1799,
+  "train_apex_domains": 2520,
+  "test_apex_domains": 631,
+  "domain_overlap": 0,
+  "label_distribution_test": {
+    "0": 1402,
+    "1": 397
+  },
+  "status": "ZERO_LEAKAGE_CONFIRMED"
+}

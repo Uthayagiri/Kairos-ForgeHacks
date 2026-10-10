@@ -1,0 +1,79 @@
+{
+  "model_version": "2.2.0-candidate-semantic-behavior",
+  "model_name": "Semantic & Behavioral Augmented XGBoost Phishing Detector (Candidate E)",
+  "sha256_hash": "d4acc6e5d3b04c55cdacee49c6eb2dd37c6ee007b0ce815386f3717ff2751784",
+  "date_trained": "2026-09-16T04:46:04.422167+00:00",
+  "algorithm": "XGBClassifier",
+  "feature_count": 54,
+  "hyperparameters": {
+    "max_depth": 4,
+    "learning_rate": 0.05,
+    "n_estimators": 220,
+    "colsample_bytree": 0.7,
+    "subsample": 0.95,
+    "reg_lambda": 1.0,
+    "scale_pos_weight": 5.0,
+    "random_state": 42,
+    "eval_metric": "logloss"
+  },
+  "evaluation_metrics": {
+    "accuracy": 0.8979,
+    "precision": 0.8638,
+    "recall": 0.6691,
+    "f1_score": 0.7541,
+    "specificity": 0.9678,
+    "false_positive_rate": 0.0322,
+    "false_negative_rate": 0.3309,
+    "roc_auc": 0.976,
+    "pr_auc": 0.9167,
+    "brier_score": 0.0592,
+    "confusion_matrix": {
+      "tn": 1321,
+      "fp": 44,
+      "fn": 138,
+      "tp": 279
+    },
+    "slices": {
+      "sparse_legitimate_fpr": 0.2054,
+      "sparse_legitimate_fps": 38,
+      "sparse_legitimate_total": 185,
+      "legitimate_login_fpr": 0.0154,
+      "legitimate_login_fps": 3,
+      "legitimate_login_total": 195,
+      "shortened_phishing_recall": 0.8333,
+      "shortened_phishing_total": 6,
+      "https_phishing_recall": 0.6489,
+      "https_phishing_total": 393,
+      "sparse_phishing_recall": 0.6391,
+      "sparse_phishing_total": 363
+    },
+    "top2_feature_concentration_pct": 39.05,
+    "top_15_features": {
+      "num_links": 0.2833017110824585,
+      "num_internal_links": 0.10718131065368652,
+      "high_external_link_concentration": 0.07723330706357956,
+      "domain_length": 0.0479632243514061,
+      "num_external_links": 0.03251369670033455,
+      "uses_https": 0.02731255069375038,
+      "num_slashes": 0.026741191744804382,
+      "path_length": 0.023763960227370262,
+      "external_link_ratio": 0.01961355470120907,
+      "path_depth": 0.0195782370865345,
+      "num_digits": 0.01820432022213936,
+      "num_meta_refresh_redirects": 0.01676122657954693,
+      "num_special_chars": 0.015004445798695087,
+      "num_scripts": 0.014036799781024456,
+      "num_links_with_mismatched_text": 0.013236799277365208
+    }
+  },
+  "comparison_with_production_baseline": {
+    "prod_accuracy": 0.9686,
+    "candidate_accuracy": 0.8979,
+    "prod_recall": 0.9856,
+    "candidate_recall": 0.6691,
+    "prod_sparse_fpr": 0.2378,
+    "candidate_sparse_fpr": 0.2054,
+    "prod_top2_concentration": 43.06,
+    "candidate_top2_concentration": 39.05
+  }
+}

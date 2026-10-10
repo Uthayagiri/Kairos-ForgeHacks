@@ -1,0 +1,22 @@
+{
+  "model_version": "2.2.0-candidate-ext-link-concentration",
+  "model_name": "External Link Concentration Augmented XGBoost Phishing Detector (Candidate B)",
+  "sha256_hash": "9442554d9bb61cdfea074c3feefd44424b141a36b7b0cdd3872284a7d1d748b7",
+  "date_trained": "2026-09-16T05:16:50.523584+00:00",
+  "algorithm": "XGBClassifier",
+  "feature_count": 44,
+  "hyperparameters": {
+    "max_depth": 4,
+    "learning_rate": 0.05,
+    "n_estimators": 220,
+    "colsample_bytree": 0.7,
+    "subsample": 0.95,
+    "reg_lambda": 1.0,
+    "scale_pos_weight": 5.0,
+    "random_state": 42,
+    "eval_metric": "logloss"
+  },
+  "production_sha256_verified": "7a80ec64d1d39530f0283bd62758de990f71fe8fe0e92933fa0ada1ea904b0c2",
+  "top2_feature_concentration": 38.61,
+  "high_external_link_gain_pct": 3.72
+}

@@ -1,0 +1,754 @@
+[
+  {
+    "index": 1,
+    "category": "1. Major Legitimate (Varied Architecture)",
+    "url": "https://www.amazon.com",
+    "note": "Major E-commerce (Complex DOM)",
+    "expected": "safe / suspicious (low-medium)",
+    "actual_status": "safe",
+    "actual_risk": "low",
+    "actual_confidence": 0.2,
+    "is_phishing": false,
+    "html_available": false,
+    "content_rendering_incomplete": false,
+    "match": true,
+    "duration_ms": 250.21450000349432,
+    "indicators_count": 2,
+    "indicators": [
+      "URL contains sensitive or authentication-related keywords (e.g., login, verify, account, secure).",
+      "Live HTML content could not be inspected (HTTP 202); threat level is bounded to Suspicious/Low based on URL-only analysis."
+    ]
+  },
+  {
+    "index": 2,
+    "category": "1. Major Legitimate (Varied Architecture)",
+    "url": "https://www.bbc.com",
+    "note": "Major News Site (Server-rendered/Hydrated)",
+    "expected": "safe (low)",
+    "actual_status": "safe",
+    "actual_risk": "low",
+    "actual_confidence": 0.0025,
+    "is_phishing": false,
+    "html_available": true,
+    "content_rendering_incomplete": false,
+    "match": true,
+    "duration_ms": 608.1525999907171,
+    "indicators_count": 1,
+    "indicators": [
+      "Page scripts contain potentially suspicious JavaScript execution patterns."
+    ]
+  },
+  {
+    "index": 3,
+    "category": "1. Major Legitimate (Varied Architecture)",
+    "url": "https://www.nytimes.com",
+    "note": "Major News Publisher",
+    "expected": "safe (low)",
+    "actual_status": "safe",
+    "actual_risk": "low",
+    "actual_confidence": 0.0084,
+    "is_phishing": false,
+    "html_available": true,
+    "content_rendering_incomplete": false,
+    "match": true,
+    "duration_ms": 860.6759999966016,
+    "indicators_count": 2,
+    "indicators": [
+      "Page embeds hidden or zero-dimension iframe element(s).",
+      "Page scripts contain potentially suspicious JavaScript execution patterns."
+    ]
+  },
+  {
+    "index": 4,
+    "category": "1. Major Legitimate (Varied Architecture)",
+    "url": "https://www.usa.gov",
+    "note": "Government .gov portal",
+    "expected": "safe (low)",
+    "actual_status": "safe",
+    "actual_risk": "low",
+    "actual_confidence": 0.013,
+    "is_phishing": false,
+    "html_available": true,
+    "content_rendering_incomplete": false,
+    "match": true,
+    "duration_ms": 854.0604999870993,
+    "indicators_count": 3,
+    "indicators": [
+      "Form submission sends sensitive user data to an external third-party domain (2 form(s)).",
+      "Page embeds hidden or zero-dimension iframe element(s).",
+      "Page scripts contain potentially suspicious JavaScript execution patterns."
+    ]
+  },
+  {
+    "index": 5,
+    "category": "1. Major Legitimate (Varied Architecture)",
+    "url": "https://www.india.gov.in",
+    "note": "Government .gov.in portal",
+    "expected": "safe (low)",
+    "actual_status": "safe",
+    "actual_risk": "low",
+    "actual_confidence": 0.0202,
+    "is_phishing": false,
+    "html_available": true,
+    "content_rendering_incomplete": false,
+    "match": true,
+    "duration_ms": 504.0579000051366,
+    "indicators_count": 1,
+    "indicators": [
+      "Page scripts contain potentially suspicious JavaScript execution patterns."
+    ]
+  },
+  {
+    "index": 6,
+    "category": "1. Major Legitimate (Varied Architecture)",
+    "url": "https://www.jpmorganchase.com",
+    "note": "Major Financial Institution Homepage",
+    "expected": "safe (low)",
+    "actual_status": "safe",
+    "actual_risk": "low",
+    "actual_confidence": 0.0594,
+    "is_phishing": false,
+    "html_available": true,
+    "content_rendering_incomplete": false,
+    "match": true,
+    "duration_ms": 633.4059000073466,
+    "indicators_count": 1,
+    "indicators": [
+      "Page scripts contain potentially suspicious JavaScript execution patterns."
+    ]
+  },
+  {
+    "index": 7,
+    "category": "1. Major Legitimate (Varied Architecture)",
+    "url": "https://www.bankofamerica.com",
+    "note": "Major Banking Homepage",
+    "expected": "safe (low)",
+    "actual_status": "safe",
+    "actual_risk": "low",
+    "actual_confidence": 0.0797,
+    "is_phishing": false,
+    "html_available": true,
+    "content_rendering_incomplete": false,
+    "match": true,
+    "duration_ms": 597.3283000057563,
+    "indicators_count": 3,
+    "indicators": [
+      "Page contains an authentication or login form requesting user credentials.",
+      "Form submission action is empty or points to a javascript/anchor pseudo-handler.",
+      "Page scripts contain potentially suspicious JavaScript execution patterns."
+    ]
+  },
+  {
+    "index": 8,
+    "category": "1. Major Legitimate (Varied Architecture)",
+    "url": "https://x.com",
+    "note": "Social Media (Heavy Client-Side React SPA)",
+    "expected": "safe / suspicious (SPA shell)",
+    "actual_status": "safe",
+    "actual_risk": "low",
+    "actual_confidence": 0.0105,
+    "is_phishing": false,
+    "html_available": true,
+    "content_rendering_incomplete": false,
+    "match": true,
+    "duration_ms": 550.1396999898134,
+    "indicators_count": 3,
+    "indicators": [
+      "Encrypted HTTPS connection.",
+      "Standard domain and URL structure without known obfuscation techniques.",
+      "No credential harvesting forms detected on page."
+    ]
+  },
+  {
+    "index": 9,
+    "category": "1. Major Legitimate (Varied Architecture)",
+    "url": "https://github.com",
+    "note": "Developer Platform (SSR + Turbo)",
+    "expected": "safe (low)",
+    "actual_status": "safe",
+    "actual_risk": "low",
+    "actual_confidence": 0.0011,
+    "is_phishing": false,
+    "html_available": true,
+    "content_rendering_incomplete": false,
+    "match": true,
+    "duration_ms": 571.4299999963259,
+    "indicators_count": 2,
+    "indicators": [
+      "Page contains an authentication or login form requesting user credentials.",
+      "Page scripts contain potentially suspicious JavaScript execution patterns."
+    ]
+  },
+  {
+    "index": 10,
+    "category": "1. Major Legitimate (Varied Architecture)",
+    "url": "https://gitlab.com",
+    "note": "Developer Platform (Vue.js SPA)",
+    "expected": "safe / suspicious (SPA)",
+    "actual_status": "safe",
+    "actual_risk": "low",
+    "actual_confidence": 0.0008,
+    "is_phishing": false,
+    "html_available": true,
+    "content_rendering_incomplete": false,
+    "match": true,
+    "duration_ms": 908.6768999986816,
+    "indicators_count": 3,
+    "indicators": [
+      "Encrypted HTTPS connection.",
+      "Standard domain and URL structure without known obfuscation techniques.",
+      "No credential harvesting forms detected on page."
+    ]
+  },
+  {
+    "index": 11,
+    "category": "1. Major Legitimate (Varied Architecture)",
+    "url": "https://www.mit.edu",
+    "note": "Higher Education (.edu)",
+    "expected": "safe (low)",
+    "actual_status": "safe",
+    "actual_risk": "low",
+    "actual_confidence": 0.014,
+    "is_phishing": false,
+    "html_available": true,
+    "content_rendering_incomplete": false,
+    "match": true,
+    "duration_ms": 403.1418999948073,
+    "indicators_count": 1,
+    "indicators": [
+      "Page embeds hidden or zero-dimension iframe element(s)."
+    ]
+  },
+  {
+    "index": 12,
+    "category": "1. Major Legitimate (Varied Architecture)",
+    "url": "https://www.ox.ac.uk",
+    "note": "Higher Education (.ac.uk)",
+    "expected": "safe (low)",
+    "actual_status": "safe",
+    "actual_risk": "low",
+    "actual_confidence": 0.2,
+    "is_phishing": false,
+    "html_available": false,
+    "content_rendering_incomplete": false,
+    "match": true,
+    "duration_ms": 223.54549998999573,
+    "indicators_count": 3,
+    "indicators": [
+      "Live HTML content could not be inspected (HTTP 403); threat level is bounded to Suspicious/Low based on URL-only analysis.",
+      "Encrypted HTTPS connection.",
+      "Standard domain and URL structure without known obfuscation techniques."
+    ]
+  },
+  {
+    "index": 13,
+    "category": "1. Major Legitimate (Varied Architecture)",
+    "url": "https://ps.bitsathy.ac.in",
+    "note": "Educational Institution (Vue/React SPA Shell)",
+    "expected": "suspicious (medium / SPA shell)",
+    "actual_status": "suspicious",
+    "actual_risk": "medium",
+    "actual_confidence": 0.4505,
+    "is_phishing": false,
+    "html_available": true,
+    "content_rendering_incomplete": true,
+    "match": true,
+    "duration_ms": 335.3904999967199,
+    "indicators_count": 1,
+    "indicators": [
+      "Page appears to be a JavaScript-rendered application; static content could not be fully inspected \u2014 verdict is bounded due to incomplete visibility into rendered content."
+    ]
+  },
+  {
+    "index": 14,
+    "category": "1. Major Legitimate (Varied Architecture)",
+    "url": "https://vercel.com",
+    "note": "Cloud / Deployment Platform (Next.js)",
+    "expected": "safe / suspicious (Next.js)",
+    "actual_status": "safe",
+    "actual_risk": "low",
+    "actual_confidence": 0.0014,
+    "is_phishing": false,
+    "html_available": true,
+    "content_rendering_incomplete": false,
+    "match": true,
+    "duration_ms": 493.4377999888966,
+    "indicators_count": 2,
+    "indicators": [
+      "Page scripts contain potentially suspicious JavaScript execution patterns.",
+      "Contains 1 hyperlink(s) with misleading anchor text differing from destination URL."
+    ]
+  },
+  {
+    "index": 15,
+    "category": "1. Major Legitimate (Varied Architecture)",
+    "url": "https://cloud.google.com",
+    "note": "Cloud Computing Platform",
+    "expected": "safe (low)",
+    "actual_status": "suspicious",
+    "actual_risk": "medium",
+    "actual_confidence": 0.3808,
+    "is_phishing": false,
+    "html_available": false,
+    "content_rendering_incomplete": false,
+    "match": true,
+    "duration_ms": 792.3037000000477,
+    "indicators_count": 1,
+    "indicators": [
+      "Live HTML content could not be inspected (Response exceeds size limit (2109957 bytes)); threat level is bounded to Suspicious/Low based on URL-only analysis."
+    ]
+  },
+  {
+    "index": 16,
+    "category": "2. Legitimate Deep Links & Query Params",
+    "url": "https://docs.python.org/3/library/urllib.parse.html",
+    "note": "Deep Documentation Path",
+    "expected": "safe (low)",
+    "actual_status": "safe",
+    "actual_risk": "low",
+    "actual_confidence": 0.0088,
+    "is_phishing": false,
+    "html_available": true,
+    "content_rendering_incomplete": false,
+    "match": true,
+    "duration_ms": 383.81669999216683,
+    "indicators_count": 1,
+    "indicators": [
+      "Page scripts contain potentially suspicious JavaScript execution patterns."
+    ]
+  },
+  {
+    "index": 17,
+    "category": "2. Legitimate Deep Links & Query Params",
+    "url": "https://en.wikipedia.org/wiki/Phishing?action=history&offset=20260101",
+    "note": "Deep Query + Keyword in Path",
+    "expected": "safe (low)",
+    "actual_status": "suspicious",
+    "actual_risk": "medium",
+    "actual_confidence": 0.3852,
+    "is_phishing": false,
+    "html_available": false,
+    "content_rendering_incomplete": false,
+    "match": true,
+    "duration_ms": 451.54720000573434,
+    "indicators_count": 1,
+    "indicators": [
+      "Live HTML content could not be inspected (HTTP 429); threat level is bounded to Suspicious/Low based on URL-only analysis."
+    ]
+  },
+  {
+    "index": 18,
+    "category": "2. Legitimate Deep Links & Query Params",
+    "url": "https://github.com/login",
+    "note": "Legitimate Login Page (Password Form on Real Domain)",
+    "expected": "safe (low / login form)",
+    "actual_status": "safe",
+    "actual_risk": "low",
+    "actual_confidence": 0.2209,
+    "is_phishing": false,
+    "html_available": true,
+    "content_rendering_incomplete": false,
+    "match": true,
+    "duration_ms": 343.32159999758005,
+    "indicators_count": 2,
+    "indicators": [
+      "URL contains sensitive or authentication-related keywords (e.g., login, verify, account, secure).",
+      "Page contains an authentication or login form requesting user credentials."
+    ]
+  },
+  {
+    "index": 19,
+    "category": "2. Legitimate Deep Links & Query Params",
+    "url": "https://stackoverflow.com/questions/tagged/python?tab=Votes",
+    "note": "Q&A Forum Deep Query String",
+    "expected": "safe (low)",
+    "actual_status": "suspicious",
+    "actual_risk": "medium",
+    "actual_confidence": 0.4207,
+    "is_phishing": false,
+    "html_available": false,
+    "content_rendering_incomplete": false,
+    "match": true,
+    "duration_ms": 6163.42729999451,
+    "indicators_count": 1,
+    "indicators": [
+      "Live HTML content could not be inspected (HTTP 403); threat level is bounded to Suspicious/Low based on URL-only analysis."
+    ]
+  },
+  {
+    "index": 20,
+    "category": "2. Legitimate Deep Links & Query Params",
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7095405/",
+    "note": "Scientific Research Deep Link",
+    "expected": "safe (low)",
+    "actual_status": "phishing",
+    "actual_risk": "high",
+    "actual_confidence": 0.9503,
+    "is_phishing": true,
+    "html_available": true,
+    "content_rendering_incomplete": false,
+    "match": false,
+    "duration_ms": 2400.0613000098383,
+    "indicators_count": 2,
+    "indicators": [
+      "Excessive number of subdomains detected (3 subdomains).",
+      "Page scripts contain potentially suspicious JavaScript execution patterns."
+    ]
+  },
+  {
+    "index": 21,
+    "category": "3. Safe URLs with Structural Quirks",
+    "url": "https://tinyurl.com/app",
+    "note": "URL Shortener Domain Homepage",
+    "expected": "safe (low)",
+    "actual_status": "phishing",
+    "actual_risk": "high",
+    "actual_confidence": 0.8496,
+    "is_phishing": true,
+    "html_available": true,
+    "content_rendering_incomplete": false,
+    "match": false,
+    "duration_ms": 6063.953799995943,
+    "indicators_count": 1,
+    "indicators": [
+      "Uses a known URL shortening service that conceals the true destination hostname."
+    ]
+  },
+  {
+    "index": 22,
+    "category": "3. Safe URLs with Structural Quirks",
+    "url": "https://news.ycombinator.com",
+    "note": "Hacker News (Minimalist Pure Static HTML)",
+    "expected": "safe (low)",
+    "actual_status": "safe",
+    "actual_risk": "low",
+    "actual_confidence": 0.0273,
+    "is_phishing": false,
+    "html_available": true,
+    "content_rendering_incomplete": false,
+    "match": true,
+    "duration_ms": 1204.1158999927575,
+    "indicators_count": 3,
+    "indicators": [
+      "Encrypted HTTPS connection.",
+      "Standard domain and URL structure without known obfuscation techniques.",
+      "No credential harvesting forms detected on page."
+    ]
+  },
+  {
+    "index": 23,
+    "category": "3. Safe URLs with Structural Quirks",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP",
+    "note": "MDN Web Docs Subdomain + Deep Path",
+    "expected": "safe (low)",
+    "actual_status": "safe",
+    "actual_risk": "low",
+    "actual_confidence": 0.0181,
+    "is_phishing": false,
+    "html_available": true,
+    "content_rendering_incomplete": false,
+    "match": true,
+    "duration_ms": 1198.5526999924332,
+    "indicators_count": 3,
+    "indicators": [
+      "Encrypted HTTPS connection.",
+      "Standard domain and URL structure without known obfuscation techniques.",
+      "No credential harvesting forms detected on page."
+    ]
+  },
+  {
+    "index": 24,
+    "category": "3. Safe URLs with Structural Quirks",
+    "url": "https://dev.to",
+    "note": "Developer Community (.to ccTLD)",
+    "expected": "safe (low)",
+    "actual_status": "safe",
+    "actual_risk": "low",
+    "actual_confidence": 0.0019,
+    "is_phishing": false,
+    "html_available": true,
+    "content_rendering_incomplete": false,
+    "match": true,
+    "duration_ms": 647.6299999922048,
+    "indicators_count": 1,
+    "indicators": [
+      "Page scripts contain potentially suspicious JavaScript execution patterns."
+    ]
+  },
+  {
+    "index": 25,
+    "category": "3. Safe URLs with Structural Quirks",
+    "url": "https://raw.githubusercontent.com",
+    "note": "Multi-part Subdomain CDN",
+    "expected": "safe (low / degraded)",
+    "actual_status": "safe",
+    "actual_risk": "low",
+    "actual_confidence": 0.0744,
+    "is_phishing": false,
+    "html_available": true,
+    "content_rendering_incomplete": false,
+    "match": true,
+    "duration_ms": 904.3267000088235,
+    "indicators_count": 2,
+    "indicators": [
+      "Page contains an authentication or login form requesting user credentials.",
+      "Page scripts contain potentially suspicious JavaScript execution patterns."
+    ]
+  },
+  {
+    "index": 26,
+    "category": "3. Safe URLs with Structural Quirks",
+    "url": "https://about.gitlab.com",
+    "note": "Company Subdomain Portal",
+    "expected": "safe (low)",
+    "actual_status": "safe",
+    "actual_risk": "low",
+    "actual_confidence": 0.0025,
+    "is_phishing": false,
+    "html_available": true,
+    "content_rendering_incomplete": false,
+    "match": true,
+    "duration_ms": 341.4725000038743,
+    "indicators_count": 3,
+    "indicators": [
+      "Encrypted HTTPS connection.",
+      "Standard domain and URL structure without known obfuscation techniques.",
+      "No credential harvesting forms detected on page."
+    ]
+  },
+  {
+    "index": 27,
+    "category": "4. Synthetic Phishing Attack Patterns",
+    "url": "http://192.168.1.100/paypal/login.php",
+    "note": "Raw IPv4 + Brand Path + Insecure HTTP",
+    "expected": "phishing (high)",
+    "actual_status": "phishing",
+    "actual_risk": "high",
+    "actual_confidence": 0.9194,
+    "is_phishing": true,
+    "html_available": false,
+    "content_rendering_incomplete": false,
+    "match": true,
+    "duration_ms": 5214.874099998269,
+    "indicators_count": 4,
+    "indicators": [
+      "URL uses a raw IP address instead of a standard domain name.",
+      "URL contains sensitive or authentication-related keywords (e.g., login, verify, account, secure).",
+      "Connection does not use secure HTTPS encryption.",
+      "Live HTML content could not be inspected (HTTP 503); high-risk verdict is driven by strong URL-level threat signals."
+    ]
+  },
+  {
+    "index": 28,
+    "category": "4. Synthetic Phishing Attack Patterns",
+    "url": "http://10.0.0.1/secure-banking/verification.html",
+    "note": "Raw Private IP + Credential Verification Path",
+    "expected": "phishing (high)",
+    "actual_status": "phishing",
+    "actual_risk": "high",
+    "actual_confidence": 0.8557,
+    "is_phishing": true,
+    "html_available": false,
+    "content_rendering_incomplete": false,
+    "match": true,
+    "duration_ms": 8114.5862999983365,
+    "indicators_count": 4,
+    "indicators": [
+      "URL uses a raw IP address instead of a standard domain name.",
+      "URL contains sensitive or authentication-related keywords (e.g., login, verify, account, secure).",
+      "Connection does not use secure HTTPS encryption.",
+      "Live HTML content could not be inspected (Request timed out); high-risk verdict is driven by strong URL-level threat signals."
+    ]
+  },
+  {
+    "index": 29,
+    "category": "4. Synthetic Phishing Attack Patterns",
+    "url": "http://paypal-account-verification.security-update.xyz/login.php",
+    "note": "Brand Impersonation Subdomain + Suspicious TLD (.xyz)",
+    "expected": "phishing (high)",
+    "actual_status": "phishing",
+    "actual_risk": "high",
+    "actual_confidence": 0.9938,
+    "is_phishing": true,
+    "html_available": false,
+    "content_rendering_incomplete": false,
+    "match": true,
+    "duration_ms": 39.29479999351315,
+    "indicators_count": 4,
+    "indicators": [
+      "Domain utilizes a high-risk or commonly abused top-level domain (TLD).",
+      "URL contains sensitive or authentication-related keywords (e.g., login, verify, account, secure).",
+      "Connection does not use secure HTTPS encryption.",
+      "Live HTML content could not be inspected (Connection failed / DNS resolution error); high-risk verdict is driven by strong URL-level threat signals."
+    ]
+  },
+  {
+    "index": 30,
+    "category": "4. Synthetic Phishing Attack Patterns",
+    "url": "http://wellsfargo.com.security-alert-service.top/auth/signin.html",
+    "note": "Brand Subdomain Deception + .top TLD + Auth Path",
+    "expected": "phishing (high)",
+    "actual_status": "phishing",
+    "actual_risk": "high",
+    "actual_confidence": 0.9897,
+    "is_phishing": true,
+    "html_available": false,
+    "content_rendering_incomplete": false,
+    "match": true,
+    "duration_ms": 40.62099999282509,
+    "indicators_count": 4,
+    "indicators": [
+      "Domain utilizes a high-risk or commonly abused top-level domain (TLD).",
+      "URL contains sensitive or authentication-related keywords (e.g., login, verify, account, secure).",
+      "Connection does not use secure HTTPS encryption.",
+      "Live HTML content could not be inspected (Connection failed / DNS resolution error); high-risk verdict is driven by strong URL-level threat signals."
+    ]
+  },
+  {
+    "index": 31,
+    "category": "4. Synthetic Phishing Attack Patterns",
+    "url": "http://chase-bank-verify-identity.support-desk.account-update.tk/index.html",
+    "note": "Excessive Subdomains + Sensitive Keywords + .tk TLD",
+    "expected": "phishing (high)",
+    "actual_status": "phishing",
+    "actual_risk": "high",
+    "actual_confidence": 0.9902,
+    "is_phishing": true,
+    "html_available": false,
+    "content_rendering_incomplete": false,
+    "match": true,
+    "duration_ms": 234.28920000151265,
+    "indicators_count": 4,
+    "indicators": [
+      "Domain utilizes a high-risk or commonly abused top-level domain (TLD).",
+      "URL contains sensitive or authentication-related keywords (e.g., login, verify, account, secure).",
+      "Connection does not use secure HTTPS encryption.",
+      "Live HTML content could not be inspected (Connection failed / DNS resolution error); high-risk verdict is driven by strong URL-level threat signals."
+    ]
+  },
+  {
+    "index": 32,
+    "category": "4. Synthetic Phishing Attack Patterns",
+    "url": "http://172.16.254.1:8080/apple/id/account/billing/signin",
+    "note": "Raw IP + Non-standard Port + Brand Spoofing Deep Path",
+    "expected": "phishing (high)",
+    "actual_status": "phishing",
+    "actual_risk": "high",
+    "actual_confidence": 0.913,
+    "is_phishing": true,
+    "html_available": false,
+    "content_rendering_incomplete": false,
+    "match": true,
+    "duration_ms": 8028.523599990876,
+    "indicators_count": 5,
+    "indicators": [
+      "URL uses a raw IP address instead of a standard domain name.",
+      "URL contains sensitive or authentication-related keywords (e.g., login, verify, account, secure).",
+      "URL specifies a non-standard port number.",
+      "Connection does not use secure HTTPS encryption.",
+      "Live HTML content could not be inspected (Request timed out); high-risk verdict is driven by strong URL-level threat signals."
+    ]
+  },
+  {
+    "index": 33,
+    "category": "5. Edge-Case URL Inputs",
+    "url": "https://example.com/search?q=cybersecurity&category=research&filter=recent#top-results",
+    "note": "Complex Query Parameters + Fragment (#)",
+    "expected": "safe (low)",
+    "actual_status": "safe",
+    "actual_risk": "low",
+    "actual_confidence": 0.2,
+    "is_phishing": false,
+    "html_available": false,
+    "content_rendering_incomplete": false,
+    "match": true,
+    "duration_ms": 293.45939999620896,
+    "indicators_count": 2,
+    "indicators": [
+      "URL contains sensitive or authentication-related keywords (e.g., login, verify, account, secure).",
+      "Live HTML content could not be inspected (HTTP 404); threat level is bounded to Suspicious/Low based on URL-only analysis."
+    ]
+  },
+  {
+    "index": 34,
+    "category": "5. Edge-Case URL Inputs",
+    "url": "https://example.com/path_with-dashes.and_underscores~and.dots/test",
+    "note": "Valid URL Special Characters (~, -, _, .)",
+    "expected": "safe (low)",
+    "actual_status": "safe",
+    "actual_risk": "low",
+    "actual_confidence": 0.2,
+    "is_phishing": false,
+    "html_available": false,
+    "content_rendering_incomplete": false,
+    "match": true,
+    "duration_ms": 294.0884999989066,
+    "indicators_count": 3,
+    "indicators": [
+      "Live HTML content could not be inspected (HTTP 404); threat level is bounded to Suspicious/Low based on URL-only analysis.",
+      "Encrypted HTTPS connection.",
+      "Standard domain and URL structure without known obfuscation techniques."
+    ]
+  },
+  {
+    "index": 35,
+    "category": "5. Edge-Case URL Inputs",
+    "url": "https://example.com/subfolder/subfolder/subfolder/subfolder/subfolder/subfolder/subfolder/subfolder/subfolder/subfolder/subfolder/subfolder/subfolder/subfolder/subfolder/document.html",
+    "note": "Very Deep Legitimate Path (~160 chars)",
+    "expected": "safe (low)",
+    "actual_status": "safe",
+    "actual_risk": "low",
+    "actual_confidence": 0.2006,
+    "is_phishing": false,
+    "html_available": false,
+    "content_rendering_incomplete": false,
+    "match": true,
+    "duration_ms": 298.7594000005629,
+    "indicators_count": 3,
+    "indicators": [
+      "Live HTML content could not be inspected (HTTP 404); threat level is bounded to Suspicious/Low based on URL-only analysis.",
+      "Encrypted HTTPS connection.",
+      "Standard domain and URL structure without known obfuscation techniques."
+    ]
+  },
+  {
+    "index": 36,
+    "category": "5. Edge-Case URL Inputs",
+    "url": "https://xn--e1afmkfd.xn--p1ai",
+    "note": "Punycode Internationalized Domain Name (IDN)",
+    "expected": "safe / suspicious",
+    "actual_status": "suspicious",
+    "actual_risk": "medium",
+    "actual_confidence": 0.699,
+    "is_phishing": false,
+    "html_available": true,
+    "content_rendering_incomplete": false,
+    "match": true,
+    "duration_ms": 1925.8084000030067,
+    "indicators_count": 3,
+    "indicators": [
+      "Encrypted HTTPS connection.",
+      "Standard domain and URL structure without known obfuscation techniques.",
+      "No credential harvesting forms detected on page."
+    ]
+  },
+  {
+    "index": 37,
+    "category": "5. Edge-Case URL Inputs",
+    "url": "https://example.com/?redirect=https%3A%2F%2Fother.com%2Fpath%3Fparam%3Dval",
+    "note": "URL-Encoded Query Parameter Containing Nested URL",
+    "expected": "safe (low)",
+    "actual_status": "phishing",
+    "actual_risk": "high",
+    "actual_confidence": 0.9819,
+    "is_phishing": true,
+    "html_available": true,
+    "content_rendering_incomplete": false,
+    "match": false,
+    "duration_ms": 247.83390000811778,
+    "indicators_count": 1,
+    "indicators": [
+      "URL contains percent-encoded characters that may obfuscate the path structure."
+    ]
+  }
+]

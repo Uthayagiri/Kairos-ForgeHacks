@@ -1,0 +1,381 @@
+{
+  "benchmark_metadata": {
+    "title": "Fair Fixed-Split Model Benchmark Across All Candidates",
+    "date": "2026-09-16T05:33:29.713406+00:00",
+    "split_strategy": "GroupShuffleSplit(n_splits=1, test_size=0.20, random_state=42)",
+    "total_samples": 8910,
+    "train_samples": 7111,
+    "test_samples": 1799,
+    "train_domains": 2520,
+    "test_domains": 631,
+    "domain_overlap": 0,
+    "production_model_sha256": "7a80ec64d1d39530f0283bd62758de990f71fe8fe0e92933fa0ada1ea904b0c2"
+  },
+  "models": {
+    "1_live_production_model_v2_1_0": {
+      "model_name": "Live Production Model (v2.1.0 Champion)",
+      "model_type": "Pre-trained Production Artifact",
+      "feature_count": 43,
+      "evaluation_scope": "True Held-Out Generalization (GroupShuffleSplit Test Set, N=1,799)",
+      "metrics": {
+        "accuracy": 0.9455,
+        "recall": 0.9421,
+        "precision": 0.833,
+        "f1_score": 0.8842,
+        "specificity": 0.9465,
+        "false_positive_rate": 0.0535,
+        "false_negative_rate": 0.0579,
+        "roc_auc": 0.9819,
+        "pr_auc": 0.9636,
+        "brier_score": 0.039,
+        "confusion_matrix": {
+          "tn": 1327,
+          "fp": 75,
+          "fn": 23,
+          "tp": 374
+        },
+        "probability_distribution": {
+          "phishing_probabilities": {
+            "mean": 0.8977,
+            "median": 0.9805,
+            "std": 0.2155,
+            "p10": 0.6772,
+            "p25": 0.9298,
+            "p50": 0.9805,
+            "p75": 0.998,
+            "p90": 0.9996,
+            "p95": 0.9998,
+            "p99": 0.9998
+          },
+          "legitimate_probabilities": {
+            "mean": 0.0715,
+            "median": 0.0079,
+            "std": 0.1699,
+            "p10": 0.002,
+            "p25": 0.003,
+            "p50": 0.0079,
+            "p75": 0.0339,
+            "p90": 0.2132,
+            "p95": 0.5098,
+            "p99": 0.8376
+          }
+        },
+        "slices": {
+          "sparse_legitimate_fpr": 0.2889,
+          "sparse_legitimate_fps": 65,
+          "sparse_legitimate_total": 225,
+          "sparse_phishing_recall": 0.9897,
+          "sparse_phishing_tps": 287,
+          "sparse_phishing_total": 290,
+          "https_phishing_recall": 0.9304,
+          "https_phishing_tps": 294,
+          "https_phishing_total": 316,
+          "shortened_phishing_recall": 0.9444,
+          "shortened_phishing_tps": 17,
+          "shortened_phishing_total": 18,
+          "legitimate_login_fpr": 0.0317,
+          "legitimate_login_fps": 7,
+          "legitimate_login_total": 221,
+          "external_form_legitimate_fpr": 0.023,
+          "external_form_legitimate_fps": 2,
+          "external_form_legitimate_total": 87,
+          "external_form_phishing_recall": 1.0,
+          "external_form_phishing_tps": 14,
+          "external_form_phishing_total": 14
+        }
+      }
+    },
+    "2_retrained_43_feature_baseline": {
+      "model_name": "Retrained 43-Feature Baseline",
+      "model_type": "Trained from scratch on GSS Train Partition",
+      "feature_count": 43,
+      "evaluation_scope": "True Held-Out Generalization (GroupShuffleSplit Test Set, N=1,799)",
+      "metrics": {
+        "accuracy": 0.9455,
+        "recall": 0.9421,
+        "precision": 0.833,
+        "f1_score": 0.8842,
+        "specificity": 0.9465,
+        "false_positive_rate": 0.0535,
+        "false_negative_rate": 0.0579,
+        "roc_auc": 0.9819,
+        "pr_auc": 0.9636,
+        "brier_score": 0.039,
+        "confusion_matrix": {
+          "tn": 1327,
+          "fp": 75,
+          "fn": 23,
+          "tp": 374
+        },
+        "probability_distribution": {
+          "phishing_probabilities": {
+            "mean": 0.8977,
+            "median": 0.9805,
+            "std": 0.2155,
+            "p10": 0.6772,
+            "p25": 0.9298,
+            "p50": 0.9805,
+            "p75": 0.998,
+            "p90": 0.9996,
+            "p95": 0.9998,
+            "p99": 0.9998
+          },
+          "legitimate_probabilities": {
+            "mean": 0.0715,
+            "median": 0.0079,
+            "std": 0.1699,
+            "p10": 0.002,
+            "p25": 0.003,
+            "p50": 0.0079,
+            "p75": 0.0339,
+            "p90": 0.2132,
+            "p95": 0.5098,
+            "p99": 0.8376
+          }
+        },
+        "slices": {
+          "sparse_legitimate_fpr": 0.2889,
+          "sparse_legitimate_fps": 65,
+          "sparse_legitimate_total": 225,
+          "sparse_phishing_recall": 0.9897,
+          "sparse_phishing_tps": 287,
+          "sparse_phishing_total": 290,
+          "https_phishing_recall": 0.9304,
+          "https_phishing_tps": 294,
+          "https_phishing_total": 316,
+          "shortened_phishing_recall": 0.9444,
+          "shortened_phishing_tps": 17,
+          "shortened_phishing_total": 18,
+          "legitimate_login_fpr": 0.0317,
+          "legitimate_login_fps": 7,
+          "legitimate_login_total": 221,
+          "external_form_legitimate_fpr": 0.023,
+          "external_form_legitimate_fps": 2,
+          "external_form_legitimate_total": 87,
+          "external_form_phishing_recall": 1.0,
+          "external_form_phishing_tps": 14,
+          "external_form_phishing_total": 14
+        }
+      }
+    },
+    "3_candidate_link_density": {
+      "model_name": "Link-Density Normalization Candidate",
+      "model_type": "Trained on GSS Train Partition (num_internal_links replaced with link density ratios)",
+      "feature_count": 47,
+      "evaluation_scope": "True Held-Out Generalization (GroupShuffleSplit Test Set, N=1,799)",
+      "metrics": {
+        "accuracy": 0.9483,
+        "recall": 0.9345,
+        "precision": 0.847,
+        "f1_score": 0.8886,
+        "specificity": 0.9522,
+        "false_positive_rate": 0.0478,
+        "false_negative_rate": 0.0655,
+        "roc_auc": 0.9847,
+        "pr_auc": 0.9674,
+        "brier_score": 0.0367,
+        "confusion_matrix": {
+          "tn": 1335,
+          "fp": 67,
+          "fn": 26,
+          "tp": 371
+        },
+        "probability_distribution": {
+          "phishing_probabilities": {
+            "mean": 0.8969,
+            "median": 0.9825,
+            "std": 0.2189,
+            "p10": 0.6853,
+            "p25": 0.9182,
+            "p50": 0.9825,
+            "p75": 0.998,
+            "p90": 0.9995,
+            "p95": 0.9997,
+            "p99": 0.9997
+          },
+          "legitimate_probabilities": {
+            "mean": 0.0681,
+            "median": 0.0094,
+            "std": 0.1608,
+            "p10": 0.0027,
+            "p25": 0.0044,
+            "p50": 0.0094,
+            "p75": 0.032,
+            "p90": 0.1974,
+            "p95": 0.4889,
+            "p99": 0.7787
+          }
+        },
+        "slices": {
+          "sparse_legitimate_fpr": 0.2711,
+          "sparse_legitimate_fps": 61,
+          "sparse_legitimate_total": 225,
+          "sparse_phishing_recall": 0.9897,
+          "sparse_phishing_tps": 287,
+          "sparse_phishing_total": 290,
+          "https_phishing_recall": 0.9209,
+          "https_phishing_tps": 291,
+          "https_phishing_total": 316,
+          "shortened_phishing_recall": 0.8333,
+          "shortened_phishing_tps": 15,
+          "shortened_phishing_total": 18,
+          "legitimate_login_fpr": 0.0407,
+          "legitimate_login_fps": 9,
+          "legitimate_login_total": 221,
+          "external_form_legitimate_fpr": 0.023,
+          "external_form_legitimate_fps": 2,
+          "external_form_legitimate_total": 87,
+          "external_form_phishing_recall": 1.0,
+          "external_form_phishing_tps": 14,
+          "external_form_phishing_total": 14
+        }
+      }
+    },
+    "4_candidate_semantic_behavior": {
+      "model_name": "Semantic & Behavioral Augmented Candidate (Candidate E)",
+      "model_type": "Trained on GSS Train Partition (+Form, +Structure, +Consistency)",
+      "feature_count": 54,
+      "evaluation_scope": "True Held-Out Generalization (GroupShuffleSplit Test Set, N=1,799)",
+      "metrics": {
+        "accuracy": 0.9466,
+        "recall": 0.9421,
+        "precision": 0.8367,
+        "f1_score": 0.8863,
+        "specificity": 0.9479,
+        "false_positive_rate": 0.0521,
+        "false_negative_rate": 0.0579,
+        "roc_auc": 0.9821,
+        "pr_auc": 0.9654,
+        "brier_score": 0.0383,
+        "confusion_matrix": {
+          "tn": 1329,
+          "fp": 73,
+          "fn": 23,
+          "tp": 374
+        },
+        "probability_distribution": {
+          "phishing_probabilities": {
+            "mean": 0.8976,
+            "median": 0.9821,
+            "std": 0.2151,
+            "p10": 0.7022,
+            "p25": 0.9293,
+            "p50": 0.9821,
+            "p75": 0.9979,
+            "p90": 0.9995,
+            "p95": 0.9997,
+            "p99": 0.9997
+          },
+          "legitimate_probabilities": {
+            "mean": 0.0704,
+            "median": 0.0089,
+            "std": 0.1675,
+            "p10": 0.002,
+            "p25": 0.0032,
+            "p50": 0.0089,
+            "p75": 0.0342,
+            "p90": 0.1894,
+            "p95": 0.5225,
+            "p99": 0.8043
+          }
+        },
+        "slices": {
+          "sparse_legitimate_fpr": 0.2978,
+          "sparse_legitimate_fps": 67,
+          "sparse_legitimate_total": 225,
+          "sparse_phishing_recall": 0.9862,
+          "sparse_phishing_tps": 286,
+          "sparse_phishing_total": 290,
+          "https_phishing_recall": 0.9304,
+          "https_phishing_tps": 294,
+          "https_phishing_total": 316,
+          "shortened_phishing_recall": 1.0,
+          "shortened_phishing_tps": 18,
+          "shortened_phishing_total": 18,
+          "legitimate_login_fpr": 0.0362,
+          "legitimate_login_fps": 8,
+          "legitimate_login_total": 221,
+          "external_form_legitimate_fpr": 0.023,
+          "external_form_legitimate_fps": 2,
+          "external_form_legitimate_total": 87,
+          "external_form_phishing_recall": 1.0,
+          "external_form_phishing_tps": 14,
+          "external_form_phishing_total": 14
+        }
+      }
+    },
+    "5_candidate_external_link_concentration": {
+      "model_name": "External-Link-Concentration Augmented Candidate",
+      "model_type": "Trained on GSS Train Partition (+high_external_link_concentration only)",
+      "feature_count": 44,
+      "evaluation_scope": "True Held-Out Generalization (GroupShuffleSplit Test Set, N=1,799)",
+      "metrics": {
+        "accuracy": 0.945,
+        "recall": 0.9395,
+        "precision": 0.8326,
+        "f1_score": 0.8828,
+        "specificity": 0.9465,
+        "false_positive_rate": 0.0535,
+        "false_negative_rate": 0.0605,
+        "roc_auc": 0.9818,
+        "pr_auc": 0.9623,
+        "brier_score": 0.0396,
+        "confusion_matrix": {
+          "tn": 1327,
+          "fp": 75,
+          "fn": 24,
+          "tp": 373
+        },
+        "probability_distribution": {
+          "phishing_probabilities": {
+            "mean": 0.8942,
+            "median": 0.9821,
+            "std": 0.2167,
+            "p10": 0.6767,
+            "p25": 0.901,
+            "p50": 0.9821,
+            "p75": 0.998,
+            "p90": 0.9995,
+            "p95": 0.9997,
+            "p99": 0.9998
+          },
+          "legitimate_probabilities": {
+            "mean": 0.0718,
+            "median": 0.0084,
+            "std": 0.1709,
+            "p10": 0.0021,
+            "p25": 0.0032,
+            "p50": 0.0084,
+            "p75": 0.0327,
+            "p90": 0.2138,
+            "p95": 0.5198,
+            "p99": 0.8263
+          }
+        },
+        "slices": {
+          "sparse_legitimate_fpr": 0.2933,
+          "sparse_legitimate_fps": 66,
+          "sparse_legitimate_total": 225,
+          "sparse_phishing_recall": 0.9862,
+          "sparse_phishing_tps": 286,
+          "sparse_phishing_total": 290,
+          "https_phishing_recall": 0.9272,
+          "https_phishing_tps": 293,
+          "https_phishing_total": 316,
+          "shortened_phishing_recall": 0.9444,
+          "shortened_phishing_tps": 17,
+          "shortened_phishing_total": 18,
+          "legitimate_login_fpr": 0.0362,
+          "legitimate_login_fps": 8,
+          "legitimate_login_total": 221,
+          "external_form_legitimate_fpr": 0.023,
+          "external_form_legitimate_fps": 2,
+          "external_form_legitimate_total": 87,
+          "external_form_phishing_recall": 1.0,
+          "external_form_phishing_tps": 14,
+          "external_form_phishing_total": 14
+        }
+      }
+    }
+  }
+}

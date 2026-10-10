@@ -1,0 +1,1426 @@
+{
+  "experiment_title": "Semantic Candidate Repeated Multi-Seed Domain-Grouped Validation",
+  "date": "2026-09-16T05:45:35.452100+00:00",
+  "methodology": "Repeated GroupShuffleSplit(n_splits=1, test_size=0.20, random_state=seed) across 5 seeds",
+  "seeds": [
+    42,
+    101,
+    777,
+    2024,
+    9999
+  ],
+  "production_model_sha256": "7a80ec64d1d39530f0283bd62758de990f71fe8fe0e92933fa0ada1ea904b0c2",
+  "consistency_summary": {
+    "seeds_evaluated": [
+      42,
+      101,
+      777,
+      2024,
+      9999
+    ],
+    "semantic_recall_vs_baseline": {
+      "wins": 2,
+      "ties": 1,
+      "losses": 2,
+      "recall_diff_mean": -0.0124,
+      "recall_diff_values": [
+        0.0,
+        0.0021,
+        0.0041,
+        -0.0619,
+        -0.0065
+      ],
+      "fn_diff_values": [
+        0,
+        -1,
+        -1,
+        36,
+        3
+      ]
+    },
+    "semantic_accuracy_vs_baseline": {
+      "wins": 3,
+      "ties": 0,
+      "losses": 2,
+      "acc_diff_mean": -0.0012,
+      "acc_diff_values": [
+        0.0011,
+        0.0026,
+        0.0053,
+        -0.0145,
+        -0.0006
+      ]
+    },
+    "semantic_precision_vs_baseline": {
+      "prec_diff_mean": 0.0078,
+      "prec_diff_values": [
+        0.0037,
+        0.0069,
+        0.0214,
+        0.004,
+        0.0032
+      ]
+    },
+    "meets_94_percent_recall_all_seeds": {
+      "baseline_meets_all": false,
+      "semantic_meets_all": false
+    }
+  },
+  "aggregate_metrics": {
+    "baseline_43_features": {
+      "accuracy": {
+        "mean": 0.9435,
+        "std": 0.0143,
+        "min": 0.9185,
+        "max": 0.963,
+        "values": [
+          0.9455,
+          0.9433,
+          0.947,
+          0.9185,
+          0.963
+        ]
+      },
+      "recall": {
+        "mean": 0.9181,
+        "std": 0.0451,
+        "min": 0.8282,
+        "max": 0.9458,
+        "values": [
+          0.9421,
+          0.9398,
+          0.9347,
+          0.8282,
+          0.9458
+        ]
+      },
+      "precision": {
+        "mean": 0.8454,
+        "std": 0.0505,
+        "min": 0.7583,
+        "max": 0.9046,
+        "values": [
+          0.833,
+          0.8469,
+          0.7583,
+          0.8844,
+          0.9046
+        ]
+      },
+      "f1_score": {
+        "mean": 0.8785,
+        "std": 0.0302,
+        "min": 0.8373,
+        "max": 0.9247,
+        "values": [
+          0.8842,
+          0.8909,
+          0.8373,
+          0.8554,
+          0.9247
+        ]
+      },
+      "specificity": {
+        "mean": 0.9528,
+        "std": 0.0087,
+        "min": 0.9444,
+        "max": 0.9684,
+        "values": [
+          0.9465,
+          0.9444,
+          0.9491,
+          0.9556,
+          0.9684
+        ]
+      },
+      "false_positive_rate": {
+        "mean": 0.0472,
+        "std": 0.0087,
+        "min": 0.0316,
+        "max": 0.0556,
+        "values": [
+          0.0535,
+          0.0556,
+          0.0509,
+          0.0444,
+          0.0316
+        ]
+      },
+      "roc_auc": {
+        "mean": 0.9846,
+        "std": 0.0053,
+        "min": 0.9756,
+        "max": 0.9901,
+        "values": [
+          0.9819,
+          0.9885,
+          0.9867,
+          0.9756,
+          0.9901
+        ]
+      },
+      "pr_auc": {
+        "mean": 0.9599,
+        "std": 0.0143,
+        "min": 0.9422,
+        "max": 0.9758,
+        "values": [
+          0.9636,
+          0.9739,
+          0.9422,
+          0.944,
+          0.9758
+        ]
+      },
+      "brier_score": {
+        "mean": 0.0398,
+        "std": 0.0087,
+        "min": 0.0292,
+        "max": 0.0558,
+        "values": [
+          0.039,
+          0.037,
+          0.0379,
+          0.0558,
+          0.0292
+        ]
+      },
+      "slices": {
+        "sparse_legitimate_fpr": {
+          "mean": 0.281,
+          "std": 0.0412,
+          "values": [
+            0.2889,
+            0.3398,
+            0.2972,
+            0.2647,
+            0.2143
+          ]
+        },
+        "sparse_phishing_recall": {
+          "mean": 0.955,
+          "std": 0.0554,
+          "values": [
+            0.9897,
+            0.9797,
+            0.9752,
+            0.8446,
+            0.986
+          ]
+        },
+        "https_phishing_recall": {
+          "mean": 0.9075,
+          "std": 0.0531,
+          "values": [
+            0.9304,
+            0.9398,
+            0.9295,
+            0.8016,
+            0.936
+          ]
+        },
+        "shortened_phishing_recall": {
+          "mean": 0.9343,
+          "std": 0.1057,
+          "values": [
+            0.9444,
+            1.0,
+            1.0,
+            0.7273,
+            1.0
+          ]
+        },
+        "legitimate_login_fpr": {
+          "mean": 0.0314,
+          "std": 0.0079,
+          "values": [
+            0.0317,
+            0.0459,
+            0.0248,
+            0.0306,
+            0.024
+          ]
+        },
+        "external_form_legitimate_fpr": {
+          "mean": 0.0096,
+          "std": 0.0088,
+          "values": [
+            0.023,
+            0.0,
+            0.0137,
+            0.0114,
+            0.0
+          ]
+        },
+        "external_form_phishing_recall": {
+          "mean": 0.9784,
+          "std": 0.0432,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.8919
+          ]
+        }
+      },
+      "confusion_totals": {
+        "fn_values": [
+          23,
+          28,
+          16,
+          100,
+          25
+        ],
+        "fn_mean": 38.4,
+        "fp_values": [
+          75,
+          79,
+          73,
+          63,
+          46
+        ],
+        "fp_mean": 67.2
+      }
+    },
+    "semantic_54_features": {
+      "accuracy": {
+        "mean": 0.9422,
+        "std": 0.02,
+        "min": 0.904,
+        "max": 0.9624,
+        "values": [
+          0.9466,
+          0.9459,
+          0.9523,
+          0.904,
+          0.9624
+        ]
+      },
+      "recall": {
+        "mean": 0.9057,
+        "std": 0.0697,
+        "min": 0.7663,
+        "max": 0.9421,
+        "values": [
+          0.9421,
+          0.9419,
+          0.9388,
+          0.7663,
+          0.9393
+        ]
+      },
+      "precision": {
+        "mean": 0.8533,
+        "std": 0.0445,
+        "min": 0.7797,
+        "max": 0.9078,
+        "values": [
+          0.8367,
+          0.8538,
+          0.7797,
+          0.8884,
+          0.9078
+        ]
+      },
+      "f1_score": {
+        "mean": 0.876,
+        "std": 0.035,
+        "min": 0.8229,
+        "max": 0.9232,
+        "values": [
+          0.8863,
+          0.8957,
+          0.8519,
+          0.8229,
+          0.9232
+        ]
+      },
+      "specificity": {
+        "mean": 0.956,
+        "std": 0.0084,
+        "min": 0.9473,
+        "max": 0.9698,
+        "values": [
+          0.9479,
+          0.9473,
+          0.9546,
+          0.9605,
+          0.9698
+        ]
+      },
+      "false_positive_rate": {
+        "mean": 0.044,
+        "std": 0.0084,
+        "min": 0.0302,
+        "max": 0.0527,
+        "values": [
+          0.0521,
+          0.0527,
+          0.0454,
+          0.0395,
+          0.0302
+        ]
+      },
+      "roc_auc": {
+        "mean": 0.9843,
+        "std": 0.0054,
+        "min": 0.9747,
+        "max": 0.9893,
+        "values": [
+          0.9821,
+          0.9886,
+          0.9869,
+          0.9747,
+          0.9893
+        ]
+      },
+      "pr_auc": {
+        "mean": 0.9604,
+        "std": 0.0144,
+        "min": 0.9427,
+        "max": 0.976,
+        "values": [
+          0.9654,
+          0.974,
+          0.944,
+          0.9427,
+          0.976
+        ]
+      },
+      "brier_score": {
+        "mean": 0.04,
+        "std": 0.0104,
+        "min": 0.0288,
+        "max": 0.0598,
+        "values": [
+          0.0383,
+          0.037,
+          0.0363,
+          0.0598,
+          0.0288
+        ]
+      },
+      "slices": {
+        "sparse_legitimate_fpr": {
+          "mean": 0.2751,
+          "std": 0.0403,
+          "values": [
+            0.2978,
+            0.335,
+            0.2783,
+            0.2451,
+            0.2194
+          ]
+        },
+        "sparse_phishing_recall": {
+          "mean": 0.9386,
+          "std": 0.0864,
+          "values": [
+            0.9862,
+            0.9797,
+            0.9752,
+            0.7659,
+            0.986
+          ]
+        },
+        "https_phishing_recall": {
+          "mean": 0.8946,
+          "std": 0.0823,
+          "values": [
+            0.9304,
+            0.9424,
+            0.9339,
+            0.7302,
+            0.936
+          ]
+        },
+        "shortened_phishing_recall": {
+          "mean": 0.9455,
+          "std": 0.1091,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            0.7273,
+            1.0
+          ]
+        },
+        "legitimate_login_fpr": {
+          "mean": 0.028,
+          "std": 0.0083,
+          "values": [
+            0.0362,
+            0.0367,
+            0.0165,
+            0.0306,
+            0.02
+          ]
+        },
+        "external_form_legitimate_fpr": {
+          "mean": 0.0096,
+          "std": 0.0088,
+          "values": [
+            0.023,
+            0.0,
+            0.0137,
+            0.0114,
+            0.0
+          ]
+        },
+        "external_form_phishing_recall": {
+          "mean": 0.9784,
+          "std": 0.0432,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.8919
+          ]
+        }
+      },
+      "confusion_totals": {
+        "fn_values": [
+          23,
+          27,
+          15,
+          136,
+          28
+        ],
+        "fn_mean": 45.8,
+        "fp_values": [
+          73,
+          75,
+          65,
+          56,
+          44
+        ],
+        "fp_mean": 62.6
+      }
+    },
+    "live_production_artifact": {
+      "accuracy": {
+        "mean": 0.9603,
+        "std": 0.0091,
+        "min": 0.9455,
+        "max": 0.9744,
+        "values": [
+          0.9455,
+          0.9603,
+          0.9601,
+          0.961,
+          0.9744
+        ]
+      },
+      "recall": {
+        "mean": 0.9694,
+        "std": 0.0163,
+        "min": 0.9421,
+        "max": 0.9892,
+        "values": [
+          0.9421,
+          0.9828,
+          0.9673,
+          0.9656,
+          0.9892
+        ]
+      },
+      "precision": {
+        "mean": 0.8649,
+        "std": 0.0428,
+        "min": 0.8007,
+        "max": 0.912,
+        "values": [
+          0.833,
+          0.8721,
+          0.8007,
+          0.9065,
+          0.912
+        ]
+      },
+      "f1_score": {
+        "mean": 0.9137,
+        "std": 0.0286,
+        "min": 0.8762,
+        "max": 0.949,
+        "values": [
+          0.8842,
+          0.9242,
+          0.8762,
+          0.9351,
+          0.949
+        ]
+      },
+      "specificity": {
+        "mean": 0.9574,
+        "std": 0.0077,
+        "min": 0.9465,
+        "max": 0.9698,
+        "values": [
+          0.9465,
+          0.9529,
+          0.9588,
+          0.9591,
+          0.9698
+        ]
+      },
+      "false_positive_rate": {
+        "mean": 0.0426,
+        "std": 0.0077,
+        "min": 0.0302,
+        "max": 0.0535,
+        "values": [
+          0.0535,
+          0.0471,
+          0.0412,
+          0.0409,
+          0.0302
+        ]
+      },
+      "roc_auc": {
+        "mean": 0.991,
+        "std": 0.005,
+        "min": 0.9819,
+        "max": 0.9956,
+        "values": [
+          0.9819,
+          0.9956,
+          0.9909,
+          0.991,
+          0.9955
+        ]
+      },
+      "pr_auc": {
+        "mean": 0.9809,
+        "std": 0.0109,
+        "min": 0.9636,
+        "max": 0.9914,
+        "values": [
+          0.9636,
+          0.9913,
+          0.9731,
+          0.9852,
+          0.9914
+        ]
+      },
+      "brier_score": {
+        "mean": 0.0284,
+        "std": 0.0061,
+        "min": 0.0201,
+        "max": 0.039,
+        "values": [
+          0.039,
+          0.0264,
+          0.0278,
+          0.0288,
+          0.0201
+        ]
+      },
+      "slices": {
+        "sparse_legitimate_fpr": {
+          "mean": 0.2608,
+          "std": 0.0297,
+          "values": [
+            0.2889,
+            0.2913,
+            0.2547,
+            0.2598,
+            0.2092
+          ]
+        },
+        "sparse_phishing_recall": {
+          "mean": 0.9892,
+          "std": 0.0032,
+          "values": [
+            0.9897,
+            0.9898,
+            0.9851,
+            0.9869,
+            0.9944
+          ]
+        },
+        "https_phishing_recall": {
+          "mean": 0.9644,
+          "std": 0.0195,
+          "values": [
+            0.9304,
+            0.9799,
+            0.9648,
+            0.9603,
+            0.9867
+          ]
+        },
+        "shortened_phishing_recall": {
+          "mean": 0.9889,
+          "std": 0.0222,
+          "values": [
+            0.9444,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "legitimate_login_fpr": {
+          "mean": 0.0252,
+          "std": 0.006,
+          "values": [
+            0.0317,
+            0.0321,
+            0.0165,
+            0.0218,
+            0.024
+          ]
+        },
+        "external_form_legitimate_fpr": {
+          "mean": 0.0069,
+          "std": 0.0092,
+          "values": [
+            0.023,
+            0.0,
+            0.0,
+            0.0114,
+            0.0
+          ]
+        },
+        "external_form_phishing_recall": {
+          "mean": 1.0,
+          "std": 0.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "confusion_totals": {
+        "fn_values": [
+          23,
+          8,
+          8,
+          20,
+          5
+        ],
+        "fn_mean": 12.8,
+        "fp_values": [
+          75,
+          67,
+          59,
+          58,
+          44
+        ],
+        "fp_mean": 60.6
+      }
+    }
+  },
+  "individual_split_results": [
+    {
+      "seed": 42,
+      "train_samples": 7111,
+      "test_samples": 1799,
+      "train_domains": 2520,
+      "test_domains": 631,
+      "phishing_test_samples": 397,
+      "legitimate_test_samples": 1402,
+      "baseline_43_features": {
+        "accuracy": 0.9455,
+        "recall": 0.9421,
+        "precision": 0.833,
+        "f1_score": 0.8842,
+        "specificity": 0.9465,
+        "false_positive_rate": 0.0535,
+        "false_negative_rate": 0.0579,
+        "roc_auc": 0.9819,
+        "pr_auc": 0.9636,
+        "brier_score": 0.039,
+        "confusion_matrix": {
+          "tn": 1327,
+          "fp": 75,
+          "fn": 23,
+          "tp": 374
+        },
+        "slices": {
+          "sparse_legitimate_fpr": 0.2889,
+          "sparse_legitimate_fps": 65,
+          "sparse_legitimate_total": 225,
+          "sparse_phishing_recall": 0.9897,
+          "sparse_phishing_tps": 287,
+          "sparse_phishing_total": 290,
+          "https_phishing_recall": 0.9304,
+          "https_phishing_tps": 294,
+          "https_phishing_total": 316,
+          "shortened_phishing_recall": 0.9444,
+          "shortened_phishing_tps": 17,
+          "shortened_phishing_total": 18,
+          "legitimate_login_fpr": 0.0317,
+          "legitimate_login_fps": 7,
+          "legitimate_login_total": 221,
+          "external_form_legitimate_fpr": 0.023,
+          "external_form_legitimate_fps": 2,
+          "external_form_legitimate_total": 87,
+          "external_form_phishing_recall": 1.0,
+          "external_form_phishing_tps": 14,
+          "external_form_phishing_total": 14
+        }
+      },
+      "semantic_54_features": {
+        "accuracy": 0.9466,
+        "recall": 0.9421,
+        "precision": 0.8367,
+        "f1_score": 0.8863,
+        "specificity": 0.9479,
+        "false_positive_rate": 0.0521,
+        "false_negative_rate": 0.0579,
+        "roc_auc": 0.9821,
+        "pr_auc": 0.9654,
+        "brier_score": 0.0383,
+        "confusion_matrix": {
+          "tn": 1329,
+          "fp": 73,
+          "fn": 23,
+          "tp": 374
+        },
+        "slices": {
+          "sparse_legitimate_fpr": 0.2978,
+          "sparse_legitimate_fps": 67,
+          "sparse_legitimate_total": 225,
+          "sparse_phishing_recall": 0.9862,
+          "sparse_phishing_tps": 286,
+          "sparse_phishing_total": 290,
+          "https_phishing_recall": 0.9304,
+          "https_phishing_tps": 294,
+          "https_phishing_total": 316,
+          "shortened_phishing_recall": 1.0,
+          "shortened_phishing_tps": 18,
+          "shortened_phishing_total": 18,
+          "legitimate_login_fpr": 0.0362,
+          "legitimate_login_fps": 8,
+          "legitimate_login_total": 221,
+          "external_form_legitimate_fpr": 0.023,
+          "external_form_legitimate_fps": 2,
+          "external_form_legitimate_total": 87,
+          "external_form_phishing_recall": 1.0,
+          "external_form_phishing_tps": 14,
+          "external_form_phishing_total": 14
+        }
+      },
+      "live_production_artifact": {
+        "accuracy": 0.9455,
+        "recall": 0.9421,
+        "precision": 0.833,
+        "f1_score": 0.8842,
+        "specificity": 0.9465,
+        "false_positive_rate": 0.0535,
+        "false_negative_rate": 0.0579,
+        "roc_auc": 0.9819,
+        "pr_auc": 0.9636,
+        "brier_score": 0.039,
+        "confusion_matrix": {
+          "tn": 1327,
+          "fp": 75,
+          "fn": 23,
+          "tp": 374
+        },
+        "slices": {
+          "sparse_legitimate_fpr": 0.2889,
+          "sparse_legitimate_fps": 65,
+          "sparse_legitimate_total": 225,
+          "sparse_phishing_recall": 0.9897,
+          "sparse_phishing_tps": 287,
+          "sparse_phishing_total": 290,
+          "https_phishing_recall": 0.9304,
+          "https_phishing_tps": 294,
+          "https_phishing_total": 316,
+          "shortened_phishing_recall": 0.9444,
+          "shortened_phishing_tps": 17,
+          "shortened_phishing_total": 18,
+          "legitimate_login_fpr": 0.0317,
+          "legitimate_login_fps": 7,
+          "legitimate_login_total": 221,
+          "external_form_legitimate_fpr": 0.023,
+          "external_form_legitimate_fps": 2,
+          "external_form_legitimate_total": 87,
+          "external_form_phishing_recall": 1.0,
+          "external_form_phishing_tps": 14,
+          "external_form_phishing_total": 14
+        }
+      },
+      "delta_semantic_minus_baseline": {
+        "recall_diff": 0.0,
+        "accuracy_diff": 0.0011,
+        "precision_diff": 0.0037,
+        "f1_diff": 0.0021,
+        "fpr_diff": -0.0014,
+        "fn_count_diff": 0,
+        "fp_count_diff": -2
+      }
+    },
+    {
+      "seed": 101,
+      "train_samples": 7023,
+      "test_samples": 1887,
+      "train_domains": 2520,
+      "test_domains": 631,
+      "phishing_test_samples": 465,
+      "legitimate_test_samples": 1422,
+      "baseline_43_features": {
+        "accuracy": 0.9433,
+        "recall": 0.9398,
+        "precision": 0.8469,
+        "f1_score": 0.8909,
+        "specificity": 0.9444,
+        "false_positive_rate": 0.0556,
+        "false_negative_rate": 0.0602,
+        "roc_auc": 0.9885,
+        "pr_auc": 0.9739,
+        "brier_score": 0.037,
+        "confusion_matrix": {
+          "tn": 1343,
+          "fp": 79,
+          "fn": 28,
+          "tp": 437
+        },
+        "slices": {
+          "sparse_legitimate_fpr": 0.3398,
+          "sparse_legitimate_fps": 70,
+          "sparse_legitimate_total": 206,
+          "sparse_phishing_recall": 0.9797,
+          "sparse_phishing_tps": 386,
+          "sparse_phishing_total": 394,
+          "https_phishing_recall": 0.9398,
+          "https_phishing_tps": 375,
+          "https_phishing_total": 399,
+          "shortened_phishing_recall": 1.0,
+          "shortened_phishing_tps": 0,
+          "shortened_phishing_total": 0,
+          "legitimate_login_fpr": 0.0459,
+          "legitimate_login_fps": 10,
+          "legitimate_login_total": 218,
+          "external_form_legitimate_fpr": 0.0,
+          "external_form_legitimate_fps": 0,
+          "external_form_legitimate_total": 78,
+          "external_form_phishing_recall": 1.0,
+          "external_form_phishing_tps": 11,
+          "external_form_phishing_total": 11
+        }
+      },
+      "semantic_54_features": {
+        "accuracy": 0.9459,
+        "recall": 0.9419,
+        "precision": 0.8538,
+        "f1_score": 0.8957,
+        "specificity": 0.9473,
+        "false_positive_rate": 0.0527,
+        "false_negative_rate": 0.0581,
+        "roc_auc": 0.9886,
+        "pr_auc": 0.974,
+        "brier_score": 0.037,
+        "confusion_matrix": {
+          "tn": 1347,
+          "fp": 75,
+          "fn": 27,
+          "tp": 438
+        },
+        "slices": {
+          "sparse_legitimate_fpr": 0.335,
+          "sparse_legitimate_fps": 69,
+          "sparse_legitimate_total": 206,
+          "sparse_phishing_recall": 0.9797,
+          "sparse_phishing_tps": 386,
+          "sparse_phishing_total": 394,
+          "https_phishing_recall": 0.9424,
+          "https_phishing_tps": 376,
+          "https_phishing_total": 399,
+          "shortened_phishing_recall": 1.0,
+          "shortened_phishing_tps": 0,
+          "shortened_phishing_total": 0,
+          "legitimate_login_fpr": 0.0367,
+          "legitimate_login_fps": 8,
+          "legitimate_login_total": 218,
+          "external_form_legitimate_fpr": 0.0,
+          "external_form_legitimate_fps": 0,
+          "external_form_legitimate_total": 78,
+          "external_form_phishing_recall": 1.0,
+          "external_form_phishing_tps": 11,
+          "external_form_phishing_total": 11
+        }
+      },
+      "live_production_artifact": {
+        "accuracy": 0.9603,
+        "recall": 0.9828,
+        "precision": 0.8721,
+        "f1_score": 0.9242,
+        "specificity": 0.9529,
+        "false_positive_rate": 0.0471,
+        "false_negative_rate": 0.0172,
+        "roc_auc": 0.9956,
+        "pr_auc": 0.9913,
+        "brier_score": 0.0264,
+        "confusion_matrix": {
+          "tn": 1355,
+          "fp": 67,
+          "fn": 8,
+          "tp": 457
+        },
+        "slices": {
+          "sparse_legitimate_fpr": 0.2913,
+          "sparse_legitimate_fps": 60,
+          "sparse_legitimate_total": 206,
+          "sparse_phishing_recall": 0.9898,
+          "sparse_phishing_tps": 390,
+          "sparse_phishing_total": 394,
+          "https_phishing_recall": 0.9799,
+          "https_phishing_tps": 391,
+          "https_phishing_total": 399,
+          "shortened_phishing_recall": 1.0,
+          "shortened_phishing_tps": 0,
+          "shortened_phishing_total": 0,
+          "legitimate_login_fpr": 0.0321,
+          "legitimate_login_fps": 7,
+          "legitimate_login_total": 218,
+          "external_form_legitimate_fpr": 0.0,
+          "external_form_legitimate_fps": 0,
+          "external_form_legitimate_total": 78,
+          "external_form_phishing_recall": 1.0,
+          "external_form_phishing_tps": 11,
+          "external_form_phishing_total": 11
+        }
+      },
+      "delta_semantic_minus_baseline": {
+        "recall_diff": 0.0021,
+        "accuracy_diff": 0.0026,
+        "precision_diff": 0.0069,
+        "f1_diff": 0.0048,
+        "fpr_diff": -0.0029,
+        "fn_count_diff": -1,
+        "fp_count_diff": -4
+      }
+    },
+    {
+      "seed": 777,
+      "train_samples": 7232,
+      "test_samples": 1678,
+      "train_domains": 2520,
+      "test_domains": 631,
+      "phishing_test_samples": 245,
+      "legitimate_test_samples": 1433,
+      "baseline_43_features": {
+        "accuracy": 0.947,
+        "recall": 0.9347,
+        "precision": 0.7583,
+        "f1_score": 0.8373,
+        "specificity": 0.9491,
+        "false_positive_rate": 0.0509,
+        "false_negative_rate": 0.0653,
+        "roc_auc": 0.9867,
+        "pr_auc": 0.9422,
+        "brier_score": 0.0379,
+        "confusion_matrix": {
+          "tn": 1360,
+          "fp": 73,
+          "fn": 16,
+          "tp": 229
+        },
+        "slices": {
+          "sparse_legitimate_fpr": 0.2972,
+          "sparse_legitimate_fps": 63,
+          "sparse_legitimate_total": 212,
+          "sparse_phishing_recall": 0.9752,
+          "sparse_phishing_tps": 197,
+          "sparse_phishing_total": 202,
+          "https_phishing_recall": 0.9295,
+          "https_phishing_tps": 211,
+          "https_phishing_total": 227,
+          "shortened_phishing_recall": 1.0,
+          "shortened_phishing_tps": 11,
+          "shortened_phishing_total": 11,
+          "legitimate_login_fpr": 0.0248,
+          "legitimate_login_fps": 6,
+          "legitimate_login_total": 242,
+          "external_form_legitimate_fpr": 0.0137,
+          "external_form_legitimate_fps": 1,
+          "external_form_legitimate_total": 73,
+          "external_form_phishing_recall": 1.0,
+          "external_form_phishing_tps": 2,
+          "external_form_phishing_total": 2
+        }
+      },
+      "semantic_54_features": {
+        "accuracy": 0.9523,
+        "recall": 0.9388,
+        "precision": 0.7797,
+        "f1_score": 0.8519,
+        "specificity": 0.9546,
+        "false_positive_rate": 0.0454,
+        "false_negative_rate": 0.0612,
+        "roc_auc": 0.9869,
+        "pr_auc": 0.944,
+        "brier_score": 0.0363,
+        "confusion_matrix": {
+          "tn": 1368,
+          "fp": 65,
+          "fn": 15,
+          "tp": 230
+        },
+        "slices": {
+          "sparse_legitimate_fpr": 0.2783,
+          "sparse_legitimate_fps": 59,
+          "sparse_legitimate_total": 212,
+          "sparse_phishing_recall": 0.9752,
+          "sparse_phishing_tps": 197,
+          "sparse_phishing_total": 202,
+          "https_phishing_recall": 0.9339,
+          "https_phishing_tps": 212,
+          "https_phishing_total": 227,
+          "shortened_phishing_recall": 1.0,
+          "shortened_phishing_tps": 11,
+          "shortened_phishing_total": 11,
+          "legitimate_login_fpr": 0.0165,
+          "legitimate_login_fps": 4,
+          "legitimate_login_total": 242,
+          "external_form_legitimate_fpr": 0.0137,
+          "external_form_legitimate_fps": 1,
+          "external_form_legitimate_total": 73,
+          "external_form_phishing_recall": 1.0,
+          "external_form_phishing_tps": 2,
+          "external_form_phishing_total": 2
+        }
+      },
+      "live_production_artifact": {
+        "accuracy": 0.9601,
+        "recall": 0.9673,
+        "precision": 0.8007,
+        "f1_score": 0.8762,
+        "specificity": 0.9588,
+        "false_positive_rate": 0.0412,
+        "false_negative_rate": 0.0327,
+        "roc_auc": 0.9909,
+        "pr_auc": 0.9731,
+        "brier_score": 0.0278,
+        "confusion_matrix": {
+          "tn": 1374,
+          "fp": 59,
+          "fn": 8,
+          "tp": 237
+        },
+        "slices": {
+          "sparse_legitimate_fpr": 0.2547,
+          "sparse_legitimate_fps": 54,
+          "sparse_legitimate_total": 212,
+          "sparse_phishing_recall": 0.9851,
+          "sparse_phishing_tps": 199,
+          "sparse_phishing_total": 202,
+          "https_phishing_recall": 0.9648,
+          "https_phishing_tps": 219,
+          "https_phishing_total": 227,
+          "shortened_phishing_recall": 1.0,
+          "shortened_phishing_tps": 11,
+          "shortened_phishing_total": 11,
+          "legitimate_login_fpr": 0.0165,
+          "legitimate_login_fps": 4,
+          "legitimate_login_total": 242,
+          "external_form_legitimate_fpr": 0.0,
+          "external_form_legitimate_fps": 0,
+          "external_form_legitimate_total": 73,
+          "external_form_phishing_recall": 1.0,
+          "external_form_phishing_tps": 2,
+          "external_form_phishing_total": 2
+        }
+      },
+      "delta_semantic_minus_baseline": {
+        "recall_diff": 0.0041,
+        "accuracy_diff": 0.0053,
+        "precision_diff": 0.0214,
+        "f1_diff": 0.0146,
+        "fpr_diff": -0.0055,
+        "fn_count_diff": -1,
+        "fp_count_diff": -8
+      }
+    },
+    {
+      "seed": 2024,
+      "train_samples": 6909,
+      "test_samples": 2001,
+      "train_domains": 2520,
+      "test_domains": 631,
+      "phishing_test_samples": 582,
+      "legitimate_test_samples": 1419,
+      "baseline_43_features": {
+        "accuracy": 0.9185,
+        "recall": 0.8282,
+        "precision": 0.8844,
+        "f1_score": 0.8554,
+        "specificity": 0.9556,
+        "false_positive_rate": 0.0444,
+        "false_negative_rate": 0.1718,
+        "roc_auc": 0.9756,
+        "pr_auc": 0.944,
+        "brier_score": 0.0558,
+        "confusion_matrix": {
+          "tn": 1356,
+          "fp": 63,
+          "fn": 100,
+          "tp": 482
+        },
+        "slices": {
+          "sparse_legitimate_fpr": 0.2647,
+          "sparse_legitimate_fps": 54,
+          "sparse_legitimate_total": 204,
+          "sparse_phishing_recall": 0.8446,
+          "sparse_phishing_tps": 386,
+          "sparse_phishing_total": 457,
+          "https_phishing_recall": 0.8016,
+          "https_phishing_tps": 404,
+          "https_phishing_total": 504,
+          "shortened_phishing_recall": 0.7273,
+          "shortened_phishing_tps": 8,
+          "shortened_phishing_total": 11,
+          "legitimate_login_fpr": 0.0306,
+          "legitimate_login_fps": 7,
+          "legitimate_login_total": 229,
+          "external_form_legitimate_fpr": 0.0114,
+          "external_form_legitimate_fps": 1,
+          "external_form_legitimate_total": 88,
+          "external_form_phishing_recall": 1.0,
+          "external_form_phishing_tps": 26,
+          "external_form_phishing_total": 26
+        }
+      },
+      "semantic_54_features": {
+        "accuracy": 0.904,
+        "recall": 0.7663,
+        "precision": 0.8884,
+        "f1_score": 0.8229,
+        "specificity": 0.9605,
+        "false_positive_rate": 0.0395,
+        "false_negative_rate": 0.2337,
+        "roc_auc": 0.9747,
+        "pr_auc": 0.9427,
+        "brier_score": 0.0598,
+        "confusion_matrix": {
+          "tn": 1363,
+          "fp": 56,
+          "fn": 136,
+          "tp": 446
+        },
+        "slices": {
+          "sparse_legitimate_fpr": 0.2451,
+          "sparse_legitimate_fps": 50,
+          "sparse_legitimate_total": 204,
+          "sparse_phishing_recall": 0.7659,
+          "sparse_phishing_tps": 350,
+          "sparse_phishing_total": 457,
+          "https_phishing_recall": 0.7302,
+          "https_phishing_tps": 368,
+          "https_phishing_total": 504,
+          "shortened_phishing_recall": 0.7273,
+          "shortened_phishing_tps": 8,
+          "shortened_phishing_total": 11,
+          "legitimate_login_fpr": 0.0306,
+          "legitimate_login_fps": 7,
+          "legitimate_login_total": 229,
+          "external_form_legitimate_fpr": 0.0114,
+          "external_form_legitimate_fps": 1,
+          "external_form_legitimate_total": 88,
+          "external_form_phishing_recall": 1.0,
+          "external_form_phishing_tps": 26,
+          "external_form_phishing_total": 26
+        }
+      },
+      "live_production_artifact": {
+        "accuracy": 0.961,
+        "recall": 0.9656,
+        "precision": 0.9065,
+        "f1_score": 0.9351,
+        "specificity": 0.9591,
+        "false_positive_rate": 0.0409,
+        "false_negative_rate": 0.0344,
+        "roc_auc": 0.991,
+        "pr_auc": 0.9852,
+        "brier_score": 0.0288,
+        "confusion_matrix": {
+          "tn": 1361,
+          "fp": 58,
+          "fn": 20,
+          "tp": 562
+        },
+        "slices": {
+          "sparse_legitimate_fpr": 0.2598,
+          "sparse_legitimate_fps": 53,
+          "sparse_legitimate_total": 204,
+          "sparse_phishing_recall": 0.9869,
+          "sparse_phishing_tps": 451,
+          "sparse_phishing_total": 457,
+          "https_phishing_recall": 0.9603,
+          "https_phishing_tps": 484,
+          "https_phishing_total": 504,
+          "shortened_phishing_recall": 1.0,
+          "shortened_phishing_tps": 11,
+          "shortened_phishing_total": 11,
+          "legitimate_login_fpr": 0.0218,
+          "legitimate_login_fps": 5,
+          "legitimate_login_total": 229,
+          "external_form_legitimate_fpr": 0.0114,
+          "external_form_legitimate_fps": 1,
+          "external_form_legitimate_total": 88,
+          "external_form_phishing_recall": 1.0,
+          "external_form_phishing_tps": 26,
+          "external_form_phishing_total": 26
+        }
+      },
+      "delta_semantic_minus_baseline": {
+        "recall_diff": -0.0619,
+        "accuracy_diff": -0.0145,
+        "precision_diff": 0.004,
+        "f1_diff": -0.0325,
+        "fpr_diff": -0.0049,
+        "fn_count_diff": 36,
+        "fp_count_diff": -7
+      }
+    },
+    {
+      "seed": 9999,
+      "train_samples": 6993,
+      "test_samples": 1917,
+      "train_domains": 2520,
+      "test_domains": 631,
+      "phishing_test_samples": 461,
+      "legitimate_test_samples": 1456,
+      "baseline_43_features": {
+        "accuracy": 0.963,
+        "recall": 0.9458,
+        "precision": 0.9046,
+        "f1_score": 0.9247,
+        "specificity": 0.9684,
+        "false_positive_rate": 0.0316,
+        "false_negative_rate": 0.0542,
+        "roc_auc": 0.9901,
+        "pr_auc": 0.9758,
+        "brier_score": 0.0292,
+        "confusion_matrix": {
+          "tn": 1410,
+          "fp": 46,
+          "fn": 25,
+          "tp": 436
+        },
+        "slices": {
+          "sparse_legitimate_fpr": 0.2143,
+          "sparse_legitimate_fps": 42,
+          "sparse_legitimate_total": 196,
+          "sparse_phishing_recall": 0.986,
+          "sparse_phishing_tps": 351,
+          "sparse_phishing_total": 356,
+          "https_phishing_recall": 0.936,
+          "https_phishing_tps": 351,
+          "https_phishing_total": 375,
+          "shortened_phishing_recall": 1.0,
+          "shortened_phishing_tps": 2,
+          "shortened_phishing_total": 2,
+          "legitimate_login_fpr": 0.024,
+          "legitimate_login_fps": 6,
+          "legitimate_login_total": 250,
+          "external_form_legitimate_fpr": 0.0,
+          "external_form_legitimate_fps": 0,
+          "external_form_legitimate_total": 125,
+          "external_form_phishing_recall": 0.8919,
+          "external_form_phishing_tps": 33,
+          "external_form_phishing_total": 37
+        }
+      },
+      "semantic_54_features": {
+        "accuracy": 0.9624,
+        "recall": 0.9393,
+        "precision": 0.9078,
+        "f1_score": 0.9232,
+        "specificity": 0.9698,
+        "false_positive_rate": 0.0302,
+        "false_negative_rate": 0.0607,
+        "roc_auc": 0.9893,
+        "pr_auc": 0.976,
+        "brier_score": 0.0288,
+        "confusion_matrix": {
+          "tn": 1412,
+          "fp": 44,
+          "fn": 28,
+          "tp": 433
+        },
+        "slices": {
+          "sparse_legitimate_fpr": 0.2194,
+          "sparse_legitimate_fps": 43,
+          "sparse_legitimate_total": 196,
+          "sparse_phishing_recall": 0.986,
+          "sparse_phishing_tps": 351,
+          "sparse_phishing_total": 356,
+          "https_phishing_recall": 0.936,
+          "https_phishing_tps": 351,
+          "https_phishing_total": 375,
+          "shortened_phishing_recall": 1.0,
+          "shortened_phishing_tps": 2,
+          "shortened_phishing_total": 2,
+          "legitimate_login_fpr": 0.02,
+          "legitimate_login_fps": 5,
+          "legitimate_login_total": 250,
+          "external_form_legitimate_fpr": 0.0,
+          "external_form_legitimate_fps": 0,
+          "external_form_legitimate_total": 125,
+          "external_form_phishing_recall": 0.8919,
+          "external_form_phishing_tps": 33,
+          "external_form_phishing_total": 37
+        }
+      },
+      "live_production_artifact": {
+        "accuracy": 0.9744,
+        "recall": 0.9892,
+        "precision": 0.912,
+        "f1_score": 0.949,
+        "specificity": 0.9698,
+        "false_positive_rate": 0.0302,
+        "false_negative_rate": 0.0108,
+        "roc_auc": 0.9955,
+        "pr_auc": 0.9914,
+        "brier_score": 0.0201,
+        "confusion_matrix": {
+          "tn": 1412,
+          "fp": 44,
+          "fn": 5,
+          "tp": 456
+        },
+        "slices": {
+          "sparse_legitimate_fpr": 0.2092,
+          "sparse_legitimate_fps": 41,
+          "sparse_legitimate_total": 196,
+          "sparse_phishing_recall": 0.9944,
+          "sparse_phishing_tps": 354,
+          "sparse_phishing_total": 356,
+          "https_phishing_recall": 0.9867,
+          "https_phishing_tps": 370,
+          "https_phishing_total": 375,
+          "shortened_phishing_recall": 1.0,
+          "shortened_phishing_tps": 2,
+          "shortened_phishing_total": 2,
+          "legitimate_login_fpr": 0.024,
+          "legitimate_login_fps": 6,
+          "legitimate_login_total": 250,
+          "external_form_legitimate_fpr": 0.0,
+          "external_form_legitimate_fps": 0,
+          "external_form_legitimate_total": 125,
+          "external_form_phishing_recall": 1.0,
+          "external_form_phishing_tps": 37,
+          "external_form_phishing_total": 37
+        }
+      },
+      "delta_semantic_minus_baseline": {
+        "recall_diff": -0.0065,
+        "accuracy_diff": -0.0006,
+        "precision_diff": 0.0032,
+        "f1_diff": -0.0015,
+        "fpr_diff": -0.0014,
+        "fn_count_diff": 3,
+        "fp_count_diff": -2
+      }
+    }
+  ]
+}

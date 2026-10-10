@@ -1,0 +1,2218 @@
+{
+  "report_title": "Seed 2024 Failure Analysis: Semantic Candidate vs Baseline",
+  "date": "2026-09-16T05:49:07.190615+00:00",
+  "seed": 2024,
+  "sample_counts": {
+    "total_test": 2001,
+    "phishing_test": 582,
+    "legitimate_test": 1419,
+    "test_domains": 631,
+    "train_domains": 2520
+  },
+  "overall_performance": {
+    "baseline_43_features": {
+      "accuracy": 0.9185,
+      "recall": 0.8282,
+      "precision": 0.8844,
+      "fn_count": 100,
+      "tp_count": 482,
+      "fp_count": 63,
+      "tn_count": 1356
+    },
+    "semantic_54_features": {
+      "accuracy": 0.904,
+      "recall": 0.7663,
+      "precision": 0.8884,
+      "fn_count": 136,
+      "tp_count": 446,
+      "fp_count": 56,
+      "tn_count": 1363
+    },
+    "delta_semantic_minus_baseline": {
+      "accuracy_diff": -0.0145,
+      "recall_diff": -0.0619,
+      "precision_diff": 0.004,
+      "additional_false_negatives": 36,
+      "false_positive_reduction": 7
+    }
+  },
+  "root_cause_findings": {
+    "https_pct_in_36_fns": 100.0,
+    "sparse_pct_in_36_fns": 100.0,
+    "login_form_pct_in_36_fns": 2.63,
+    "password_field_pct_in_36_fns": 2.63,
+    "external_form_action_pct_in_36_fns": 0.0,
+    "high_external_link_pct_in_36_fns": 92.11,
+    "suspicious_keywords_pct_in_36_fns": 2.63,
+    "avg_baseline_score": 0.5352,
+    "avg_semantic_score": 0.4253,
+    "avg_score_drop": 0.1098,
+    "sample_affected_domains": [
+      "google.com",
+      "secureaccountview.com"
+    ]
+  },
+  "feature_profiles": {
+    "additional_36_false_negatives": {
+      "password_field_present": {
+        "mean": 0.0263,
+        "median": 0.0,
+        "pct_nonzero": 2.63
+      },
+      "external_form_action_ratio": {
+        "mean": 0.0,
+        "median": 0.0,
+        "pct_nonzero": 0.0
+      },
+      "credential_collection_pattern": {
+        "mean": 0.0263,
+        "median": 0.0,
+        "pct_nonzero": 2.63
+      },
+      "meta_refresh_present": {
+        "mean": 0.0,
+        "median": 0.0,
+        "pct_nonzero": 0.0
+      },
+      "script_to_link_ratio": {
+        "mean": 15.5711,
+        "median": 16.5,
+        "pct_nonzero": 100.0
+      },
+      "hidden_element_indicator": {
+        "mean": 0.9737,
+        "median": 1.0,
+        "pct_nonzero": 97.37
+      },
+      "iframe_to_image_ratio": {
+        "mean": 0.9474,
+        "median": 1.0,
+        "pct_nonzero": 94.74
+      },
+      "subdomain_to_apex_length_ratio": {
+        "mean": 0.3947,
+        "median": 0.4,
+        "pct_nonzero": 97.37
+      },
+      "suspicious_keyword_and_login_form": {
+        "mean": 0.0263,
+        "median": 0.0,
+        "pct_nonzero": 2.63
+      },
+      "high_external_link_concentration": {
+        "mean": 0.9211,
+        "median": 1.0,
+        "pct_nonzero": 92.11
+      },
+      "brand_keyword_deep_path": {
+        "mean": 0.0263,
+        "median": 0.0,
+        "pct_nonzero": 2.63
+      },
+      "num_links": {
+        "mean": 2.4211,
+        "median": 2.0,
+        "pct_nonzero": 97.37
+      },
+      "num_internal_links": {
+        "mean": 0.4211,
+        "median": 0.0,
+        "pct_nonzero": 5.26
+      },
+      "num_external_links": {
+        "mean": 2.0,
+        "median": 2.0,
+        "pct_nonzero": 97.37
+      },
+      "external_link_ratio": {
+        "mean": 0.9364,
+        "median": 1.0,
+        "pct_nonzero": 97.37
+      },
+      "uses_https": {
+        "mean": 1.0,
+        "median": 1.0,
+        "pct_nonzero": 100.0
+      },
+      "domain_length": {
+        "mean": 15.3158,
+        "median": 15.0,
+        "pct_nonzero": 100.0
+      },
+      "url_length": {
+        "mean": 81.7368,
+        "median": 84.0,
+        "pct_nonzero": 100.0
+      },
+      "has_suspicious_keywords": {
+        "mean": 0.0263,
+        "median": 0.0,
+        "pct_nonzero": 2.63
+      },
+      "has_login_form": {
+        "mean": 0.0263,
+        "median": 0.0,
+        "pct_nonzero": 2.63
+      }
+    },
+    "correctly_detected_phishing": {
+      "password_field_present": {
+        "mean": 0.0695,
+        "median": 0.0,
+        "pct_nonzero": 6.95
+      },
+      "external_form_action_ratio": {
+        "mean": 0.0583,
+        "median": 0.0,
+        "pct_nonzero": 5.83
+      },
+      "credential_collection_pattern": {
+        "mean": 0.0247,
+        "median": 0.0,
+        "pct_nonzero": 2.47
+      },
+      "meta_refresh_present": {
+        "mean": 0.1009,
+        "median": 0.0,
+        "pct_nonzero": 10.09
+      },
+      "script_to_link_ratio": {
+        "mean": 5.9914,
+        "median": 1.0,
+        "pct_nonzero": 87.89
+      },
+      "hidden_element_indicator": {
+        "mean": 0.6704,
+        "median": 1.0,
+        "pct_nonzero": 67.04
+      },
+      "iframe_to_image_ratio": {
+        "mean": 0.1597,
+        "median": 0.0,
+        "pct_nonzero": 23.99
+      },
+      "subdomain_to_apex_length_ratio": {
+        "mean": 1.0966,
+        "median": 0.8333,
+        "pct_nonzero": 70.63
+      },
+      "suspicious_keyword_and_login_form": {
+        "mean": 0.0135,
+        "median": 0.0,
+        "pct_nonzero": 1.35
+      },
+      "high_external_link_concentration": {
+        "mean": 0.4686,
+        "median": 0.0,
+        "pct_nonzero": 46.86
+      },
+      "brand_keyword_deep_path": {
+        "mean": 0.1054,
+        "median": 0.0,
+        "pct_nonzero": 10.54
+      },
+      "num_links": {
+        "mean": 14.5471,
+        "median": 1.0,
+        "pct_nonzero": 66.14
+      },
+      "num_internal_links": {
+        "mean": 4.3834,
+        "median": 0.0,
+        "pct_nonzero": 32.96
+      },
+      "num_external_links": {
+        "mean": 10.1637,
+        "median": 1.0,
+        "pct_nonzero": 62.11
+      },
+      "external_link_ratio": {
+        "mean": 0.4971,
+        "median": 0.5,
+        "pct_nonzero": 62.11
+      },
+      "uses_https": {
+        "mean": 0.8251,
+        "median": 1.0,
+        "pct_nonzero": 82.51
+      },
+      "domain_length": {
+        "mean": 23.4036,
+        "median": 21.0,
+        "pct_nonzero": 100.0
+      },
+      "url_length": {
+        "mean": 60.1502,
+        "median": 45.0,
+        "pct_nonzero": 100.0
+      },
+      "has_suspicious_keywords": {
+        "mean": 0.1794,
+        "median": 0.0,
+        "pct_nonzero": 17.94
+      },
+      "has_login_form": {
+        "mean": 0.1637,
+        "median": 0.0,
+        "pct_nonzero": 16.37
+      }
+    },
+    "legitimate_pages": {
+      "password_field_present": {
+        "mean": 0.0275,
+        "median": 0.0,
+        "pct_nonzero": 2.75
+      },
+      "external_form_action_ratio": {
+        "mean": 0.0495,
+        "median": 0.0,
+        "pct_nonzero": 6.2
+      },
+      "credential_collection_pattern": {
+        "mean": 0.0134,
+        "median": 0.0,
+        "pct_nonzero": 1.34
+      },
+      "meta_refresh_present": {
+        "mean": 0.0233,
+        "median": 0.0,
+        "pct_nonzero": 2.33
+      },
+      "script_to_link_ratio": {
+        "mean": 0.9918,
+        "median": 0.1969,
+        "pct_nonzero": 97.74
+      },
+      "hidden_element_indicator": {
+        "mean": 0.6998,
+        "median": 1.0,
+        "pct_nonzero": 69.98
+      },
+      "iframe_to_image_ratio": {
+        "mean": 0.0671,
+        "median": 0.0,
+        "pct_nonzero": 34.74
+      },
+      "subdomain_to_apex_length_ratio": {
+        "mean": 0.0917,
+        "median": 0.0,
+        "pct_nonzero": 11.77
+      },
+      "suspicious_keyword_and_login_form": {
+        "mean": 0.0106,
+        "median": 0.0,
+        "pct_nonzero": 1.06
+      },
+      "high_external_link_concentration": {
+        "mean": 0.05,
+        "median": 0.0,
+        "pct_nonzero": 5.0
+      },
+      "brand_keyword_deep_path": {
+        "mean": 0.0381,
+        "median": 0.0,
+        "pct_nonzero": 3.81
+      },
+      "num_links": {
+        "mean": 148.4799,
+        "median": 106.0,
+        "pct_nonzero": 94.36
+      },
+      "num_internal_links": {
+        "mean": 124.1304,
+        "median": 82.0,
+        "pct_nonzero": 93.59
+      },
+      "num_external_links": {
+        "mean": 24.3495,
+        "median": 12.0,
+        "pct_nonzero": 87.46
+      },
+      "external_link_ratio": {
+        "mean": 0.1966,
+        "median": 0.1053,
+        "pct_nonzero": 87.46
+      },
+      "uses_https": {
+        "mean": 0.9972,
+        "median": 1.0,
+        "pct_nonzero": 99.72
+      },
+      "domain_length": {
+        "mean": 12.3566,
+        "median": 12.0,
+        "pct_nonzero": 100.0
+      },
+      "url_length": {
+        "mean": 39.4926,
+        "median": 31.0,
+        "pct_nonzero": 100.0
+      },
+      "has_suspicious_keywords": {
+        "mean": 0.0571,
+        "median": 0.0,
+        "pct_nonzero": 5.71
+      },
+      "has_login_form": {
+        "mean": 0.1614,
+        "median": 0.0,
+        "pct_nonzero": 16.14
+      }
+    }
+  },
+  "feature_importances": {
+    "tree_gain_baseline": {
+      "url_length": 0.014939735643565655,
+      "domain_length": 0.06162022054195404,
+      "path_length": 0.02564043179154396,
+      "num_dots": 0.022766372188925743,
+      "num_hyphens": 0.007871651090681553,
+      "num_underscores": 0.010342021472752094,
+      "num_slashes": 0.030121175572276115,
+      "num_digits": 0.024684693664312363,
+      "num_special_chars": 0.006166850682348013,
+      "num_subdomains": 0.013840235769748688,
+      "num_query_params": 0.013811644166707993,
+      "path_depth": 0.018118832260370255,
+      "has_at_symbol": 0.004140979144722223,
+      "has_ip_address": 0.0,
+      "uses_https": 0.03862709552049637,
+      "has_port": 0.0,
+      "has_url_encoding": 0.00765191437676549,
+      "has_suspicious_tld": 0.003555804956704378,
+      "has_suspicious_keywords": 0.003504695137962699,
+      "has_double_slash_redirect": 0.007352607790380716,
+      "is_shortened_url": 0.014607114717364311,
+      "url_parse_error": 0.0,
+      "num_forms": 0.006392991170287132,
+      "num_input_fields": 0.005915211513638496,
+      "num_password_fields": 0.013913213275372982,
+      "has_login_form": 0.013079606927931309,
+      "num_forms_with_external_action": 0.00675479369238019,
+      "has_form_action_empty_or_javascript": 0.008099541999399662,
+      "num_links": 0.31709417700767517,
+      "num_internal_links": 0.13872197270393372,
+      "num_external_links": 0.036248162388801575,
+      "external_link_ratio": 0.028861153870821,
+      "num_links_with_mismatched_text": 0.0,
+      "num_scripts": 0.015400229021906853,
+      "num_iframes": 0.00454204436391592,
+      "has_hidden_iframe": 0.010151108726859093,
+      "has_suspicious_js_patterns": 0.010247058235108852,
+      "num_meta_refresh_redirects": 0.00514127966016531,
+      "title_length": 0.010128205642104149,
+      "has_favicon": 0.012163568288087845,
+      "num_images": 0.010156692937016487,
+      "text_to_html_ratio": 0.010250899009406567,
+      "html_parse_error": 0.007374056149274111
+    },
+    "tree_gain_semantic": {
+      "url_length": 0.01531432755291462,
+      "domain_length": 0.055604465305805206,
+      "path_length": 0.0206298865377903,
+      "num_dots": 0.013255095109343529,
+      "num_hyphens": 0.00847996212542057,
+      "num_underscores": 0.007222740910947323,
+      "num_slashes": 0.027182551100850105,
+      "num_digits": 0.01911378838121891,
+      "num_special_chars": 0.004770640749484301,
+      "num_subdomains": 0.005063112359493971,
+      "num_query_params": 0.010656462050974369,
+      "path_depth": 0.015092593617737293,
+      "has_at_symbol": 0.005164508707821369,
+      "has_ip_address": 0.0,
+      "uses_https": 0.034944042563438416,
+      "has_port": 0.0,
+      "has_url_encoding": 0.0024528098292648792,
+      "has_suspicious_tld": 0.003333724569529295,
+      "has_suspicious_keywords": 0.006175088696181774,
+      "has_double_slash_redirect": 0.005436226259917021,
+      "is_shortened_url": 0.011767477728426456,
+      "url_parse_error": 0.0,
+      "num_forms": 0.0054048518650233746,
+      "num_input_fields": 0.005411231890320778,
+      "num_password_fields": 0.008171041496098042,
+      "has_login_form": 0.009663221426308155,
+      "num_forms_with_external_action": 0.007533412426710129,
+      "has_form_action_empty_or_javascript": 0.007194455247372389,
+      "num_links": 0.24895794689655304,
+      "num_internal_links": 0.11043312400579453,
+      "num_external_links": 0.029910318553447723,
+      "external_link_ratio": 0.026160266250371933,
+      "num_links_with_mismatched_text": 0.0,
+      "num_scripts": 0.010758409276604652,
+      "num_iframes": 0.004737355280667543,
+      "has_hidden_iframe": 0.008473318070173264,
+      "has_suspicious_js_patterns": 0.009463712573051453,
+      "num_meta_refresh_redirects": 0.0037618556525558233,
+      "title_length": 0.008936615660786629,
+      "has_favicon": 0.017959782853722572,
+      "num_images": 0.0073613659478724,
+      "text_to_html_ratio": 0.008345437236130238,
+      "html_parse_error": 0.0060685365460813046,
+      "password_field_present": 0.0,
+      "external_form_action_ratio": 0.0036779281217604876,
+      "credential_collection_pattern": 0.005562432110309601,
+      "meta_refresh_present": 0.0,
+      "script_to_link_ratio": 0.0059022558853030205,
+      "hidden_element_indicator": 0.01098626758903265,
+      "iframe_to_image_ratio": 0.006176421418786049,
+      "subdomain_to_apex_length_ratio": 0.036453694105148315,
+      "suspicious_keyword_and_login_form": 0.013616245239973068,
+      "high_external_link_concentration": 0.09870162606239319,
+      "brand_keyword_deep_path": 0.0025574243627488613
+    },
+    "permutation_recall_baseline": [
+      {
+        "feature": "num_internal_links",
+        "mean": 0.14811,
+        "std": 0.006089
+      },
+      {
+        "feature": "num_links",
+        "mean": 0.092784,
+        "std": 0.010703
+      },
+      {
+        "feature": "num_digits",
+        "mean": 0.090722,
+        "std": 0.006821
+      },
+      {
+        "feature": "external_link_ratio",
+        "mean": 0.061856,
+        "std": 0.008276
+      },
+      {
+        "feature": "num_slashes",
+        "mean": 0.033333,
+        "std": 0.004559
+      },
+      {
+        "feature": "path_length",
+        "mean": 0.02921,
+        "std": 0.008059
+      },
+      {
+        "feature": "has_suspicious_js_patterns",
+        "mean": 0.023711,
+        "std": 0.005688
+      },
+      {
+        "feature": "num_images",
+        "mean": 0.0189,
+        "std": 0.004066
+      },
+      {
+        "feature": "has_form_action_empty_or_javascript",
+        "mean": 0.012715,
+        "std": 0.003538
+      },
+      {
+        "feature": "num_dots",
+        "mean": 0.012027,
+        "std": 0.007761
+      },
+      {
+        "feature": "num_external_links",
+        "mean": 0.011684,
+        "std": 0.003332
+      },
+      {
+        "feature": "text_to_html_ratio",
+        "mean": 0.009278,
+        "std": 0.004008
+      },
+      {
+        "feature": "num_query_params",
+        "mean": 0.00756,
+        "std": 0.004932
+      },
+      {
+        "feature": "has_hidden_iframe",
+        "mean": 0.005842,
+        "std": 0.001752
+      },
+      {
+        "feature": "num_subdomains",
+        "mean": 0.004124,
+        "std": 0.003857
+      }
+    ],
+    "permutation_recall_semantic": [
+      {
+        "feature": "num_internal_links",
+        "mean": 0.101718,
+        "std": 0.002749
+      },
+      {
+        "feature": "num_links",
+        "mean": 0.07457,
+        "std": 0.006011
+      },
+      {
+        "feature": "num_digits",
+        "mean": 0.06323,
+        "std": 0.003827
+      },
+      {
+        "feature": "external_link_ratio",
+        "mean": 0.023024,
+        "std": 0.005498
+      },
+      {
+        "feature": "num_images",
+        "mean": 0.015808,
+        "std": 0.004661
+      },
+      {
+        "feature": "has_login_form",
+        "mean": 0.006186,
+        "std": 0.001752
+      },
+      {
+        "feature": "num_external_links",
+        "mean": 0.00378,
+        "std": 0.002525
+      },
+      {
+        "feature": "num_query_params",
+        "mean": 0.001718,
+        "std": 0.001882
+      },
+      {
+        "feature": "has_suspicious_js_patterns",
+        "mean": 0.001718,
+        "std": 0.001882
+      },
+      {
+        "feature": "script_to_link_ratio",
+        "mean": 0.001375,
+        "std": 0.001286
+      },
+      {
+        "feature": "num_hyphens",
+        "mean": 0.000344,
+        "std": 0.001683
+      },
+      {
+        "feature": "has_hidden_iframe",
+        "mean": 0.000344,
+        "std": 0.000687
+      },
+      {
+        "feature": "has_favicon",
+        "mean": 0.000344,
+        "std": 0.001683
+      },
+      {
+        "feature": "iframe_to_image_ratio",
+        "mean": 0.000344,
+        "std": 0.000687
+      },
+      {
+        "feature": "high_external_link_concentration",
+        "mean": 0.000344,
+        "std": 0.001286
+      }
+    ]
+  },
+  "additional_36_false_negative_samples": [
+    {
+      "index": 2860,
+      "url": "https://sites.google.com/view/verified-badge-page/facebook",
+      "registered_domain": "google.com",
+      "label": "phishing",
+      "baseline_score": 0.5314,
+      "semantic_score": 0.4358,
+      "score_difference": -0.0956,
+      "slices": {
+        "uses_https": 1,
+        "is_shortened_url": 0,
+        "is_sparse_page": 1,
+        "has_login_form": 0,
+        "has_external_form": 0
+      },
+      "semantic_features": {
+        "password_field_present": 0,
+        "external_form_action_ratio": 0.0,
+        "credential_collection_pattern": 0,
+        "meta_refresh_present": 0,
+        "script_to_link_ratio": 12.0,
+        "hidden_element_indicator": 1,
+        "iframe_to_image_ratio": 1.0,
+        "subdomain_to_apex_length_ratio": 0.5,
+        "suspicious_keyword_and_login_form": 0,
+        "high_external_link_concentration": 0,
+        "brand_keyword_deep_path": 0
+      },
+      "key_production_features": {
+        "num_links": 0,
+        "num_internal_links": 0,
+        "num_external_links": 0,
+        "external_link_ratio": 0.0,
+        "domain_length": 16,
+        "url_length": 58,
+        "path_length": 34,
+        "num_digits": 0,
+        "num_slashes": 5,
+        "has_suspicious_keywords": 0,
+        "has_login_form": 0
+      }
+    },
+    {
+      "index": 3194,
+      "url": "https://docs.google.com/drawings/d/1fh-QepoQNnFUkiYj1Mh0lpYtC0XTPMKG84E01Rl2luo/edit",
+      "registered_domain": "google.com",
+      "label": "phishing",
+      "baseline_score": 0.5417,
+      "semantic_score": 0.4322,
+      "score_difference": -0.1096,
+      "slices": {
+        "uses_https": 1,
+        "is_shortened_url": 0,
+        "is_sparse_page": 1,
+        "has_login_form": 0,
+        "has_external_form": 0
+      },
+      "semantic_features": {
+        "password_field_present": 0,
+        "external_form_action_ratio": 0.0,
+        "credential_collection_pattern": 0,
+        "meta_refresh_present": 0,
+        "script_to_link_ratio": 16.5,
+        "hidden_element_indicator": 1,
+        "iframe_to_image_ratio": 1.0,
+        "subdomain_to_apex_length_ratio": 0.4,
+        "suspicious_keyword_and_login_form": 0,
+        "high_external_link_concentration": 1,
+        "brand_keyword_deep_path": 0
+      },
+      "key_production_features": {
+        "num_links": 2,
+        "num_internal_links": 0,
+        "num_external_links": 2,
+        "external_link_ratio": 1.0,
+        "domain_length": 15,
+        "url_length": 84,
+        "path_length": 61,
+        "num_digits": 9,
+        "num_slashes": 6,
+        "has_suspicious_keywords": 0,
+        "has_login_form": 0
+      }
+    },
+    {
+      "index": 3206,
+      "url": "https://www.secureaccountview.com/BFWeb/clients/creditsuisse/index#",
+      "registered_domain": "secureaccountview.com",
+      "label": "phishing",
+      "baseline_score": 0.6808,
+      "semantic_score": 0.4698,
+      "score_difference": -0.211,
+      "slices": {
+        "uses_https": 1,
+        "is_shortened_url": 0,
+        "is_sparse_page": 1,
+        "has_login_form": 1,
+        "has_external_form": 0
+      },
+      "semantic_features": {
+        "password_field_present": 1,
+        "external_form_action_ratio": 0.0,
+        "credential_collection_pattern": 1,
+        "meta_refresh_present": 0,
+        "script_to_link_ratio": 1.2,
+        "hidden_element_indicator": 0,
+        "iframe_to_image_ratio": 0.0,
+        "subdomain_to_apex_length_ratio": 0.0,
+        "suspicious_keyword_and_login_form": 1,
+        "high_external_link_concentration": 0,
+        "brand_keyword_deep_path": 1
+      },
+      "key_production_features": {
+        "num_links": 10,
+        "num_internal_links": 5,
+        "num_external_links": 5,
+        "external_link_ratio": 0.5,
+        "domain_length": 25,
+        "url_length": 67,
+        "path_length": 33,
+        "num_digits": 0,
+        "num_slashes": 6,
+        "has_suspicious_keywords": 1,
+        "has_login_form": 1
+      }
+    },
+    {
+      "index": 3223,
+      "url": "https://docs.google.com/drawings/d/1v-bLai0uMSfgBni7fxS6wtRx1gbMWYB6COVNS9l7EQw/edit",
+      "registered_domain": "google.com",
+      "label": "phishing",
+      "baseline_score": 0.5332,
+      "semantic_score": 0.4242,
+      "score_difference": -0.109,
+      "slices": {
+        "uses_https": 1,
+        "is_shortened_url": 0,
+        "is_sparse_page": 1,
+        "has_login_form": 0,
+        "has_external_form": 0
+      },
+      "semantic_features": {
+        "password_field_present": 0,
+        "external_form_action_ratio": 0.0,
+        "credential_collection_pattern": 0,
+        "meta_refresh_present": 0,
+        "script_to_link_ratio": 16.5,
+        "hidden_element_indicator": 1,
+        "iframe_to_image_ratio": 1.0,
+        "subdomain_to_apex_length_ratio": 0.4,
+        "suspicious_keyword_and_login_form": 0,
+        "high_external_link_concentration": 1,
+        "brand_keyword_deep_path": 0
+      },
+      "key_production_features": {
+        "num_links": 2,
+        "num_internal_links": 0,
+        "num_external_links": 2,
+        "external_link_ratio": 1.0,
+        "domain_length": 15,
+        "url_length": 84,
+        "path_length": 61,
+        "num_digits": 8,
+        "num_slashes": 6,
+        "has_suspicious_keywords": 0,
+        "has_login_form": 0
+      }
+    },
+    {
+      "index": 3255,
+      "url": "https://docs.google.com/drawings/d/1rcJGEf2oqb5Qeb4VxnWemI1HnbXNX8birOl9cJMANcw/edit",
+      "registered_domain": "google.com",
+      "label": "phishing",
+      "baseline_score": 0.5332,
+      "semantic_score": 0.4242,
+      "score_difference": -0.109,
+      "slices": {
+        "uses_https": 1,
+        "is_shortened_url": 0,
+        "is_sparse_page": 1,
+        "has_login_form": 0,
+        "has_external_form": 0
+      },
+      "semantic_features": {
+        "password_field_present": 0,
+        "external_form_action_ratio": 0.0,
+        "credential_collection_pattern": 0,
+        "meta_refresh_present": 0,
+        "script_to_link_ratio": 16.5,
+        "hidden_element_indicator": 1,
+        "iframe_to_image_ratio": 1.0,
+        "subdomain_to_apex_length_ratio": 0.4,
+        "suspicious_keyword_and_login_form": 0,
+        "high_external_link_concentration": 1,
+        "brand_keyword_deep_path": 0
+      },
+      "key_production_features": {
+        "num_links": 2,
+        "num_internal_links": 0,
+        "num_external_links": 2,
+        "external_link_ratio": 1.0,
+        "domain_length": 15,
+        "url_length": 84,
+        "path_length": 61,
+        "num_digits": 7,
+        "num_slashes": 6,
+        "has_suspicious_keywords": 0,
+        "has_login_form": 0
+      }
+    },
+    {
+      "index": 3264,
+      "url": "https://docs.google.com/drawings/d/1LPS5qsxloU0m0V99PtEahuvphpdZa7oiIapgrUShz1o/edit",
+      "registered_domain": "google.com",
+      "label": "phishing",
+      "baseline_score": 0.5332,
+      "semantic_score": 0.4242,
+      "score_difference": -0.109,
+      "slices": {
+        "uses_https": 1,
+        "is_shortened_url": 0,
+        "is_sparse_page": 1,
+        "has_login_form": 0,
+        "has_external_form": 0
+      },
+      "semantic_features": {
+        "password_field_present": 0,
+        "external_form_action_ratio": 0.0,
+        "credential_collection_pattern": 0,
+        "meta_refresh_present": 0,
+        "script_to_link_ratio": 16.5,
+        "hidden_element_indicator": 1,
+        "iframe_to_image_ratio": 1.0,
+        "subdomain_to_apex_length_ratio": 0.4,
+        "suspicious_keyword_and_login_form": 0,
+        "high_external_link_concentration": 1,
+        "brand_keyword_deep_path": 0
+      },
+      "key_production_features": {
+        "num_links": 2,
+        "num_internal_links": 0,
+        "num_external_links": 2,
+        "external_link_ratio": 1.0,
+        "domain_length": 15,
+        "url_length": 84,
+        "path_length": 61,
+        "num_digits": 8,
+        "num_slashes": 6,
+        "has_suspicious_keywords": 0,
+        "has_login_form": 0
+      }
+    },
+    {
+      "index": 3265,
+      "url": "https://docs.google.com/drawings/d/1GbAtESv6-n1WJIPL9ECZtIN6zEJmTxMgyJ0efZpvP1k/edit",
+      "registered_domain": "google.com",
+      "label": "phishing",
+      "baseline_score": 0.5332,
+      "semantic_score": 0.4242,
+      "score_difference": -0.109,
+      "slices": {
+        "uses_https": 1,
+        "is_shortened_url": 0,
+        "is_sparse_page": 1,
+        "has_login_form": 0,
+        "has_external_form": 0
+      },
+      "semantic_features": {
+        "password_field_present": 0,
+        "external_form_action_ratio": 0.0,
+        "credential_collection_pattern": 0,
+        "meta_refresh_present": 0,
+        "script_to_link_ratio": 16.5,
+        "hidden_element_indicator": 1,
+        "iframe_to_image_ratio": 1.0,
+        "subdomain_to_apex_length_ratio": 0.4,
+        "suspicious_keyword_and_login_form": 0,
+        "high_external_link_concentration": 1,
+        "brand_keyword_deep_path": 0
+      },
+      "key_production_features": {
+        "num_links": 2,
+        "num_internal_links": 0,
+        "num_external_links": 2,
+        "external_link_ratio": 1.0,
+        "domain_length": 15,
+        "url_length": 84,
+        "path_length": 61,
+        "num_digits": 7,
+        "num_slashes": 6,
+        "has_suspicious_keywords": 0,
+        "has_login_form": 0
+      }
+    },
+    {
+      "index": 3267,
+      "url": "https://docs.google.com/drawings/d/1THgmIw-9rr1IhCwjcB3R1hYVEtESwUQPpXNMXPwx5UM/edit",
+      "registered_domain": "google.com",
+      "label": "phishing",
+      "baseline_score": 0.5332,
+      "semantic_score": 0.4242,
+      "score_difference": -0.109,
+      "slices": {
+        "uses_https": 1,
+        "is_shortened_url": 0,
+        "is_sparse_page": 1,
+        "has_login_form": 0,
+        "has_external_form": 0
+      },
+      "semantic_features": {
+        "password_field_present": 0,
+        "external_form_action_ratio": 0.0,
+        "credential_collection_pattern": 0,
+        "meta_refresh_present": 0,
+        "script_to_link_ratio": 16.5,
+        "hidden_element_indicator": 1,
+        "iframe_to_image_ratio": 1.0,
+        "subdomain_to_apex_length_ratio": 0.4,
+        "suspicious_keyword_and_login_form": 0,
+        "high_external_link_concentration": 1,
+        "brand_keyword_deep_path": 0
+      },
+      "key_production_features": {
+        "num_links": 2,
+        "num_internal_links": 0,
+        "num_external_links": 2,
+        "external_link_ratio": 1.0,
+        "domain_length": 15,
+        "url_length": 84,
+        "path_length": 61,
+        "num_digits": 6,
+        "num_slashes": 6,
+        "has_suspicious_keywords": 0,
+        "has_login_form": 0
+      }
+    },
+    {
+      "index": 3269,
+      "url": "https://docs.google.com/drawings/d/1RkXjOnHUn19Akvt8teArgEahDPSgveExyMjoeS9RKuI/edit",
+      "registered_domain": "google.com",
+      "label": "phishing",
+      "baseline_score": 0.5332,
+      "semantic_score": 0.4242,
+      "score_difference": -0.109,
+      "slices": {
+        "uses_https": 1,
+        "is_shortened_url": 0,
+        "is_sparse_page": 1,
+        "has_login_form": 0,
+        "has_external_form": 0
+      },
+      "semantic_features": {
+        "password_field_present": 0,
+        "external_form_action_ratio": 0.0,
+        "credential_collection_pattern": 0,
+        "meta_refresh_present": 0,
+        "script_to_link_ratio": 16.5,
+        "hidden_element_indicator": 1,
+        "iframe_to_image_ratio": 1.0,
+        "subdomain_to_apex_length_ratio": 0.4,
+        "suspicious_keyword_and_login_form": 0,
+        "high_external_link_concentration": 1,
+        "brand_keyword_deep_path": 0
+      },
+      "key_production_features": {
+        "num_links": 2,
+        "num_internal_links": 0,
+        "num_external_links": 2,
+        "external_link_ratio": 1.0,
+        "domain_length": 15,
+        "url_length": 84,
+        "path_length": 61,
+        "num_digits": 5,
+        "num_slashes": 6,
+        "has_suspicious_keywords": 0,
+        "has_login_form": 0
+      }
+    },
+    {
+      "index": 3272,
+      "url": "https://docs.google.com/drawings/d/1bAMgqrLzTLrgIAbqtt9JkJ6hfC6VBKRrZFpJuHETVWA/edit",
+      "registered_domain": "google.com",
+      "label": "phishing",
+      "baseline_score": 0.5332,
+      "semantic_score": 0.4242,
+      "score_difference": -0.109,
+      "slices": {
+        "uses_https": 1,
+        "is_shortened_url": 0,
+        "is_sparse_page": 1,
+        "has_login_form": 0,
+        "has_external_form": 0
+      },
+      "semantic_features": {
+        "password_field_present": 0,
+        "external_form_action_ratio": 0.0,
+        "credential_collection_pattern": 0,
+        "meta_refresh_present": 0,
+        "script_to_link_ratio": 16.5,
+        "hidden_element_indicator": 1,
+        "iframe_to_image_ratio": 1.0,
+        "subdomain_to_apex_length_ratio": 0.4,
+        "suspicious_keyword_and_login_form": 0,
+        "high_external_link_concentration": 1,
+        "brand_keyword_deep_path": 0
+      },
+      "key_production_features": {
+        "num_links": 2,
+        "num_internal_links": 0,
+        "num_external_links": 2,
+        "external_link_ratio": 1.0,
+        "domain_length": 15,
+        "url_length": 84,
+        "path_length": 61,
+        "num_digits": 4,
+        "num_slashes": 6,
+        "has_suspicious_keywords": 0,
+        "has_login_form": 0
+      }
+    },
+    {
+      "index": 3379,
+      "url": "https://docs.google.com/drawings/d/1Vv9g9bKK1YUw4m-Yv5WWfpWMQF3fZfDUdkJaviRgNMA/edit",
+      "registered_domain": "google.com",
+      "label": "phishing",
+      "baseline_score": 0.5332,
+      "semantic_score": 0.4242,
+      "score_difference": -0.109,
+      "slices": {
+        "uses_https": 1,
+        "is_shortened_url": 0,
+        "is_sparse_page": 1,
+        "has_login_form": 0,
+        "has_external_form": 0
+      },
+      "semantic_features": {
+        "password_field_present": 0,
+        "external_form_action_ratio": 0.0,
+        "credential_collection_pattern": 0,
+        "meta_refresh_present": 0,
+        "script_to_link_ratio": 16.5,
+        "hidden_element_indicator": 1,
+        "iframe_to_image_ratio": 1.0,
+        "subdomain_to_apex_length_ratio": 0.4,
+        "suspicious_keyword_and_login_form": 0,
+        "high_external_link_concentration": 1,
+        "brand_keyword_deep_path": 0
+      },
+      "key_production_features": {
+        "num_links": 2,
+        "num_internal_links": 0,
+        "num_external_links": 2,
+        "external_link_ratio": 1.0,
+        "domain_length": 15,
+        "url_length": 84,
+        "path_length": 61,
+        "num_digits": 7,
+        "num_slashes": 6,
+        "has_suspicious_keywords": 0,
+        "has_login_form": 0
+      }
+    },
+    {
+      "index": 3382,
+      "url": "https://docs.google.com/drawings/d/1z9abhquN2aOl8PqdVVPzrtQMHG5t4VZnqJQfvNFALcY/edit",
+      "registered_domain": "google.com",
+      "label": "phishing",
+      "baseline_score": 0.5332,
+      "semantic_score": 0.4242,
+      "score_difference": -0.109,
+      "slices": {
+        "uses_https": 1,
+        "is_shortened_url": 0,
+        "is_sparse_page": 1,
+        "has_login_form": 0,
+        "has_external_form": 0
+      },
+      "semantic_features": {
+        "password_field_present": 0,
+        "external_form_action_ratio": 0.0,
+        "credential_collection_pattern": 0,
+        "meta_refresh_present": 0,
+        "script_to_link_ratio": 16.5,
+        "hidden_element_indicator": 1,
+        "iframe_to_image_ratio": 1.0,
+        "subdomain_to_apex_length_ratio": 0.4,
+        "suspicious_keyword_and_login_form": 0,
+        "high_external_link_concentration": 1,
+        "brand_keyword_deep_path": 0
+      },
+      "key_production_features": {
+        "num_links": 2,
+        "num_internal_links": 0,
+        "num_external_links": 2,
+        "external_link_ratio": 1.0,
+        "domain_length": 15,
+        "url_length": 84,
+        "path_length": 61,
+        "num_digits": 6,
+        "num_slashes": 6,
+        "has_suspicious_keywords": 0,
+        "has_login_form": 0
+      }
+    },
+    {
+      "index": 3383,
+      "url": "https://docs.google.com/drawings/d/1lI3BjfryPnQnFeZxn-VBaXGUASRaWvZeAcwmw1mX6gs/edit",
+      "registered_domain": "google.com",
+      "label": "phishing",
+      "baseline_score": 0.5332,
+      "semantic_score": 0.4242,
+      "score_difference": -0.109,
+      "slices": {
+        "uses_https": 1,
+        "is_shortened_url": 0,
+        "is_sparse_page": 1,
+        "has_login_form": 0,
+        "has_external_form": 0
+      },
+      "semantic_features": {
+        "password_field_present": 0,
+        "external_form_action_ratio": 0.0,
+        "credential_collection_pattern": 0,
+        "meta_refresh_present": 0,
+        "script_to_link_ratio": 16.5,
+        "hidden_element_indicator": 1,
+        "iframe_to_image_ratio": 1.0,
+        "subdomain_to_apex_length_ratio": 0.4,
+        "suspicious_keyword_and_login_form": 0,
+        "high_external_link_concentration": 1,
+        "brand_keyword_deep_path": 0
+      },
+      "key_production_features": {
+        "num_links": 2,
+        "num_internal_links": 0,
+        "num_external_links": 2,
+        "external_link_ratio": 1.0,
+        "domain_length": 15,
+        "url_length": 84,
+        "path_length": 61,
+        "num_digits": 4,
+        "num_slashes": 6,
+        "has_suspicious_keywords": 0,
+        "has_login_form": 0
+      }
+    },
+    {
+      "index": 3384,
+      "url": "https://docs.google.com/drawings/d/1IbqJRoBR3-bOI5fJB992jYK5CxMbJQCnBKEkEfdBX6U/edit",
+      "registered_domain": "google.com",
+      "label": "phishing",
+      "baseline_score": 0.5332,
+      "semantic_score": 0.4242,
+      "score_difference": -0.109,
+      "slices": {
+        "uses_https": 1,
+        "is_shortened_url": 0,
+        "is_sparse_page": 1,
+        "has_login_form": 0,
+        "has_external_form": 0
+      },
+      "semantic_features": {
+        "password_field_present": 0,
+        "external_form_action_ratio": 0.0,
+        "credential_collection_pattern": 0,
+        "meta_refresh_present": 0,
+        "script_to_link_ratio": 16.5,
+        "hidden_element_indicator": 1,
+        "iframe_to_image_ratio": 1.0,
+        "subdomain_to_apex_length_ratio": 0.4,
+        "suspicious_keyword_and_login_form": 0,
+        "high_external_link_concentration": 1,
+        "brand_keyword_deep_path": 0
+      },
+      "key_production_features": {
+        "num_links": 2,
+        "num_internal_links": 0,
+        "num_external_links": 2,
+        "external_link_ratio": 1.0,
+        "domain_length": 15,
+        "url_length": 84,
+        "path_length": 61,
+        "num_digits": 8,
+        "num_slashes": 6,
+        "has_suspicious_keywords": 0,
+        "has_login_form": 0
+      }
+    },
+    {
+      "index": 3387,
+      "url": "https://docs.google.com/drawings/d/15RmkErwo8PcXxz1i8UE58SfjCxvAwwzGCcH67gfOCcw/edit",
+      "registered_domain": "google.com",
+      "label": "phishing",
+      "baseline_score": 0.5332,
+      "semantic_score": 0.4242,
+      "score_difference": -0.109,
+      "slices": {
+        "uses_https": 1,
+        "is_shortened_url": 0,
+        "is_sparse_page": 1,
+        "has_login_form": 0,
+        "has_external_form": 0
+      },
+      "semantic_features": {
+        "password_field_present": 0,
+        "external_form_action_ratio": 0.0,
+        "credential_collection_pattern": 0,
+        "meta_refresh_present": 0,
+        "script_to_link_ratio": 16.5,
+        "hidden_element_indicator": 1,
+        "iframe_to_image_ratio": 1.0,
+        "subdomain_to_apex_length_ratio": 0.4,
+        "suspicious_keyword_and_login_form": 0,
+        "high_external_link_concentration": 1,
+        "brand_keyword_deep_path": 0
+      },
+      "key_production_features": {
+        "num_links": 2,
+        "num_internal_links": 0,
+        "num_external_links": 2,
+        "external_link_ratio": 1.0,
+        "domain_length": 15,
+        "url_length": 84,
+        "path_length": 61,
+        "num_digits": 9,
+        "num_slashes": 6,
+        "has_suspicious_keywords": 0,
+        "has_login_form": 0
+      }
+    },
+    {
+      "index": 3390,
+      "url": "https://docs.google.com/drawings/d/1DMaJkmIBMVA1QEFAPfk-3Tmz1GdQ5CMBVnrFwevS-N0/edit",
+      "registered_domain": "google.com",
+      "label": "phishing",
+      "baseline_score": 0.5247,
+      "semantic_score": 0.416,
+      "score_difference": -0.1087,
+      "slices": {
+        "uses_https": 1,
+        "is_shortened_url": 0,
+        "is_sparse_page": 1,
+        "has_login_form": 0,
+        "has_external_form": 0
+      },
+      "semantic_features": {
+        "password_field_present": 0,
+        "external_form_action_ratio": 0.0,
+        "credential_collection_pattern": 0,
+        "meta_refresh_present": 0,
+        "script_to_link_ratio": 16.5,
+        "hidden_element_indicator": 1,
+        "iframe_to_image_ratio": 1.0,
+        "subdomain_to_apex_length_ratio": 0.4,
+        "suspicious_keyword_and_login_form": 0,
+        "high_external_link_concentration": 1,
+        "brand_keyword_deep_path": 0
+      },
+      "key_production_features": {
+        "num_links": 2,
+        "num_internal_links": 0,
+        "num_external_links": 2,
+        "external_link_ratio": 1.0,
+        "domain_length": 15,
+        "url_length": 84,
+        "path_length": 61,
+        "num_digits": 6,
+        "num_slashes": 6,
+        "has_suspicious_keywords": 0,
+        "has_login_form": 0
+      }
+    },
+    {
+      "index": 3391,
+      "url": "https://docs.google.com/drawings/d/1jmY3-YZsw6heFyhU6QeUh7rQsmPCtDX3CGksNyl3W5A/edit",
+      "registered_domain": "google.com",
+      "label": "phishing",
+      "baseline_score": 0.5332,
+      "semantic_score": 0.4242,
+      "score_difference": -0.109,
+      "slices": {
+        "uses_https": 1,
+        "is_shortened_url": 0,
+        "is_sparse_page": 1,
+        "has_login_form": 0,
+        "has_external_form": 0
+      },
+      "semantic_features": {
+        "password_field_present": 0,
+        "external_form_action_ratio": 0.0,
+        "credential_collection_pattern": 0,
+        "meta_refresh_present": 0,
+        "script_to_link_ratio": 16.5,
+        "hidden_element_indicator": 1,
+        "iframe_to_image_ratio": 1.0,
+        "subdomain_to_apex_length_ratio": 0.4,
+        "suspicious_keyword_and_login_form": 0,
+        "high_external_link_concentration": 1,
+        "brand_keyword_deep_path": 0
+      },
+      "key_production_features": {
+        "num_links": 2,
+        "num_internal_links": 0,
+        "num_external_links": 2,
+        "external_link_ratio": 1.0,
+        "domain_length": 15,
+        "url_length": 84,
+        "path_length": 61,
+        "num_digits": 8,
+        "num_slashes": 6,
+        "has_suspicious_keywords": 0,
+        "has_login_form": 0
+      }
+    },
+    {
+      "index": 3432,
+      "url": "https://docs.google.com/drawings/d/1pfhVAqNctw1fGuqLlsbfyuGCvrjXug0CMzGXMVGQAv0/edit",
+      "registered_domain": "google.com",
+      "label": "phishing",
+      "baseline_score": 0.5332,
+      "semantic_score": 0.4065,
+      "score_difference": -0.1267,
+      "slices": {
+        "uses_https": 1,
+        "is_shortened_url": 0,
+        "is_sparse_page": 1,
+        "has_login_form": 0,
+        "has_external_form": 0
+      },
+      "semantic_features": {
+        "password_field_present": 0,
+        "external_form_action_ratio": 0.0,
+        "credential_collection_pattern": 0,
+        "meta_refresh_present": 0,
+        "script_to_link_ratio": 16.5,
+        "hidden_element_indicator": 1,
+        "iframe_to_image_ratio": 1.0,
+        "subdomain_to_apex_length_ratio": 0.4,
+        "suspicious_keyword_and_login_form": 0,
+        "high_external_link_concentration": 1,
+        "brand_keyword_deep_path": 0
+      },
+      "key_production_features": {
+        "num_links": 2,
+        "num_internal_links": 0,
+        "num_external_links": 2,
+        "external_link_ratio": 1.0,
+        "domain_length": 15,
+        "url_length": 84,
+        "path_length": 61,
+        "num_digits": 4,
+        "num_slashes": 6,
+        "has_suspicious_keywords": 0,
+        "has_login_form": 0
+      }
+    },
+    {
+      "index": 3433,
+      "url": "https://docs.google.com/drawings/d/1QwNAl0-WaDIePIUxjRJVAe2v2EYDjn8y7ktT1-adiYs/edit",
+      "registered_domain": "google.com",
+      "label": "phishing",
+      "baseline_score": 0.5247,
+      "semantic_score": 0.416,
+      "score_difference": -0.1087,
+      "slices": {
+        "uses_https": 1,
+        "is_shortened_url": 0,
+        "is_sparse_page": 1,
+        "has_login_form": 0,
+        "has_external_form": 0
+      },
+      "semantic_features": {
+        "password_field_present": 0,
+        "external_form_action_ratio": 0.0,
+        "credential_collection_pattern": 0,
+        "meta_refresh_present": 0,
+        "script_to_link_ratio": 16.5,
+        "hidden_element_indicator": 1,
+        "iframe_to_image_ratio": 1.0,
+        "subdomain_to_apex_length_ratio": 0.4,
+        "suspicious_keyword_and_login_form": 0,
+        "high_external_link_concentration": 1,
+        "brand_keyword_deep_path": 0
+      },
+      "key_production_features": {
+        "num_links": 2,
+        "num_internal_links": 0,
+        "num_external_links": 2,
+        "external_link_ratio": 1.0,
+        "domain_length": 15,
+        "url_length": 84,
+        "path_length": 61,
+        "num_digits": 7,
+        "num_slashes": 6,
+        "has_suspicious_keywords": 0,
+        "has_login_form": 0
+      }
+    },
+    {
+      "index": 3434,
+      "url": "https://docs.google.com/drawings/d/1EDvOEGKLxXwylbVJY4Ehvo3XPCiCYBOFXQGC-6tpme8/edit",
+      "registered_domain": "google.com",
+      "label": "phishing",
+      "baseline_score": 0.5332,
+      "semantic_score": 0.4242,
+      "score_difference": -0.109,
+      "slices": {
+        "uses_https": 1,
+        "is_shortened_url": 0,
+        "is_sparse_page": 1,
+        "has_login_form": 0,
+        "has_external_form": 0
+      },
+      "semantic_features": {
+        "password_field_present": 0,
+        "external_form_action_ratio": 0.0,
+        "credential_collection_pattern": 0,
+        "meta_refresh_present": 0,
+        "script_to_link_ratio": 16.5,
+        "hidden_element_indicator": 1,
+        "iframe_to_image_ratio": 1.0,
+        "subdomain_to_apex_length_ratio": 0.4,
+        "suspicious_keyword_and_login_form": 0,
+        "high_external_link_concentration": 1,
+        "brand_keyword_deep_path": 0
+      },
+      "key_production_features": {
+        "num_links": 2,
+        "num_internal_links": 0,
+        "num_external_links": 2,
+        "external_link_ratio": 1.0,
+        "domain_length": 15,
+        "url_length": 84,
+        "path_length": 61,
+        "num_digits": 5,
+        "num_slashes": 6,
+        "has_suspicious_keywords": 0,
+        "has_login_form": 0
+      }
+    },
+    {
+      "index": 3437,
+      "url": "https://docs.google.com/drawings/d/1D7uz2cgP0uIouz81T3AruKzqmDzffEIQkf5jmRFNMSI/edit",
+      "registered_domain": "google.com",
+      "label": "phishing",
+      "baseline_score": 0.5332,
+      "semantic_score": 0.4242,
+      "score_difference": -0.109,
+      "slices": {
+        "uses_https": 1,
+        "is_shortened_url": 0,
+        "is_sparse_page": 1,
+        "has_login_form": 0,
+        "has_external_form": 0
+      },
+      "semantic_features": {
+        "password_field_present": 0,
+        "external_form_action_ratio": 0.0,
+        "credential_collection_pattern": 0,
+        "meta_refresh_present": 0,
+        "script_to_link_ratio": 16.5,
+        "hidden_element_indicator": 1,
+        "iframe_to_image_ratio": 1.0,
+        "subdomain_to_apex_length_ratio": 0.4,
+        "suspicious_keyword_and_login_form": 0,
+        "high_external_link_concentration": 1,
+        "brand_keyword_deep_path": 0
+      },
+      "key_production_features": {
+        "num_links": 2,
+        "num_internal_links": 0,
+        "num_external_links": 2,
+        "external_link_ratio": 1.0,
+        "domain_length": 15,
+        "url_length": 84,
+        "path_length": 61,
+        "num_digits": 8,
+        "num_slashes": 6,
+        "has_suspicious_keywords": 0,
+        "has_login_form": 0
+      }
+    },
+    {
+      "index": 3442,
+      "url": "https://docs.google.com/drawings/d/1lSxg5SUSUSlVqmdI2tQHsd4N6RzHIoq8YDHMt4QHqug/edit",
+      "registered_domain": "google.com",
+      "label": "phishing",
+      "baseline_score": 0.5332,
+      "semantic_score": 0.4242,
+      "score_difference": -0.109,
+      "slices": {
+        "uses_https": 1,
+        "is_shortened_url": 0,
+        "is_sparse_page": 1,
+        "has_login_form": 0,
+        "has_external_form": 0
+      },
+      "semantic_features": {
+        "password_field_present": 0,
+        "external_form_action_ratio": 0.0,
+        "credential_collection_pattern": 0,
+        "meta_refresh_present": 0,
+        "script_to_link_ratio": 16.5,
+        "hidden_element_indicator": 1,
+        "iframe_to_image_ratio": 1.0,
+        "subdomain_to_apex_length_ratio": 0.4,
+        "suspicious_keyword_and_login_form": 0,
+        "high_external_link_concentration": 1,
+        "brand_keyword_deep_path": 0
+      },
+      "key_production_features": {
+        "num_links": 2,
+        "num_internal_links": 0,
+        "num_external_links": 2,
+        "external_link_ratio": 1.0,
+        "domain_length": 15,
+        "url_length": 84,
+        "path_length": 61,
+        "num_digits": 7,
+        "num_slashes": 6,
+        "has_suspicious_keywords": 0,
+        "has_login_form": 0
+      }
+    },
+    {
+      "index": 3444,
+      "url": "https://docs.google.com/drawings/d/1tA0CDqv6vHT8jjzPDTzW2o3m4bIsBkzuBiGfDcSa4hs/edit",
+      "registered_domain": "google.com",
+      "label": "phishing",
+      "baseline_score": 0.5332,
+      "semantic_score": 0.4242,
+      "score_difference": -0.109,
+      "slices": {
+        "uses_https": 1,
+        "is_shortened_url": 0,
+        "is_sparse_page": 1,
+        "has_login_form": 0,
+        "has_external_form": 0
+      },
+      "semantic_features": {
+        "password_field_present": 0,
+        "external_form_action_ratio": 0.0,
+        "credential_collection_pattern": 0,
+        "meta_refresh_present": 0,
+        "script_to_link_ratio": 16.5,
+        "hidden_element_indicator": 1,
+        "iframe_to_image_ratio": 1.0,
+        "subdomain_to_apex_length_ratio": 0.4,
+        "suspicious_keyword_and_login_form": 0,
+        "high_external_link_concentration": 1,
+        "brand_keyword_deep_path": 0
+      },
+      "key_production_features": {
+        "num_links": 2,
+        "num_internal_links": 0,
+        "num_external_links": 2,
+        "external_link_ratio": 1.0,
+        "domain_length": 15,
+        "url_length": 84,
+        "path_length": 61,
+        "num_digits": 8,
+        "num_slashes": 6,
+        "has_suspicious_keywords": 0,
+        "has_login_form": 0
+      }
+    },
+    {
+      "index": 3445,
+      "url": "https://docs.google.com/drawings/d/1ddfZ-ryoHDFtaEaQYij3kivMNKaPfWiiNsVihInnmL8/edit",
+      "registered_domain": "google.com",
+      "label": "phishing",
+      "baseline_score": 0.5332,
+      "semantic_score": 0.4242,
+      "score_difference": -0.109,
+      "slices": {
+        "uses_https": 1,
+        "is_shortened_url": 0,
+        "is_sparse_page": 1,
+        "has_login_form": 0,
+        "has_external_form": 0
+      },
+      "semantic_features": {
+        "password_field_present": 0,
+        "external_form_action_ratio": 0.0,
+        "credential_collection_pattern": 0,
+        "meta_refresh_present": 0,
+        "script_to_link_ratio": 16.5,
+        "hidden_element_indicator": 1,
+        "iframe_to_image_ratio": 1.0,
+        "subdomain_to_apex_length_ratio": 0.4,
+        "suspicious_keyword_and_login_form": 0,
+        "high_external_link_concentration": 1,
+        "brand_keyword_deep_path": 0
+      },
+      "key_production_features": {
+        "num_links": 2,
+        "num_internal_links": 0,
+        "num_external_links": 2,
+        "external_link_ratio": 1.0,
+        "domain_length": 15,
+        "url_length": 84,
+        "path_length": 61,
+        "num_digits": 3,
+        "num_slashes": 6,
+        "has_suspicious_keywords": 0,
+        "has_login_form": 0
+      }
+    },
+    {
+      "index": 3447,
+      "url": "https://docs.google.com/drawings/d/1rUKPySY1Y1jDksSV50wGxzAGT4DYqdV8lwnddhkFDrw/edit",
+      "registered_domain": "google.com",
+      "label": "phishing",
+      "baseline_score": 0.5332,
+      "semantic_score": 0.4242,
+      "score_difference": -0.109,
+      "slices": {
+        "uses_https": 1,
+        "is_shortened_url": 0,
+        "is_sparse_page": 1,
+        "has_login_form": 0,
+        "has_external_form": 0
+      },
+      "semantic_features": {
+        "password_field_present": 0,
+        "external_form_action_ratio": 0.0,
+        "credential_collection_pattern": 0,
+        "meta_refresh_present": 0,
+        "script_to_link_ratio": 16.5,
+        "hidden_element_indicator": 1,
+        "iframe_to_image_ratio": 1.0,
+        "subdomain_to_apex_length_ratio": 0.4,
+        "suspicious_keyword_and_login_form": 0,
+        "high_external_link_concentration": 1,
+        "brand_keyword_deep_path": 0
+      },
+      "key_production_features": {
+        "num_links": 2,
+        "num_internal_links": 0,
+        "num_external_links": 2,
+        "external_link_ratio": 1.0,
+        "domain_length": 15,
+        "url_length": 84,
+        "path_length": 61,
+        "num_digits": 7,
+        "num_slashes": 6,
+        "has_suspicious_keywords": 0,
+        "has_login_form": 0
+      }
+    },
+    {
+      "index": 3448,
+      "url": "https://docs.google.com/drawings/d/1atUiG5uExpJXGVpJQptY1OiPsZ5xVrcQaiHQvpCNupo/edit",
+      "registered_domain": "google.com",
+      "label": "phishing",
+      "baseline_score": 0.5332,
+      "semantic_score": 0.4242,
+      "score_difference": -0.109,
+      "slices": {
+        "uses_https": 1,
+        "is_shortened_url": 0,
+        "is_sparse_page": 1,
+        "has_login_form": 0,
+        "has_external_form": 0
+      },
+      "semantic_features": {
+        "password_field_present": 0,
+        "external_form_action_ratio": 0.0,
+        "credential_collection_pattern": 0,
+        "meta_refresh_present": 0,
+        "script_to_link_ratio": 16.5,
+        "hidden_element_indicator": 1,
+        "iframe_to_image_ratio": 1.0,
+        "subdomain_to_apex_length_ratio": 0.4,
+        "suspicious_keyword_and_login_form": 0,
+        "high_external_link_concentration": 1,
+        "brand_keyword_deep_path": 0
+      },
+      "key_production_features": {
+        "num_links": 2,
+        "num_internal_links": 0,
+        "num_external_links": 2,
+        "external_link_ratio": 1.0,
+        "domain_length": 15,
+        "url_length": 84,
+        "path_length": 61,
+        "num_digits": 4,
+        "num_slashes": 6,
+        "has_suspicious_keywords": 0,
+        "has_login_form": 0
+      }
+    },
+    {
+      "index": 3454,
+      "url": "https://docs.google.com/drawings/d/13VYpRaOyliIm6r3LyprZAYoRzrjIcJibUTFjAAYD9UU/edit",
+      "registered_domain": "google.com",
+      "label": "phishing",
+      "baseline_score": 0.5332,
+      "semantic_score": 0.4242,
+      "score_difference": -0.109,
+      "slices": {
+        "uses_https": 1,
+        "is_shortened_url": 0,
+        "is_sparse_page": 1,
+        "has_login_form": 0,
+        "has_external_form": 0
+      },
+      "semantic_features": {
+        "password_field_present": 0,
+        "external_form_action_ratio": 0.0,
+        "credential_collection_pattern": 0,
+        "meta_refresh_present": 0,
+        "script_to_link_ratio": 16.5,
+        "hidden_element_indicator": 1,
+        "iframe_to_image_ratio": 1.0,
+        "subdomain_to_apex_length_ratio": 0.4,
+        "suspicious_keyword_and_login_form": 0,
+        "high_external_link_concentration": 1,
+        "brand_keyword_deep_path": 0
+      },
+      "key_production_features": {
+        "num_links": 2,
+        "num_internal_links": 0,
+        "num_external_links": 2,
+        "external_link_ratio": 1.0,
+        "domain_length": 15,
+        "url_length": 84,
+        "path_length": 61,
+        "num_digits": 5,
+        "num_slashes": 6,
+        "has_suspicious_keywords": 0,
+        "has_login_form": 0
+      }
+    },
+    {
+      "index": 3457,
+      "url": "https://docs.google.com/drawings/d/1w9kEDbTab2eVSgCAKN0fVT-G5JbnLGHK9mtapF-54sE/edit",
+      "registered_domain": "google.com",
+      "label": "phishing",
+      "baseline_score": 0.5247,
+      "semantic_score": 0.416,
+      "score_difference": -0.1087,
+      "slices": {
+        "uses_https": 1,
+        "is_shortened_url": 0,
+        "is_sparse_page": 1,
+        "has_login_form": 0,
+        "has_external_form": 0
+      },
+      "semantic_features": {
+        "password_field_present": 0,
+        "external_form_action_ratio": 0.0,
+        "credential_collection_pattern": 0,
+        "meta_refresh_present": 0,
+        "script_to_link_ratio": 16.5,
+        "hidden_element_indicator": 1,
+        "iframe_to_image_ratio": 1.0,
+        "subdomain_to_apex_length_ratio": 0.4,
+        "suspicious_keyword_and_login_form": 0,
+        "high_external_link_concentration": 1,
+        "brand_keyword_deep_path": 0
+      },
+      "key_production_features": {
+        "num_links": 2,
+        "num_internal_links": 0,
+        "num_external_links": 2,
+        "external_link_ratio": 1.0,
+        "domain_length": 15,
+        "url_length": 84,
+        "path_length": 61,
+        "num_digits": 8,
+        "num_slashes": 6,
+        "has_suspicious_keywords": 0,
+        "has_login_form": 0
+      }
+    },
+    {
+      "index": 3459,
+      "url": "https://docs.google.com/drawings/d/1caru8YE3NSmkrs-WNzouSITgz0xkuLKY-NQWd3wLlug/edit",
+      "registered_domain": "google.com",
+      "label": "phishing",
+      "baseline_score": 0.5247,
+      "semantic_score": 0.416,
+      "score_difference": -0.1087,
+      "slices": {
+        "uses_https": 1,
+        "is_shortened_url": 0,
+        "is_sparse_page": 1,
+        "has_login_form": 0,
+        "has_external_form": 0
+      },
+      "semantic_features": {
+        "password_field_present": 0,
+        "external_form_action_ratio": 0.0,
+        "credential_collection_pattern": 0,
+        "meta_refresh_present": 0,
+        "script_to_link_ratio": 16.5,
+        "hidden_element_indicator": 1,
+        "iframe_to_image_ratio": 1.0,
+        "subdomain_to_apex_length_ratio": 0.4,
+        "suspicious_keyword_and_login_form": 0,
+        "high_external_link_concentration": 1,
+        "brand_keyword_deep_path": 0
+      },
+      "key_production_features": {
+        "num_links": 2,
+        "num_internal_links": 0,
+        "num_external_links": 2,
+        "external_link_ratio": 1.0,
+        "domain_length": 15,
+        "url_length": 84,
+        "path_length": 61,
+        "num_digits": 5,
+        "num_slashes": 6,
+        "has_suspicious_keywords": 0,
+        "has_login_form": 0
+      }
+    },
+    {
+      "index": 3468,
+      "url": "https://docs.google.com/drawings/d/1Tz-vtaBaTadVhzYCBVFVfGwvgioC6doyjMyjYwjIqJo/edit",
+      "registered_domain": "google.com",
+      "label": "phishing",
+      "baseline_score": 0.5332,
+      "semantic_score": 0.4071,
+      "score_difference": -0.1261,
+      "slices": {
+        "uses_https": 1,
+        "is_shortened_url": 0,
+        "is_sparse_page": 1,
+        "has_login_form": 0,
+        "has_external_form": 0
+      },
+      "semantic_features": {
+        "password_field_present": 0,
+        "external_form_action_ratio": 0.0,
+        "credential_collection_pattern": 0,
+        "meta_refresh_present": 0,
+        "script_to_link_ratio": 16.5,
+        "hidden_element_indicator": 1,
+        "iframe_to_image_ratio": 1.0,
+        "subdomain_to_apex_length_ratio": 0.4,
+        "suspicious_keyword_and_login_form": 0,
+        "high_external_link_concentration": 1,
+        "brand_keyword_deep_path": 0
+      },
+      "key_production_features": {
+        "num_links": 2,
+        "num_internal_links": 0,
+        "num_external_links": 2,
+        "external_link_ratio": 1.0,
+        "domain_length": 15,
+        "url_length": 84,
+        "path_length": 61,
+        "num_digits": 2,
+        "num_slashes": 6,
+        "has_suspicious_keywords": 0,
+        "has_login_form": 0
+      }
+    },
+    {
+      "index": 3471,
+      "url": "https://docs.google.com/drawings/d/1lM2RJVKuDXnich3PllCidk2jTgdTEN5KPUAWZKn3rZE/edit",
+      "registered_domain": "google.com",
+      "label": "phishing",
+      "baseline_score": 0.5332,
+      "semantic_score": 0.4242,
+      "score_difference": -0.109,
+      "slices": {
+        "uses_https": 1,
+        "is_shortened_url": 0,
+        "is_sparse_page": 1,
+        "has_login_form": 0,
+        "has_external_form": 0
+      },
+      "semantic_features": {
+        "password_field_present": 0,
+        "external_form_action_ratio": 0.0,
+        "credential_collection_pattern": 0,
+        "meta_refresh_present": 0,
+        "script_to_link_ratio": 16.5,
+        "hidden_element_indicator": 1,
+        "iframe_to_image_ratio": 1.0,
+        "subdomain_to_apex_length_ratio": 0.4,
+        "suspicious_keyword_and_login_form": 0,
+        "high_external_link_concentration": 1,
+        "brand_keyword_deep_path": 0
+      },
+      "key_production_features": {
+        "num_links": 2,
+        "num_internal_links": 0,
+        "num_external_links": 2,
+        "external_link_ratio": 1.0,
+        "domain_length": 15,
+        "url_length": 84,
+        "path_length": 61,
+        "num_digits": 6,
+        "num_slashes": 6,
+        "has_suspicious_keywords": 0,
+        "has_login_form": 0
+      }
+    },
+    {
+      "index": 3476,
+      "url": "https://docs.google.com/drawings/d/1ngczuu6859Hnim9QEdetVzZSpMWa-r1aDWiFBB2Vd3w/edit",
+      "registered_domain": "google.com",
+      "label": "phishing",
+      "baseline_score": 0.5332,
+      "semantic_score": 0.4242,
+      "score_difference": -0.109,
+      "slices": {
+        "uses_https": 1,
+        "is_shortened_url": 0,
+        "is_sparse_page": 1,
+        "has_login_form": 0,
+        "has_external_form": 0
+      },
+      "semantic_features": {
+        "password_field_present": 0,
+        "external_form_action_ratio": 0.0,
+        "credential_collection_pattern": 0,
+        "meta_refresh_present": 0,
+        "script_to_link_ratio": 16.5,
+        "hidden_element_indicator": 1,
+        "iframe_to_image_ratio": 1.0,
+        "subdomain_to_apex_length_ratio": 0.4,
+        "suspicious_keyword_and_login_form": 0,
+        "high_external_link_concentration": 1,
+        "brand_keyword_deep_path": 0
+      },
+      "key_production_features": {
+        "num_links": 2,
+        "num_internal_links": 0,
+        "num_external_links": 2,
+        "external_link_ratio": 1.0,
+        "domain_length": 15,
+        "url_length": 84,
+        "path_length": 61,
+        "num_digits": 9,
+        "num_slashes": 6,
+        "has_suspicious_keywords": 0,
+        "has_login_form": 0
+      }
+    },
+    {
+      "index": 3478,
+      "url": "https://docs.google.com/drawings/d/12vqSOprvmIMHdBPqNHAjE95BxmKpdTHjdgkCm7ySq-8/edit",
+      "registered_domain": "google.com",
+      "label": "phishing",
+      "baseline_score": 0.5332,
+      "semantic_score": 0.4242,
+      "score_difference": -0.109,
+      "slices": {
+        "uses_https": 1,
+        "is_shortened_url": 0,
+        "is_sparse_page": 1,
+        "has_login_form": 0,
+        "has_external_form": 0
+      },
+      "semantic_features": {
+        "password_field_present": 0,
+        "external_form_action_ratio": 0.0,
+        "credential_collection_pattern": 0,
+        "meta_refresh_present": 0,
+        "script_to_link_ratio": 16.5,
+        "hidden_element_indicator": 1,
+        "iframe_to_image_ratio": 1.0,
+        "subdomain_to_apex_length_ratio": 0.4,
+        "suspicious_keyword_and_login_form": 0,
+        "high_external_link_concentration": 1,
+        "brand_keyword_deep_path": 0
+      },
+      "key_production_features": {
+        "num_links": 2,
+        "num_internal_links": 0,
+        "num_external_links": 2,
+        "external_link_ratio": 1.0,
+        "domain_length": 15,
+        "url_length": 84,
+        "path_length": 61,
+        "num_digits": 6,
+        "num_slashes": 6,
+        "has_suspicious_keywords": 0,
+        "has_login_form": 0
+      }
+    },
+    {
+      "index": 3479,
+      "url": "https://docs.google.com/drawings/d/1Qd7EtXXjDdNeduokbADWspLZYt7bNe9FT6LTojUwsHs/edit",
+      "registered_domain": "google.com",
+      "label": "phishing",
+      "baseline_score": 0.5332,
+      "semantic_score": 0.4242,
+      "score_difference": -0.109,
+      "slices": {
+        "uses_https": 1,
+        "is_shortened_url": 0,
+        "is_sparse_page": 1,
+        "has_login_form": 0,
+        "has_external_form": 0
+      },
+      "semantic_features": {
+        "password_field_present": 0,
+        "external_form_action_ratio": 0.0,
+        "credential_collection_pattern": 0,
+        "meta_refresh_present": 0,
+        "script_to_link_ratio": 16.5,
+        "hidden_element_indicator": 1,
+        "iframe_to_image_ratio": 1.0,
+        "subdomain_to_apex_length_ratio": 0.4,
+        "suspicious_keyword_and_login_form": 0,
+        "high_external_link_concentration": 1,
+        "brand_keyword_deep_path": 0
+      },
+      "key_production_features": {
+        "num_links": 2,
+        "num_internal_links": 0,
+        "num_external_links": 2,
+        "external_link_ratio": 1.0,
+        "domain_length": 15,
+        "url_length": 84,
+        "path_length": 61,
+        "num_digits": 5,
+        "num_slashes": 6,
+        "has_suspicious_keywords": 0,
+        "has_login_form": 0
+      }
+    },
+    {
+      "index": 3701,
+      "url": "https://docs.google.com/drawings/d/1TAood9mR2wk27-O4OXCnPAA1FvXM0ert-UeewLE4SZM/edit",
+      "registered_domain": "google.com",
+      "label": "phishing",
+      "baseline_score": 0.5247,
+      "semantic_score": 0.416,
+      "score_difference": -0.1087,
+      "slices": {
+        "uses_https": 1,
+        "is_shortened_url": 0,
+        "is_sparse_page": 1,
+        "has_login_form": 0,
+        "has_external_form": 0
+      },
+      "semantic_features": {
+        "password_field_present": 0,
+        "external_form_action_ratio": 0.0,
+        "credential_collection_pattern": 0,
+        "meta_refresh_present": 0,
+        "script_to_link_ratio": 16.5,
+        "hidden_element_indicator": 1,
+        "iframe_to_image_ratio": 1.0,
+        "subdomain_to_apex_length_ratio": 0.4,
+        "suspicious_keyword_and_login_form": 0,
+        "high_external_link_concentration": 1,
+        "brand_keyword_deep_path": 0
+      },
+      "key_production_features": {
+        "num_links": 2,
+        "num_internal_links": 0,
+        "num_external_links": 2,
+        "external_link_ratio": 1.0,
+        "domain_length": 15,
+        "url_length": 84,
+        "path_length": 61,
+        "num_digits": 9,
+        "num_slashes": 6,
+        "has_suspicious_keywords": 0,
+        "has_login_form": 0
+      }
+    },
+    {
+      "index": 3731,
+      "url": "https://docs.google.com/drawings/d/1m6wFJq4XzC-QSjK54xXxS2gGZFAKrad4SBQCTspcUmw/edit",
+      "registered_domain": "google.com",
+      "label": "phishing",
+      "baseline_score": 0.5332,
+      "semantic_score": 0.4242,
+      "score_difference": -0.109,
+      "slices": {
+        "uses_https": 1,
+        "is_shortened_url": 0,
+        "is_sparse_page": 1,
+        "has_login_form": 0,
+        "has_external_form": 0
+      },
+      "semantic_features": {
+        "password_field_present": 0,
+        "external_form_action_ratio": 0.0,
+        "credential_collection_pattern": 0,
+        "meta_refresh_present": 0,
+        "script_to_link_ratio": 16.5,
+        "hidden_element_indicator": 1,
+        "iframe_to_image_ratio": 1.0,
+        "subdomain_to_apex_length_ratio": 0.4,
+        "suspicious_keyword_and_login_form": 0,
+        "high_external_link_concentration": 1,
+        "brand_keyword_deep_path": 0
+      },
+      "key_production_features": {
+        "num_links": 2,
+        "num_internal_links": 0,
+        "num_external_links": 2,
+        "external_link_ratio": 1.0,
+        "domain_length": 15,
+        "url_length": 84,
+        "path_length": 61,
+        "num_digits": 7,
+        "num_slashes": 6,
+        "has_suspicious_keywords": 0,
+        "has_login_form": 0
+      }
+    },
+    {
+      "index": 3788,
+      "url": "https://docs.google.com/drawings/d/1rJpwgy7Caqilk0Bgw2-EUy-wzOhTcFr5K7KFWi7WWNE/edit",
+      "registered_domain": "google.com",
+      "label": "phishing",
+      "baseline_score": 0.5247,
+      "semantic_score": 0.416,
+      "score_difference": -0.1087,
+      "slices": {
+        "uses_https": 1,
+        "is_shortened_url": 0,
+        "is_sparse_page": 1,
+        "has_login_form": 0,
+        "has_external_form": 0
+      },
+      "semantic_features": {
+        "password_field_present": 0,
+        "external_form_action_ratio": 0.0,
+        "credential_collection_pattern": 0,
+        "meta_refresh_present": 0,
+        "script_to_link_ratio": 16.5,
+        "hidden_element_indicator": 1,
+        "iframe_to_image_ratio": 1.0,
+        "subdomain_to_apex_length_ratio": 0.4,
+        "suspicious_keyword_and_login_form": 0,
+        "high_external_link_concentration": 1,
+        "brand_keyword_deep_path": 0
+      },
+      "key_production_features": {
+        "num_links": 2,
+        "num_internal_links": 0,
+        "num_external_links": 2,
+        "external_link_ratio": 1.0,
+        "domain_length": 15,
+        "url_length": 84,
+        "path_length": 61,
+        "num_digits": 7,
+        "num_slashes": 6,
+        "has_suspicious_keywords": 0,
+        "has_login_form": 0
+      }
+    },
+    {
+      "index": 4110,
+      "url": "https://sites.google.com/view/gmx111/home",
+      "registered_domain": "google.com",
+      "label": "phishing",
+      "baseline_score": 0.5054,
+      "semantic_score": 0.4859,
+      "score_difference": -0.0195,
+      "slices": {
+        "uses_https": 1,
+        "is_shortened_url": 0,
+        "is_sparse_page": 1,
+        "has_login_form": 0,
+        "has_external_form": 0
+      },
+      "semantic_features": {
+        "password_field_present": 0,
+        "external_form_action_ratio": 0.0,
+        "credential_collection_pattern": 0,
+        "meta_refresh_present": 0,
+        "script_to_link_ratio": 1.0,
+        "hidden_element_indicator": 1,
+        "iframe_to_image_ratio": 0.0,
+        "subdomain_to_apex_length_ratio": 0.5,
+        "suspicious_keyword_and_login_form": 0,
+        "high_external_link_concentration": 0,
+        "brand_keyword_deep_path": 0
+      },
+      "key_production_features": {
+        "num_links": 12,
+        "num_internal_links": 11,
+        "num_external_links": 1,
+        "external_link_ratio": 0.0833,
+        "domain_length": 16,
+        "url_length": 41,
+        "path_length": 17,
+        "num_digits": 3,
+        "num_slashes": 5,
+        "has_suspicious_keywords": 0,
+        "has_login_form": 0
+      }
+    }
+  ]
+}

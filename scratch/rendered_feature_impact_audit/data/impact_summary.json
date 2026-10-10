@@ -1,0 +1,58 @@
+{
+  "dataset_rows_analyzed": 250,
+  "pages_with_feature_changes": 94,
+  "pct_pages_with_feature_changes": 37.6,
+  "mean_changed_features_per_page": 0.7,
+  "median_changed_features_per_page": 0.0,
+  "max_changed_features_per_page": 9,
+  "mean_absolute_score_delta": 0.0016,
+  "median_absolute_score_delta": 0.0,
+  "max_absolute_score_delta": 0.1436,
+  "total_prediction_flips": 0,
+  "legitimate_metrics": {
+    "total_legit_analyzed": 127,
+    "false_positives_reduced": 0,
+    "new_false_positives_created": 0,
+    "risk_scores_de_escalated": 0,
+    "risk_scores_increased": 1
+  },
+  "phishing_metrics": {
+    "total_phishing_analyzed": 123,
+    "false_negatives_introduced": 0,
+    "false_negatives_resolved": 0,
+    "risk_scores_weakened": 4,
+    "risk_scores_strengthened": 2
+  },
+  "slice_impacts": {
+    "sparse_pages": {
+      "count": 89,
+      "pct_changed_features": 48.31,
+      "mean_abs_score_delta": 0.0043,
+      "prediction_changes": 0
+    },
+    "zero_internal_links": {
+      "count": 65,
+      "pct_changed_features": 53.85,
+      "mean_abs_score_delta": 0.0058,
+      "prediction_changes": 0
+    },
+    "https_pages": {
+      "count": 227,
+      "pct_changed_features": 35.68,
+      "mean_abs_score_delta": 0.0017,
+      "prediction_changes": 0
+    },
+    "js_present": {
+      "count": 235,
+      "pct_changed_features": 34.89,
+      "mean_abs_score_delta": 0.0016,
+      "prediction_changes": 0
+    },
+    "ambiguous_band": {
+      "count": 7,
+      "pct_changed_features": 28.57,
+      "mean_abs_score_delta": 0.0205,
+      "prediction_changes": 0
+    }
+  }
+}

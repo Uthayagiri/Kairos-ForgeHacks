@@ -1,0 +1,14 @@
+{
+  "static_feature_latency_mean_ms": 1.25,
+  "headless_rendering_latency_mean_ms": 2015.26,
+  "headless_rendering_latency_p50_ms": 2002.1,
+  "headless_rendering_latency_p95_ms": 2045.5,
+  "trigger_rates": {
+    "T1_sparse": "3.45% (62 / 1799)",
+    "T2_js_spa": "4.89% (88 / 1799)",
+    "T3_sparse_js": "3.22% (58 / 1799)",
+    "T4_narrow": "2.45% (44 / 1799)",
+    "T5_learned": "1.56% (28 / 1799)"
+  },
+  "effective_pipeline_latency_mean_ms": 66.14
+}

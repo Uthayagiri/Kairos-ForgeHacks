@@ -1,0 +1,72 @@
+[
+  {
+    "feature_1": "num_meta_refresh_redirects",
+    "feature_2": "meta_refresh_present",
+    "correlation": 1.0
+  },
+  {
+    "feature_1": "num_links",
+    "feature_2": "num_internal_links",
+    "correlation": 0.9717
+  },
+  {
+    "feature_1": "num_slashes",
+    "feature_2": "path_depth",
+    "correlation": 0.9341
+  },
+  {
+    "feature_1": "has_suspicious_js_patterns",
+    "feature_2": "hidden_element_indicator",
+    "correlation": 0.869
+  },
+  {
+    "feature_1": "num_forms",
+    "feature_2": "num_input_fields",
+    "correlation": 0.8453
+  },
+  {
+    "feature_1": "external_link_ratio",
+    "feature_2": "high_external_link_concentration",
+    "correlation": 0.8413
+  },
+  {
+    "feature_1": "url_length",
+    "feature_2": "num_digits",
+    "correlation": 0.8282
+  },
+  {
+    "feature_1": "num_forms_with_external_action",
+    "feature_2": "external_form_action_ratio",
+    "correlation": 0.8099
+  },
+  {
+    "feature_1": "password_field_present",
+    "feature_2": "credential_collection_pattern",
+    "correlation": 0.7646
+  },
+  {
+    "feature_1": "num_dots",
+    "feature_2": "num_subdomains",
+    "correlation": 0.7562
+  },
+  {
+    "feature_1": "domain_length",
+    "feature_2": "subdomain_to_apex_length_ratio",
+    "correlation": 0.7538
+  },
+  {
+    "feature_1": "path_length",
+    "feature_2": "num_hyphens",
+    "correlation": 0.7223
+  },
+  {
+    "feature_1": "has_suspicious_keywords",
+    "feature_2": "brand_keyword_deep_path",
+    "correlation": 0.7196
+  },
+  {
+    "feature_1": "path_length",
+    "feature_2": "path_depth",
+    "correlation": 0.7125
+  }
+]

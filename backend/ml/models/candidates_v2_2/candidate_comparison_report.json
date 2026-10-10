@@ -1,0 +1,150 @@
+{
+  "C1_XGB_d4_col0.65_spw4.0": {
+    "accuracy": 0.9286,
+    "precision": 0.871,
+    "recall": 0.8876,
+    "f1_score": 0.8792,
+    "roc_auc": 0.9651,
+    "brier_score": 0.0682,
+    "confusion_matrix": {
+      "true_negatives": 1198,
+      "false_positives": 69,
+      "false_negatives": 59,
+      "true_positives": 466
+    },
+    "subclass_recalls": {
+      "shortener_phishing_recall": 0.9091,
+      "sparse_phishing_recall": 0.9502,
+      "https_phishing_recall": 0.8822
+    },
+    "top2_feature_concentration": 32.79,
+    "top_importances": {
+      "num_links": 0.19343094527721405,
+      "num_internal_links": 0.13446302711963654,
+      "domain_length": 0.07817601412534714,
+      "num_subdomains": 0.05850079655647278,
+      "uses_https": 0.05660078674554825,
+      "num_external_links": 0.04862532019615173,
+      "num_images": 0.045245300978422165,
+      "path_length": 0.036243174225091934,
+      "num_slashes": 0.02575034461915493,
+      "num_digits": 0.024559373036026955,
+      "external_link_ratio": 0.023201560601592064,
+      "path_depth": 0.022088244557380676,
+      "url_length": 0.021412769332528114,
+      "has_url_encoding": 0.02034573443233967,
+      "num_query_params": 0.018741371110081673
+    }
+  },
+  "C2_Calibrated_d4_col0.60_spw3.5": {
+    "accuracy": 0.8064,
+    "precision": 0.8321,
+    "recall": 0.4248,
+    "f1_score": 0.5624,
+    "roc_auc": 0.9564,
+    "brier_score": 0.1299,
+    "confusion_matrix": {
+      "true_negatives": 1222,
+      "false_positives": 45,
+      "false_negatives": 302,
+      "true_positives": 223
+    },
+    "subclass_recalls": {
+      "shortener_phishing_recall": 0.7273,
+      "sparse_phishing_recall": 0.4076,
+      "https_phishing_recall": 0.3992
+    },
+    "top2_feature_concentration": 31.87,
+    "top_importances": {
+      "num_links": 0.1822180449962616,
+      "num_internal_links": 0.13649889826774597,
+      "num_external_links": 0.08558470755815506,
+      "domain_length": 0.0760941281914711,
+      "num_subdomains": 0.04843514412641525,
+      "uses_https": 0.04487839341163635,
+      "path_length": 0.03643107786774635,
+      "num_images": 0.033322207629680634,
+      "external_link_ratio": 0.029402324929833412,
+      "num_slashes": 0.025609243661165237,
+      "num_query_params": 0.02069173753261566,
+      "path_depth": 0.020398419350385666,
+      "num_scripts": 0.020294513553380966,
+      "num_digits": 0.020135052502155304,
+      "url_length": 0.019292812794446945
+    }
+  },
+  "C3_XGB_d4_col0.65_spw4.5": {
+    "accuracy": 0.8644,
+    "precision": 0.8279,
+    "recall": 0.6781,
+    "f1_score": 0.7455,
+    "roc_auc": 0.9567,
+    "brier_score": 0.0818,
+    "confusion_matrix": {
+      "true_negatives": 1193,
+      "false_positives": 74,
+      "false_negatives": 169,
+      "true_positives": 356
+    },
+    "subclass_recalls": {
+      "shortener_phishing_recall": 0.9091,
+      "sparse_phishing_recall": 0.6919,
+      "https_phishing_recall": 0.6627
+    },
+    "top2_feature_concentration": 32.16,
+    "top_importances": {
+      "num_links": 0.18869584798812866,
+      "num_internal_links": 0.13289883732795715,
+      "domain_length": 0.0828266590833664,
+      "uses_https": 0.05569392070174217,
+      "num_external_links": 0.050288036465644836,
+      "num_subdomains": 0.04847955331206322,
+      "num_images": 0.04548853263258934,
+      "path_length": 0.03628072887659073,
+      "num_slashes": 0.025138678029179573,
+      "external_link_ratio": 0.024791553616523743,
+      "num_digits": 0.02300252951681614,
+      "url_length": 0.021206647157669067,
+      "path_depth": 0.021082133054733276,
+      "has_url_encoding": 0.020179400220513344,
+      "num_query_params": 0.019872654229402542
+    }
+  },
+  "C4_Calibrated_d3_col0.60_spw4.0": {
+    "accuracy": 0.8002,
+    "precision": 0.8224,
+    "recall": 0.4057,
+    "f1_score": 0.5434,
+    "roc_auc": 0.955,
+    "brier_score": 0.1262,
+    "confusion_matrix": {
+      "true_negatives": 1221,
+      "false_positives": 46,
+      "false_negatives": 312,
+      "true_positives": 213
+    },
+    "subclass_recalls": {
+      "shortener_phishing_recall": 0.7273,
+      "sparse_phishing_recall": 0.3957,
+      "https_phishing_recall": 0.3792
+    },
+    "top2_feature_concentration": 34.94,
+    "top_importances": {
+      "num_links": 0.20882003009319305,
+      "num_internal_links": 0.1405889093875885,
+      "num_external_links": 0.07928390055894852,
+      "domain_length": 0.07051853835582733,
+      "num_subdomains": 0.054800935089588165,
+      "num_images": 0.05003444477915764,
+      "uses_https": 0.03755394369363785,
+      "path_length": 0.03519348055124283,
+      "external_link_ratio": 0.031379327178001404,
+      "num_slashes": 0.029089882969856262,
+      "num_scripts": 0.0238722562789917,
+      "path_depth": 0.022488495334982872,
+      "num_digits": 0.020907288417220116,
+      "num_query_params": 0.020218651741743088,
+      "url_length": 0.017369067296385765
+    }
+  }
+}

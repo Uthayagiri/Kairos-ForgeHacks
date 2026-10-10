@@ -1,0 +1,221 @@
+{
+  "dataset_metadata": {
+    "total_samples": 8958,
+    "num_features": 43,
+    "train_samples": 7166,
+    "test_samples": 1792,
+    "legitimate_train_count": 5249,
+    "phishing_train_count": 1917,
+    "legitimate_test_count": 1313,
+    "phishing_test_count": 479,
+    "random_state": 42
+  },
+  "models": {
+    "random_forest": {
+      "name": "Random Forest",
+      "parameters": {
+        "n_estimators": 100,
+        "random_state": 42
+      },
+      "test_metrics": {
+        "accuracy": 0.976,
+        "precision": 0.9678,
+        "recall": 0.9415,
+        "f1": 0.9545,
+        "roc_auc": 0.9977
+      },
+      "confusion_matrix": {
+        "tn": 1298,
+        "fp": 15,
+        "fn": 28,
+        "tp": 451
+      },
+      "cross_validation_train": {
+        "folds": 5,
+        "cv_accuracy_mean": 0.9746,
+        "cv_accuracy_std": 0.0038,
+        "cv_f1_mean": 0.9521,
+        "cv_f1_std": 0.0075,
+        "fold_accuracies": [
+          0.9819,
+          0.9728,
+          0.9707,
+          0.9735,
+          0.9742
+        ],
+        "fold_f1_scores": [
+          0.9663,
+          0.9489,
+          0.9441,
+          0.9497,
+          0.9513
+        ]
+      },
+      "top_15_features": [
+        {
+          "feature": "domain_length",
+          "importance": 0.130339
+        },
+        {
+          "feature": "num_internal_links",
+          "importance": 0.129504
+        },
+        {
+          "feature": "num_links",
+          "importance": 0.099699
+        },
+        {
+          "feature": "num_external_links",
+          "importance": 0.062485
+        },
+        {
+          "feature": "path_length",
+          "importance": 0.059128
+        },
+        {
+          "feature": "num_images",
+          "importance": 0.050648
+        },
+        {
+          "feature": "num_scripts",
+          "importance": 0.050521
+        },
+        {
+          "feature": "num_subdomains",
+          "importance": 0.047079
+        },
+        {
+          "feature": "num_digits",
+          "importance": 0.040961
+        },
+        {
+          "feature": "num_slashes",
+          "importance": 0.039111
+        },
+        {
+          "feature": "external_link_ratio",
+          "importance": 0.038077
+        },
+        {
+          "feature": "num_dots",
+          "importance": 0.037718
+        },
+        {
+          "feature": "url_length",
+          "importance": 0.037633
+        },
+        {
+          "feature": "text_to_html_ratio",
+          "importance": 0.028245
+        },
+        {
+          "feature": "path_depth",
+          "importance": 0.024484
+        }
+      ]
+    },
+    "xgboost": {
+      "name": "XGBoost",
+      "parameters": {
+        "eval_metric": "logloss",
+        "random_state": 42
+      },
+      "test_metrics": {
+        "accuracy": 0.9782,
+        "precision": 0.9721,
+        "recall": 0.9457,
+        "f1": 0.9587,
+        "roc_auc": 0.9972
+      },
+      "confusion_matrix": {
+        "tn": 1300,
+        "fp": 13,
+        "fn": 26,
+        "tp": 453
+      },
+      "cross_validation_train": {
+        "folds": 5,
+        "cv_accuracy_mean": 0.9767,
+        "cv_accuracy_std": 0.0044,
+        "cv_f1_mean": 0.9561,
+        "cv_f1_std": 0.0083,
+        "fold_accuracies": [
+          0.9826,
+          0.9742,
+          0.9714,
+          0.9742,
+          0.9812
+        ],
+        "fold_f1_scores": [
+          0.9673,
+          0.9514,
+          0.9458,
+          0.9513,
+          0.9645
+        ]
+      },
+      "top_15_features": [
+        {
+          "feature": "num_links",
+          "importance": 0.334415
+        },
+        {
+          "feature": "domain_length",
+          "importance": 0.079379
+        },
+        {
+          "feature": "num_internal_links",
+          "importance": 0.070691
+        },
+        {
+          "feature": "uses_https",
+          "importance": 0.055651
+        },
+        {
+          "feature": "num_links_with_mismatched_text",
+          "importance": 0.054072
+        },
+        {
+          "feature": "num_digits",
+          "importance": 0.034857
+        },
+        {
+          "feature": "path_length",
+          "importance": 0.032904
+        },
+        {
+          "feature": "num_dots",
+          "importance": 0.025026
+        },
+        {
+          "feature": "num_external_links",
+          "importance": 0.021056
+        },
+        {
+          "feature": "num_hyphens",
+          "importance": 0.016948
+        },
+        {
+          "feature": "url_length",
+          "importance": 0.016826
+        },
+        {
+          "feature": "num_slashes",
+          "importance": 0.016635
+        },
+        {
+          "feature": "is_shortened_url",
+          "importance": 0.015422
+        },
+        {
+          "feature": "num_forms",
+          "importance": 0.015219
+        },
+        {
+          "feature": "has_favicon",
+          "importance": 0.014783
+        }
+      ]
+    }
+  }
+}

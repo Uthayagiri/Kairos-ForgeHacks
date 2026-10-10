@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PhishGuard AI — Security Warning: Malicious Website Intercepted</title>
+  <link rel="stylesheet" href="warning.css">
+</head>
+<body>
+  <div class="warning-container">
+    
+    <!-- Warning Card -->
+    <div class="warning-card">
+      
+      <!-- Top Alert Beacon -->
+      <div class="alert-beacon">
+        <div class="beacon-ring"></div>
+        <div class="beacon-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <line x1="12" y1="8" x2="12" y2="12"/>
+            <line x1="12" y1="16" x2="12.01" y2="16"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Main Headline -->
+      <div class="warning-header">
+        <div class="product-tag">PHISHGUARD AI • NAVIGATION PROTECTION</div>
+        <div class="risk-metric-row">
+          <span id="risk-badge" class="risk-badge risk-badge-high">CRITICAL PHISHING THREAT</span>
+          <span class="risk-score-pill">RISK SCORE: <strong id="risk-score-value">--%</strong></span>
+        </div>
+        <h1 class="warning-title">Deceptive Phishing Website Intercepted</h1>
+        <p id="block-reason-text" class="warning-sub">
+          Navigation blocked automatically before document load. PhishGuard AI detected severe credential harvesting and domain deception indicators.
+        </p>
+      </div>
+
+      <!-- Target URL Box -->
+      <div class="target-url-box">
+        <span class="url-label">INTERCEPTED DESTINATION:</span>
+        <span id="target-url" class="url-text">Loading target URL...</span>
+      </div>
+
+      <!-- Detected Threat Signals Box -->
+      <div class="threat-signals-box">
+        <div class="signals-title">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+            <line x1="12" y1="9" x2="12" y2="13"/>
+            <line x1="12" y1="17" x2="12.01" y2="17"/>
+          </svg>
+          <span>DETECTED SECURITY THREATS</span>
+        </div>
+        <ul id="threat-list" class="threat-list">
+          <li>Evaluating security threat indicators...</li>
+        </ul>
+      </div>
+
+      <!-- Risk Component Breakdown (Forensic Signals) -->
+      <div id="signals-breakdown-box" class="signals-breakdown-box hidden">
+        <div class="breakdown-header">
+          <span class="breakdown-title">FORENSIC SIGNAL BREAKDOWN</span>
+        </div>
+        <div id="breakdown-content" class="breakdown-grid"></div>
+      </div>
+
+      <!-- Primary Action Buttons -->
+      <div class="actions-row">
+        <button id="safety-btn" class="primary-btn">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+          </svg>
+          <span>Return to Safety (Recommended)</span>
+        </button>
+
+        <button id="open-dashboard-btn" class="secondary-btn">
+          <span>Open Full Dashboard</span>
+        </button>
+      </div>
+
+      <!-- Collapsible Override Section -->
+      <div class="override-section">
+        <button id="toggle-override-btn" class="override-toggle">
+          <span>Advanced / I understand the risks</span>
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 12 15 18 9"/>
+          </svg>
+        </button>
+
+        <div id="override-panel" class="override-panel hidden">
+          <p class="override-warning">
+            <strong>Warning:</strong> Navigating to this website may expose passwords, financial details, or personal accounts to attackers.
+          </p>
+          <button id="proceed-override-btn" class="override-btn">
+            Proceed to Unsafe Site (Override Protection)
+          </button>
+        </div>
+      </div>
+
+      <!-- Footer Disclaimer -->
+      <div class="warning-footer">
+        <span>Protected by PhishGuard AI • ML XGBoost 2.1 Engine • Zero Telemetry Leaks</span>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="warning.js"></script>
+</body>
+</html>

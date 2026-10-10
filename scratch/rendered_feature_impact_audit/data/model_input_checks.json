@@ -1,0 +1,112 @@
+[
+  {
+    "sample_idx": 0,
+    "url_hash": "5c19622daed778b8",
+    "label": 0,
+    "num_features_passed": 43,
+    "vector_identical": true,
+    "static_score": 0.02,
+    "rendered_score": 0.02,
+    "score_changed": false,
+    "prediction_changed": false
+  },
+  {
+    "sample_idx": 1,
+    "url_hash": "44dd931104832fe9",
+    "label": 0,
+    "num_features_passed": 43,
+    "vector_identical": true,
+    "static_score": 0.0158,
+    "rendered_score": 0.0158,
+    "score_changed": false,
+    "prediction_changed": false
+  },
+  {
+    "sample_idx": 2,
+    "url_hash": "da036dba5d33bfd3",
+    "label": 0,
+    "num_features_passed": 43,
+    "vector_identical": true,
+    "static_score": 0.0212,
+    "rendered_score": 0.0212,
+    "score_changed": false,
+    "prediction_changed": false
+  },
+  {
+    "sample_idx": 3,
+    "url_hash": "0d580494bfd95ffa",
+    "label": 0,
+    "num_features_passed": 43,
+    "vector_identical": true,
+    "static_score": 0.0175,
+    "rendered_score": 0.0175,
+    "score_changed": false,
+    "prediction_changed": false
+  },
+  {
+    "sample_idx": 4,
+    "url_hash": "5e7c83cd07176407",
+    "label": 0,
+    "num_features_passed": 43,
+    "vector_identical": true,
+    "static_score": 0.0123,
+    "rendered_score": 0.0123,
+    "score_changed": false,
+    "prediction_changed": false
+  },
+  {
+    "sample_idx": 5,
+    "url_hash": "aaf9ac15a3c32cc5",
+    "label": 0,
+    "num_features_passed": 43,
+    "vector_identical": true,
+    "static_score": 0.0015,
+    "rendered_score": 0.0015,
+    "score_changed": false,
+    "prediction_changed": false
+  },
+  {
+    "sample_idx": 6,
+    "url_hash": "680dff531e90f6eb",
+    "label": 0,
+    "num_features_passed": 43,
+    "vector_identical": true,
+    "static_score": 0.0061,
+    "rendered_score": 0.0061,
+    "score_changed": false,
+    "prediction_changed": false
+  },
+  {
+    "sample_idx": 7,
+    "url_hash": "bd5faefcb7eddc9e",
+    "label": 0,
+    "num_features_passed": 43,
+    "vector_identical": true,
+    "static_score": 0.0137,
+    "rendered_score": 0.0137,
+    "score_changed": false,
+    "prediction_changed": false
+  },
+  {
+    "sample_idx": 8,
+    "url_hash": "3d0be58a9ddc4657",
+    "label": 0,
+    "num_features_passed": 43,
+    "vector_identical": true,
+    "static_score": 0.0048,
+    "rendered_score": 0.0048,
+    "score_changed": false,
+    "prediction_changed": false
+  },
+  {
+    "sample_idx": 9,
+    "url_hash": "2995080fd7fd8b42",
+    "label": 0,
+    "num_features_passed": 43,
+    "vector_identical": false,
+    "static_score": 0.02,
+    "rendered_score": 0.0309,
+    "score_changed": true,
+    "prediction_changed": false
+  }
+]
